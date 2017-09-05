@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html ng-app="opiumLeage">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="/img/icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/icon-iphone4.png" />
+    <title>Opium League :: Clasificaciones</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.0/css/bulma.min.css" type="text/css" >
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-92241042-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+
+  <body>
+
+    <!-- Header  -->
+    <header>
+      <div id="cabecera"> <a href="/"><img src="../img/logo_futmondo.jpg" alt="Logo"/></a>&nbsp;
+        <div class="app">
+          <a href="https://itunes.apple.com/es/app/futmondo-manager-de-futbol/id663530434?mt=8" title="Ir a Apple Store" target="_blank">
+          <img src="../img/ios_footer.png"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.mondosports.futmondo" title="Ir a Google Play" target="_blank">
+          <img src="../img/android_footer.png"></a>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Menu -->
+    <div class="tabs">
+      <ul>
+        <li class="is-active"><a href="/">XV OPIUM LEAGUE</a></li>
+        <li><a href="/views/table.html">Clasificaciones</a></li>
+        <li><a href="/views/charts.html">Gráficos</a></li>
+        <li><a href="/views/rules.html">Reglamento</a></li>
+        <li><a href="/views/gallery.html">Participantes</a></li>
+        <li><a href="/views/history.html">Historia</a></li>
+      </ul>
+    </div>
+
+
+    <!-- General Table -->
+    <section class="section">
+      <div class="subtitle has-text-centered">CLASIFICACIÓN GENERAL</div>
+      <table class="table" ng-controller="TableController">
+        <thead>
+          <tr>
+            <th>Posición</th>
+            <th>Equipo</th>
+            <th>Jugador</th>
+            <th>Jornadas</th>
+            <th>Puntos</th>
+            <th>Mejor</th>
+            <th>Peor</th>
+            <th>Media</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Posición</th>
+            <th>Equipo</th>
+            <th>Jugador</th>
+            <th>Jornadas</th>
+            <th>Puntos</th>
+            <th>Mejor</th>
+            <th>Peor</th>
+            <th>Media</th>
+          </tr>
+        </tfoot>
+        <tbody ng-repeat="player in general_table" ng-cloak>
+          <tr ng-class="{'champions': player.order < 5,
+                      'uefa': (player.order == 5 || player.order == 6),
+                      'intertoto': player.order == 7,
+                      'descenso': player.order > general_table.length - 3}">
+            <td>{{player.position}}</td>
+            <td class="left-table">{{player.team}}</td>
+            <td class="left-table"><img ng-src="{{player.image}}" class="foto-table" /> {{player.name}}</td>
+            <td>{{player.num_jornadas}}</td>
+            <td>{{player.score_total}}</td>
+            <td>{{player.score_best}}</td>
+            <td>{{player.score_worst}}</td>
+            <td>{{player.score_average}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+
+    <!-- Match-day Tables -->
+    <section class="section has-text-centered" ng-controller="TableController as table">
+      <div class="subtitle has-text-centered">CLASIFICACIÓN POR JORNADA</div>
+      <span id="table_jornada" class="has-text-centered" ng-repeat="jornada in jornadas_table" ng-show="jornada[0].points" ng-cloak>
+        <div class="">
+          <i class="fa fa-futbol-o" aria-hidden="true"></i> {{jornada.name}}
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Pos</th>
+              <th>Equipo</th>
+              <th>Puntos</th>
+            </tr>
+          </thead>
+          <tbody ng-repeat="player_jornada in jornada">
+            <tr ng-class="{'champions': player_jornada.points == jornada.best_score,
+                           'descenso': player_jornada.points == jornada.worst_score}">
+              <td>{{player_jornada.position}}</td>
+              <td class="left-table">{{player_jornada.team}}</td>
+              <td>{{player_jornada.points}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </span>
+    </section>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
