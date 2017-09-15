@@ -64,8 +64,16 @@
       });
 
       //Calculate
-      $scope.general_table.score_best = 0;
-      $scope.general_table.score_worst = 1000;
+      $scope.general_table.score_best = {
+        name: "",
+        score: 0,
+        image: ""
+      };
+      $scope.general_table.score_worst = {
+        name: "",
+        score: 1000,
+        image: ""
+      };
       for (let i = 0; i < $scope.general_table.length; i++) {
         $scope.general_table[i].order = i + 1;
         if (i > 0){
@@ -80,9 +88,18 @@
         $scope.general_table[i].num_jornadas = $scope.general_table[i].points_jornadas.filter((value)=>{return value !== 0;}).length;
 
         //Best, Worst for the whole season
-        $scope.general_table.score_best < $scope.general_table[i].score_best ? $scope.general_table.score_best = $scope.general_table[i].points_jornadas : null;
-        $scope.general_table.score_worst > $scope.general_table[i].score_worst ? $scope.general_table.score_worst = $scope.general_table[i].points_jornadas : null;
-        console.log("peor: ", $scope.general_table.score_worst);
+        console.log(`Almacenado: ${$scope.general_table.score_best.score}, Actual: ${$scope.general_table[i].score_best}`);
+        if ($scope.general_table.score_best.score < $scope.general_table[i].score_best){
+          $scope.general_table.score_best.name = $scope.general_table[i].name;
+          $scope.general_table.score_best.score = $scope.general_table[i].score_best;
+          $scope.general_table.score_best.image = $scope.general_table[i].image;
+        }
+
+        if ($scope.general_table.score_worst.score > $scope.general_table[i].score_worst){
+          $scope.general_table.score_worst.name = $scope.general_table[i].name;
+          $scope.general_table.score_worst.score = $scope.general_table[i].score_worst;
+          $scope.general_table.score_worst.image = $scope.general_table[i].image;
+        }
       }
       console.log('Clasificación General', $scope.general_table);
     });

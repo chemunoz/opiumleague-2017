@@ -27,6 +27,7 @@
           return acum
         })));
       }
+
       let chart = c3.generate({
         bindto: '#chart_jornada',
         data: {
