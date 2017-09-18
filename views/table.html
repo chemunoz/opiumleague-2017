@@ -97,26 +97,6 @@
     </section>
 
 
-    <!-- Best/Worst Score -->
-    <section class="section has-text-centered" ng-controller="TableController as table">
-      <div class="subtitle has-text-centered">MEJOR / PEOR CLASIFICACION DE LA LIGA</div>
-      <div class="columns">
-        <div class="column">
-          <div>Mejor Jornada: </div>
-          <div>{{general_table.score_best.name}}: {{general_table.score_best.score}} puntos</div>
-          <img ng-src="{{general_table.score_best.image}}" class="foto" />
-        </div>
-        <div class="column">
-          <div>Peor Jornada: </div>
-          <div>{{general_table.score_worst.name}}: {{general_table.score_worst.score}} puntos</div>
-          <img ng-src="{{general_table.score_worst.image}}" class="foto" />
-        </div>
-      </div>
-      <span id="table_jornada" class="has-text-centered" ng-repeat="jornada in jornadas_table" ng-show="jornada[0].points" ng-cloak>
-      </span>
-    </section>
-
-
 
     <!-- Match-day Tables -->
     <section class="section has-text-centered" ng-controller="TableController as table">

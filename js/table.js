@@ -88,13 +88,13 @@
         $scope.general_table[i].num_jornadas = $scope.general_table[i].points_jornadas.filter((value)=>{return value !== 0;}).length;
 
         //Best, Worst for the whole season
-        console.log(`Almacenado: ${$scope.general_table.score_best.score}, Actual: ${$scope.general_table[i].score_best}`);
+        //Best
         if ($scope.general_table.score_best.score < $scope.general_table[i].score_best){
           $scope.general_table.score_best.name = $scope.general_table[i].name;
           $scope.general_table.score_best.score = $scope.general_table[i].score_best;
           $scope.general_table.score_best.image = $scope.general_table[i].image;
         }
-
+        //Worst
         if ($scope.general_table.score_worst.score > $scope.general_table[i].score_worst){
           $scope.general_table.score_worst.name = $scope.general_table[i].name;
           $scope.general_table.score_worst.score = $scope.general_table[i].score_worst;

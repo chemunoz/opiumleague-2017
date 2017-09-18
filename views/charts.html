@@ -58,6 +58,24 @@
       </div>
     </section>
 
+    <!-- Best/Worst Score -->
+    <section class="section has-text-centered" ng-controller="TableController as table">
+      <div class="subtitle has-text-centered">MEJOR / PEOR CLASIFICACION DE LA LIGA</div>
+      <div class="columns">
+        <div class="column">
+          <div><i class="fa fa-trophy" aria-hidden="true"></i> Mejor Jornada: </div>
+          <div>{{general_table.score_best.name}}: {{general_table.score_best.score}} puntos</div>
+          <img ng-src="{{general_table.score_best.image}}" class="foto" />
+        </div>
+        <div class="column">
+          <div><i class="fa fa-trophy" aria-hidden="true"></i> Peor Jornada: </div>
+          <div>{{general_table.score_worst.name}}: {{general_table.score_worst.score}} puntos</div>
+          <img ng-src="{{general_table.score_worst.image}}" class="foto" />
+        </div>
+      </div>
+      <span id="table_jornada" class="has-text-centered" ng-repeat="jornada in jornadas_table" ng-show="jornada[0].points" ng-cloak>
+      </span>
+    </section>
 
     <!-- <p class="subtitle has-text-centered">PRÓXIMAMENTE ...</p>
     <p class="has-text-centered"><img src="/img/charts.png" alt=""></p> -->
@@ -71,6 +89,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
     <script src="../js/app.js"></script>
+    <script src="../js/table.js"></script>
     <script src="../js/charts.js"></script>
   </body>
 </html>
