@@ -1,0 +1,74 @@
+/* TAGS */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+div{
+  font-family: $font-family;
+}
+
+p{
+  font-family: $font-family;
+  text-align: justify;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+section {
+  padding: 0.5rem 1.5rem !important;
+}
+
+table{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+}
+table th, table td{
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+li, ol, ul {
+  margin: 0 auto;
+}
+
+
+
+
+img.redonda {
+  @include border-radius(15px);
+}
+img.foto {
+  width: 200px;
+  /* height: 200px; */
+  /* border: dotted 2px; */
+  @include border-radius(50%);
+  vertical-align: middle;
+}
+img.foto-table {
+  width: 40px;
+  height: 40px;
+  /* border: dotted 2px; */
+  @include border-radius(150px);
+  vertical-align: middle;
+}
+img.arrow{
+  width: 35px;
+}
+
+
+
+/*BULMA Class*/
+.subtitle {
+  font-size: 1.1rem;
+}

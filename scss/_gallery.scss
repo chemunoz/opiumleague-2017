@@ -1,0 +1,17 @@
+/*GALERIA*/
+#contenedor{
+  width: 95%;
+  @include border-radius(15px);
+  background-color: $color-futmondo;
+  margin: 0px auto;
+  text-align: center;
+  padding: 5px;
+}
+
+.subcontenedor{
+  background-color: #FFF;
+  text-align: center;
+  display: inline-table;
+  @include border-radius(15px);
+  margin: 5px;
+}

@@ -1,0 +1,20 @@
+/*GRAFICOS*/
+#contenedor-graficos{
+  width: 95%;
+  @include border-radius(15px);
+  margin: 0px auto;
+  text-align: center;
+  padding: 5px;
+}
+
+.c3 text {
+  font-size: 13px;
+}
+
+.fa-exchange{
+  @include transform(90deg);
+}
+
+.fa-trophy-down{
+  @include transform(-180deg);
+}

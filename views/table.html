@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html ng-app="opiumLeage">
+<!doctype html>
+<html lang="es" ng-app="opiumLeage">
   <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="/img/icon-iphone.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/icon-ipad.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/icon-iphone4.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" sizes="128x128" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon" href="../img/icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/icon-iphone4.png" />
     <title>Opium League :: Clasificaciones</title>
+
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.0/css/bulma.min.css" type="text/css" >
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -20,14 +22,120 @@
       ga('create', 'UA-92241042-1', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <style media="screen">
+      /* CABECERA */
+      #cabecera {
+        width: 95%;
+        background-color: none;
+        text-align: left;
+        margin: 0px auto; }
+
+      .apps-icons {
+        float: right;
+        width: 35%;
+        padding-top: 10px;
+        text-align: right; }
+
+      .apps-icons img {
+        width: 120px;
+        /*height: 35px;*/ }
+
+      /* MENUS */
+      @media (max-width: 992px) {
+        .nav-fill .nav-item {
+          -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+          text-align: left;
+        }
+      }
+
+      /* CLASIFICACIONES */
+      tr.champions {
+        background-color: #FFFF00;
+        color: #000; }
+
+      tr.uefa {
+        background-color: #FFC000;
+        color: #000; }
+
+      tr.intertoto {
+        background-color: #E26B0A;
+        color: #000; }
+
+      tr.resto {
+        background-color: #FFF;
+        color: #000 !important; }
+
+      tr.descenso {
+        background-color: #F00;
+        color: #FFF !important;
+      }
+
+      td.left-table {
+        text-align: left !important; }
+
+      td.right-table {
+        text-align: right !important; }
+
+      tbody tr:hover {
+        background-color: #0F0 !important;
+        color: #000 !important; }
+
+      tbody tr th:hover {
+        background-color: #FFF !important;
+        color: #000 !important; }
+
+
+      .historic_table table tbody thead,
+      .historic_table table thead {
+        font-size: 1rem; }
+
+      img.foto-table {
+        width: 2.5rem;
+        height: 2.5rem;
+        /* border: dotted 2px; */
+        -webkit-border-radius: 150px;
+        -moz-border-radius: 150px;
+        -ms-border-radius: 150px;
+        border-radius: 150px;
+        vertical-align: middle; }
+
+      img.arrow {
+        width: 2rem; }
+
+      @media (min-width: 576px) {
+        .historic_table {
+          display: inline-block;
+          margin: 1px 3px 10px 3px;
+          border: 1px solid;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          border-radius: 5px; }
+      }
+      @media (min-width: 992px) {
+        img.foto-table {
+          width: 3rem;
+          height: 3rem;
+          /* border: dotted 2px; */
+          -webkit-border-radius: 150px;
+          -moz-border-radius: 150px;
+          -ms-border-radius: 150px;
+          border-radius: 150px;
+          vertical-align: middle; }
+      }
+    </style>
   </head>
 
-  <body>
+
+  <body ng-controller="TableController">
 
     <!-- Header  -->
-    <header>
-      <div id="cabecera"> <a href="/"><img src="../img/logo_futmondo.jpg" alt="Logo"/></a>&nbsp;
-        <div class="app">
+    <header style="background-color: #FFF">
+      <div id="cabecera" class="d-none d-lg-block"> <a href="/"><img src="../img/banner_opium.png" alt="Logo"/></a>&nbsp;
+        <div class="apps-icons">
           <a href="https://itunes.apple.com/es/app/futmondo-manager-de-futbol/id663530434?mt=8" title="Ir a Apple Store" target="_blank">
           <img src="../img/ios_footer.png"></a>
           <a href="https://play.google.com/store/apps/details?id=com.mondosports.futmondo" title="Ir a Google Play" target="_blank">
@@ -37,96 +145,214 @@
     </header>
 
 
-    <!-- Menu -->
-    <div class="tabs">
-      <ul>
-        <li class="is-active"><a href="/">XV OPIUM LEAGUE</a></li>
-        <li><a href="/views/table.html">Clasificaciones</a></li>
-        <li><a href="/views/charts.html">Gráficos</a></li>
-        <li><a href="/views/rules.html">Reglamento</a></li>
-        <li><a href="/views/gallery.html">Participantes</a></li>
-        <li><a href="/views/history.html">Historia</a></li>
-      </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <a class="navbar-brand d-lg-none d-block" href="/">
+        <img src="../img/banner_opium.png" height="40" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav nav-fill w-100">
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <span><i class="fa fa-home" aria-hidden="true"></i></span>
+              <span>Home <span class="sr-only">(current)</span></span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/views/table.html">
+              <span><i class="fa fa-table" aria-hidden="true"></i></span>
+              <span>Clasificación</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/charts.html">
+              <span><i class="fa fa-area-chart" aria-hidden="true"></i></span>
+              <span>Gráficos</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/cup.html">
+              <span><i class="fa fa-trophy" aria-hidden="true"></i></span>
+              <span>Copa</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/rules.html">
+              <span><i class="fa fa-file-text" aria-hidden="true"></i></span>
+              <span>Reglamento</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/gallery.html">
+              <span><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+              <span>Participantes</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/history.html">
+              <span><i class="fa fa-university" aria-hidden="true"></i></i></span>
+              <span>Historia</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="h3 text-center my-3">CLASIFICACIONES</div>
+
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs nav-fill my-3" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+          <span><i class="fa fa-table" aria-hidden="true"></i></span>
+          <span class="d-none d-md-inline">Clasificación General</span>
+          <span class="d-sm-inline d-md-none">Cla. Gral.</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+          <span class="icon is-small"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+          <span class="d-none d-md-inline">Histórico General</span>
+          <span class="d-sm-inline d-md-none">His. Gral.</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+          <span class="icon is-small"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+          <span class="d-none d-md-inline">Histórico Jornadas</span>
+          <span class="d-sm-inline d-md-none">His. Jor.</span>
+        </a>
+      </li>
+    </ul>
+
+
+
+    <!-- TABLES -->
+    <div class="tab-content" id="myTabContent">
+      <!-- General Table -->
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <section class="table-responsive">
+          <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th class="text-center align-middle"><abbr title="Posicion">Pos</abbr></th>
+                <th class="text-center align-middle"><abbr title="Sube/baja posición">#####</abbr></th>
+                <th class="text-center align-middle">Equipo</th>
+                <th class="text-center align-middle d-none d-md-table-cell">Jugador</th>
+                <th class="text-center align-middle d-none d-sm-table-cell"><abbr title="Jornada">Jor</abbr></th>
+                <th class="text-center align-middle"><abbr title="Puntos">Ptos</abbr></th>
+                <th class="text-center align-middle d-none d-sm-table-cell"><abbr title="Mejor Jornada">Mejor</abbr></th>
+                <th class="text-center align-middle d-none d-sm-table-cell"><abbr title="Peor Jornada">Peor</abbr></th>
+                <th class="text-center align-middle d-none d-sm-table-cell"><abbr title="Media Puntos/Jornada">Media</abbr></th>
+              </tr>
+            </thead>
+            <tfoot class="thead-light">
+              <tr>
+                <th class="text-center align-middle"><abbr title="Posicion">Pos</abbr></th>
+                <th class="text-center align-middle"><abbr title="Sube/baja posición">#####</abbr></th>
+                <th class="text-center align-middle">Equipo</th>
+                <th class="text-center align-middle d-none d-md-table-cell">Jugador</th>
+                <th class="text-center align-middle d-none d-sm-table-cell"><abbr title="Jornada">Jor</abbr></th>
+                <th class="text-center align-middle"><abbr title="Puntos">Ptos</abbr></th>
+                <th class="text-center align-middle d-none d-sm-table-cell"><abbr title="Mejor Jornada">Mejor</abbr></th>
+                <th class="text-center align-middle d-none d-sm-table-cell"><abbr title="Peor Jornada">Peor</abbr></th>
+                <th class="text-center align-middle d-none d-sm-table-cell"><abbr title="Media Puntos/Jornada">Media</abbr></th>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr ng-repeat="player in general_table" ng-cloak ng-class="{'champions': player.position_general < 5,
+                          'uefa': (player.position_general == 5 || player.position_general == 6),
+                          'intertoto': player.position_general == 7,
+                          'descenso': player.position_general > general_table.length - 3}">
+                <th class="text-center align-middle">{{player.position_general}}</th>
+                <td class="text-center align-middle"><img ng-src="{{player.updown}}" class="arrow" /> {{player.updown_num}}</td>
+                <td class="align-middle"><a href="profile.html?id={{player.id}}" class="text-dark"><img ng-src="{{player.shield}}" class="foto-table" /> {{player.team}}</a></td>
+                <td class="align-middle d-none d-md-table-cell"><a href="/profile.html?id={{player.id}}" class="text-dark"><img ng-src="{{player.image}}" class="foto-table" /> {{player.name}}</a></td>
+                <td class="text-center align-middle d-none d-sm-table-cell">{{player.num_jornadas}}</td>
+                <td class="text-center align-middle font-weight-bold">{{player.score_general}}</td>
+                <td class="text-center align-middle d-none d-sm-table-cell">{{player.score_best}}</td>
+                <td class="text-center align-middle d-none d-sm-table-cell">{{player.score_worst}}</td>
+                <td class="text-center align-middle d-none d-sm-table-cell">{{player.score_average}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <!-- Match-day Tables -->
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <section class="table-responsive text-center">
+          <div class="text-center">HISTÓRICO GENERAL</div>
+          <span class="historic_table" ng-repeat="jornada in historic_general" ng-show="jornada[0].id" ng-cloak>
+            <div class="my-3">
+              <i class="fa fa-futbol-o" aria-hidden="true"></i> {{jornada.jor_name}}
+            </div>
+            <table class="table mt-3">
+              <thead class="thead-light">
+                <tr>
+                  <th class="text-center align-middle"><abbr title="Posicion">Pos</abbr></th>
+                  <th class="text-center align-middle">Equipo</th>
+                  <th class="text-center align-middle"><abbr title="Puntos">Ptos</abbr></th>
+                </tr>
+              </thead>
+              <tbody ng-repeat="player_jornada in jornada">
+               <tr ng-class="{'champions': player_jornada.position_general < 5,
+                           'uefa': (player_jornada.position_general == 5 || player_jornada.position_general == 6),
+                           'intertoto': player_jornada.position_general == 7,
+                           'descenso': player_jornada.position_general > jornada.length - 3}">
+                  <th class="text-center align-middle">{{player_jornada.position_general}}</th>
+                  <td class="text-left align-middle"><a href="profile.html?id={{player_jornada.id}}"><img ng-src="{{player_jornada.shield}}" class="foto-table" /> {{player_jornada.team}}</a></td>
+                  <td class="text-center align-middle font-weight-bold">{{player_jornada.score_general}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </span>
+        </section>
+      </div>
+
+
+      <!-- Match-day Tables -->
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <section class="table-responsive text-center">
+          <div class="text-center">HISTÓRICO DE JORNADAS</div>
+          <span class="historic_table" ng-repeat="jornada in historic_jornada" ng-show="jornada[0].id" ng-cloak>
+            <div class="my-3">
+              <i class="fa fa-futbol-o" aria-hidden="true"></i> {{jornada.jor_name}}
+            </div>
+            <table class="table mt-3">
+              <thead class="thead-light">
+                <tr>
+                  <th class="text-center align-middle"><abbr title="Posicion">Pos</abbr></th>
+                  <th class="text-center align-middle">Equipo</th>
+                  <th class="text-center align-middle"><abbr title="Puntos">Ptos</abbr></th>
+                </tr>
+              </thead>
+              <tbody ng-repeat="player_jornada in jornada">
+                <tr ng-class="{'champions': player_jornada.position_jornada == 1,
+                               'descenso': player_jornada.position_jornada == jornada.length}">
+                  <th class="text-center align-middle">{{player_jornada.position_jornada}}</th>
+                  <td class="text-left align-middle"><a href="profile.html?id={{player_jornada.id}}"><img ng-src="{{player_jornada.shield}}" class="foto-table" /> {{player_jornada.team}}</a></td>
+                  <td class="text-center align-middle font-weight-bold">{{player_jornada.score_jornada}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </span>
+        </section>
+      </div>
+
+
     </div>
 
 
-    <!-- General Table -->
-    <section class="section">
-      <div class="subtitle has-text-centered">CLASIFICACIÓN GENERAL</div>
-      <table class="table" ng-controller="TableController">
-        <thead>
-          <tr>
-            <th>Posición</th>
-            <th>Equipo</th>
-            <th>Jugador</th>
-            <th>Jornadas</th>
-            <th>Puntos</th>
-            <th>Mejor</th>
-            <th>Peor</th>
-            <th>Media</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <th>Posición</th>
-            <th>Equipo</th>
-            <th>Jugador</th>
-            <th>Jornadas</th>
-            <th>Puntos</th>
-            <th>Mejor</th>
-            <th>Peor</th>
-            <th>Media</th>
-          </tr>
-        </tfoot>
-        <tbody ng-repeat="player in general_table" ng-cloak>
-          <tr ng-class="{'champions': player.order < 5,
-                      'uefa': (player.order == 5 || player.order == 6),
-                      'intertoto': player.order == 7,
-                      'descenso': player.order > general_table.length - 3}">
-            <td>{{player.position}}</td>
-            <td class="left-table">{{player.team}}</td>
-            <td class="left-table"><img ng-src="{{player.image}}" class="foto-table" /> {{player.name}}</td>
-            <td>{{player.num_jornadas}}</td>
-            <td>{{player.score_total}}</td>
-            <td>{{player.score_best}}</td>
-            <td>{{player.score_worst}}</td>
-            <td>{{player.score_average}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-
-
-    <!-- Match-day Tables -->
-    <section class="section has-text-centered" ng-controller="TableController as table">
-      <div class="subtitle has-text-centered">CLASIFICACIÓN POR JORNADA</div>
-      <span id="table_jornada" class="has-text-centered" ng-repeat="jornada in jornadas_table" ng-show="jornada[0].points" ng-cloak>
-        <div class="">
-          <i class="fa fa-futbol-o" aria-hidden="true"></i> {{jornada.name}}
-        </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Pos</th>
-              <th>Equipo</th>
-              <th>Puntos</th>
-            </tr>
-          </thead>
-          <tbody ng-repeat="player_jornada in jornada">
-            <tr ng-class="{'champions': player_jornada.points == jornada.best_score,
-                           'descenso': player_jornada.points == jornada.worst_score}">
-              <td>{{player_jornada.position}}</td>
-              <td class="left-table">{{player_jornada.team}}</td>
-              <td>{{player_jornada.points}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </span>
-    </section>
-
-
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/table.js"></script>

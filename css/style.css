@@ -1,216 +1,358 @@
-@charset "utf-8";
+/* TAGS */
+body, html {
+  height: 100%;
+  margin: 0; }
 
-div{
-  font-family: 'Roboto', sans-serif;
-}
+div {
+  font-family: "Roboto", sans-serif; }
 
-p{
-  font-family: 'Roboto', sans-serif;
-  text-align: justify;
-}
+p {
+  font-family: "Roboto", sans-serif;
+  text-align: justify; }
 
-a{
+a {
   color: #000;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
-ul{
-  list-style: none;
-}
+ul {
+  list-style: none; }
 
 section {
-  padding: 0.5rem 1.5rem !important;
-}
+  padding: 0.5rem 1.5rem !important; }
 
+table {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  font-weight: bold;
+  text-align: center; }
+
+table th, table td {
+  vertical-align: middle !important;
+  text-align: center !important; }
+
+li, ol, ul {
+  margin: 0 auto; }
 
 img.redonda {
-  border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
-}
+  -ms-border-radius: 15px;
+  border-radius: 15px; }
 
 img.foto {
   width: 200px;
-  height: 200px;
+  /* height: 200px; */
   /* border: dotted 2px; */
-  border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-}
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  vertical-align: middle; }
 
 img.foto-table {
   width: 40px;
   height: 40px;
   /* border: dotted 2px; */
-  border-radius: 150px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
-  vertical-align: middle;
-}
+  -ms-border-radius: 150px;
+  border-radius: 150px;
+  vertical-align: middle; }
 
-table{
-  width: 90%;
-  margin: 0 auto;
-  position: relative;
-  font-weight: bold;
-  text-align: center;
-}
-table th, table td{
-  vertical-align: middle !important;
-  text-align: center !important;
-}
+img.arrow {
+  width: 35px; }
 
-.subtitle
-
+/*BULMA Class*/
+.subtitle {
+  font-size: 1.1rem; }
 
 /*CABECERA*/
-#cabecera{
+#cabecera {
   width: 95%;
   background-color: none;
   text-align: left;
-  margin: 0px auto;
-}
+  margin: 0px auto; }
 
-.app {
+.apps-icons {
   float: right;
   width: 35%;
   padding-top: 10px;
-  text-align: right;
-}
+  text-align: right; }
+  .apps-icons img {
+    width: 120px;
+    /*height: 35px;*/ }
 
-.app img{
-  width: 150px;
-  /*height: 35px;*/
-}
+/* INDEX */
+.main-title {
+  color: #FFF;
+  font-size: 3em;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px; }
 
-
-.titulo{
-  padding: 5px;
-  border: solid 1px;
-  border-radius: 10px;
-  background: darkgrey;
-  margin: 10px 50px;
-}
-
-
-/*PATROCINADORES*/
-#patrocinadores{
+/* Banner Sponsors */
+#patrocinadores {
   float: left;
   width: 100%;
   margin: 20px auto;
   text-align: center;
   border-radius: 0px 0px 10px 10px;
-}
+  position: absolute;
+  bottom: 0px; }
+  #patrocinadores img {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px; }
 
-#patrocinadores img{
-   border-radius: 5px;
-}
+.bg {
+  /* The image used */
+  background-image: url("../img/background.png");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
+/* CLASIFICACIONES */
+tr.champions {
+  background-color: #FFFF00;
+  color: #000; }
 
-/*CLASIFICACION*/
-tr.champions{
-    background-color: #FFFF00;
-    color: #000;
-}
-tr.uefa{
-    background-color: #FFC000;
-    color: #000;
-}
-tr.intertoto{
-    background-color: #E26B0A;
-    color: #000;
-}
-tr.resto{
-    background-color: #FFF;
-    color: #000;
-}
-tr.descenso{
-    background-color: #F00;
-    color: #FFF;
-}
+tr.uefa {
+  background-color: #FFC000;
+  color: #000; }
 
-td.left-table{
-    text-align: left !important;
-}
-tbody tr:hover{
+tr.intertoto {
+  background-color: #E26B0A;
+  color: #000; }
+
+tr.resto {
+  background-color: #FFF;
+  color: #000; }
+
+tr.descenso {
+  background-color: #F00;
+  color: #FFF; }
+
+td.left-table {
+  text-align: left !important; }
+
+td.right-table {
+  text-align: right !important; }
+
+tbody tr:hover {
   background-color: #0F0 !important;
-  color: #000 !important;
-}
+  color: #000 !important; }
+tbody tr th:hover {
+  background-color: #FFF !important;
+  color: #000 !important; }
 
 /*Por jornada*/
-#table_jornada{
+#table_jornada {
   background-color: #ABC;
   display: inline-block;
   margin: 1px 3px 10px 3px;
   padding: 0px;
-  border-radius: 5px;
-}
-#table_jornada table{
-  width: 98%;
-}
-#table_jornada table tbody,
-#table_jornada table thead{
-  font-size: 0.7em;
-}
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px; }
+  #table_jornada table {
+    width: 98%; }
+  #table_jornada table tbody thead,
+  #table_jornada table thead {
+    font-size: 0.7em; }
+
+/*CUP*/
+.cup-table {
+  width: 85%; }
+  .cup-table td {
+    width: 33%; }
+  .cup-table th {
+    text-align: left !important; }
+
+#tab_container .container_item {
+  display: none; }
+#tab_container .container_item.is-active {
+  display: block; }
 
 /*GALERIA*/
-#contenedor{
+#contenedor {
   width: 95%;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
   border-radius: 15px;
-  background-color: #669900;
+  background-color: #2FB101;
   margin: 0px auto;
   text-align: center;
-  padding: 5px;
-}
+  padding: 5px; }
 
-.subcontenedor{
+.subcontenedor {
   background-color: #FFF;
   text-align: center;
   display: inline-table;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
   border-radius: 15px;
-  margin: 5px;
-}
-
+  margin: 5px; }
 
 /*REGLAMENTO*/
-#contenedor-reglas{
+#contenedor-reglas {
   width: 90%;
   height: 100%;
-  background-color: #669900;
+  background-color: #2FB101;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
   border-radius: 10px;
   padding: 20px;
-  margin: 0px auto;
-}
+  margin: 0px auto; }
+  #contenedor-reglas p {
+    /*margin: 1px 1px 15px 1px;*/
+    color: #FFF; }
+  #contenedor-reglas ol {
+    margin: 1px 1px 1px 30px; }
 
-#contenedor-reglas p{
-  /*margin: 1px 1px 15px 1px;*/
-  color: #FFF;
-}
-
-#contenedor-reglas ol{
-  margin: 1px 1px 1px 30px;
-}
-
-.regla-titulo{
+.regla-titulo {
   font-weight: bold;
   font-style: italic;
   color: #000 !important;
-  margin: 10px 1px 1px 1px;
-}
+  margin: 10px 1px 1px 1px; }
 
-.regla-texto{
-  margin: 1px 1px 1px 30px;
-}
+.regla-texto {
+  margin: 1px 1px 1px 30px; }
 
 /*GRAFICOS*/
-#contenedor-graficos{
+#contenedor-graficos {
   width: 95%;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
   border-radius: 15px;
   margin: 0px auto;
   text-align: center;
-  padding: 5px;
-}
+  padding: 5px; }
 
 .c3 text {
-  font-size: 13px;
-}
+  font-size: 13px; }
+
+.fa-exchange {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.fa-trophy-down {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
+
+/*HISTORIA*/
+.fila-par {
+  background: #EEE; }
+
+.fila-impar {
+  background: #DDD; }
+
+.fa-trophy {
+  vertical-align: middle;
+  font-size: 2em; }
+
+.color-ligafantastica {
+  color: #00A0E3; }
+
+.color-ligafutmondo {
+  color: #2FB101; }
+
+.color-mundial {
+  color: #FFBF00; }
+
+.color-eurocopa {
+  color: #C0C0C0; }
+
+.history-legend {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  padding: 1.25rem 0;
+  position: relative;
+  text-align: center; }
+
+/* PERFIL */
+.c3-line {
+  stroke-width: 5px; }
+
+#curve_chart {
+  width: 100%;
+  height: 500px; }
+
+.container.profile {
+  margin-top: 50px; }
+
+.profile-heading {
+  margin: 20px 0;
+  padding-bottom: 30px; }
+  .profile-heading .name {
+    border-right: 1px solid #f1f1f1;
+    margin: -30px 0;
+    padding: 40px 30px 0 30px; }
+  .profile-heading .followers,
+  .profile-heading .following {
+    border-right: 1px solid #f1f1f1;
+    margin: -30px 0;
+    padding: 70px 30px; }
+  .profile-heading .likes {
+    margin: -30px 0;
+    padding: 70px 30px; }
+  .profile-heading .stat-key {
+    font-size: 20px;
+    font-weight: 200; }
+  .profile-heading .stat-val {
+    font-size: 35px;
+    font-weight: bold; }
+
+.likes {
+  margin: -30px 0;
+  padding: 70px 30px; }
+
+.profile-options {
+  background-color: #f1f1f1;
+  margin: -20px 0 20px 0; }
+  .profile-options .link a {
+    padding: 18px;
+    font-size: 18px; }
+  .profile-options .link .icon {
+    font-size: 16px;
+    padding-top: 2px; }
+
+.tagline {
+  padding: 20px 0;
+  font-size: 16px;
+  line-height: 1.4; }
+
+.avatar {
+  float: right; }
+
+.follow {
+  float: right; }
+
+.avatar img {
+  width: 256px;
+  border-radius: 200px; }
+
+p.title.is-bold {
+  font-weight: bold; }
+
+.card .timestamp {
+  float: right;
+  color: #bbb; }
+
+/*# sourceMappingURL=style.css.map */

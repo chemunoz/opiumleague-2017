@@ -1,0 +1,36 @@
+/*HISTORIA*/
+.fila-par{
+  background: #EEE;
+}
+
+.fila-impar{
+  background: #DDD;
+}
+
+.fa-trophy{
+  vertical-align: middle;
+  font-size: 2em;
+}
+
+.color-ligafantastica{
+  color: $color-ligafantastica;
+}
+
+.color-ligafutmondo{
+  color: $color-futmondo;
+}
+
+.color-mundial{
+  color: $color-mundial;
+}
+
+.color-eurocopa{
+  color: $color-eurocopa;
+}
+
+.history-legend{
+  @include border-radius(3px);
+  padding: 1.25rem 0;
+  position: relative;
+  text-align: center;
+}

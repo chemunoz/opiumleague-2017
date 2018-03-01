@@ -1,0 +1,27 @@
+/*REGLAMENTO*/
+#contenedor-reglas{
+  width: 90%;
+  height: 100%;
+  background-color: $color-futmondo;
+  @include border-radius(10px);
+  padding: 20px;
+  margin: 0px auto;
+  p{
+    /*margin: 1px 1px 15px 1px;*/
+    color: #FFF;
+  }
+  ol{
+    margin: 1px 1px 1px 30px;
+  }
+}
+
+.regla-titulo{
+  font-weight: bold;
+  font-style: italic;
+  color: #000 !important;
+  margin: 10px 1px 1px 1px;
+}
+
+.regla-texto{
+  margin: 1px 1px 1px 30px;
+}

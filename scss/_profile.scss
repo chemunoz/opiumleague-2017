@@ -1,0 +1,88 @@
+/* PERFIL */
+
+.c3-line {
+  stroke-width: 5px;
+}
+
+#curve_chart{
+  width: 100%;
+  height: 500px;
+}
+
+
+
+
+
+.container.profile {
+  margin-top:50px;
+}
+
+.profile-heading {
+  margin: 20px 0;
+  padding-bottom: 30px;
+  .name {
+    border-right: 1px solid #f1f1f1;
+    margin:-30px 0;
+    padding: 40px 30px 0 30px;
+  }
+  .followers,
+  .following {
+    border-right: 1px solid #f1f1f1;
+    margin:-30px 0;
+    padding: 70px 30px;
+  }
+  .likes {
+    margin:-30px 0;
+    padding: 70px 30px;
+  }
+  .stat-key {
+    font-size: 20px;
+    font-weight: 200;
+  }
+  .stat-val {
+    font-size: 35px;
+    font-weight: bold;
+  }
+}
+
+.likes {
+  margin:-30px 0;
+  padding: 70px 30px;
+}
+
+
+.profile-options {
+  background-color: #f1f1f1;
+  margin:-20px 0 20px 0;
+  .link a {
+    padding:18px;
+    font-size: 18px;
+  }
+  .link .icon {
+    font-size: 16px;
+    padding-top:2px;
+  }
+}
+
+.tagline {
+  padding:20px 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.avatar {
+  float: right;
+}
+.follow {
+  float: right;
+}
+.avatar img {
+  width: 256px;
+  border-radius: 200px;
+}
+p.title.is-bold {
+  font-weight: bold;
+}
+.card .timestamp {
+  float: right;
+  color: #bbb;
+}

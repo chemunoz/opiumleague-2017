@@ -7,10 +7,10 @@
     //Generate Gallery
     $scope.$on('playersLoaded', function(event){
       //Use angular.copy because "=" pass data by reference
-      $scope.players_gallery = angular.copy($scope.players);
+      $scope.players_gallery = angular.copy($rootScope.players);
 
-      //Sort
-      $scope.players_gallery.sort(function(a, b){
+      // Sort by player name
+      $scope.players_name = $scope.players_gallery.sort(function(a, b){
         //note the minus before -cmp, for descending order
         return cmp(
           [cmp(a.name, b.name)],

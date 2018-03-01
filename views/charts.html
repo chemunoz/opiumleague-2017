@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html ng-app="opiumLeage">
+<html lang="es" ng-app="opiumLeage">
   <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" sizes="128x128" href="../img/favicon.ico" />
     <link rel="apple-touch-icon" href="/img/icon-iphone.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/img/icon-ipad.png" />
     <link rel="apple-touch-icon" sizes="114x114" href="/img/icon-iphone4.png" />
     <title>Opium League :: Gráficos</title>
+
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.0/css/bulma.min.css" type="text/css" >
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Graficos -->
+    <link href="../css/c3.min.css" rel="stylesheet">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -21,14 +28,83 @@
       ga('create', 'UA-92241042-1', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <style>
+    /* CABECERA */
+    #cabecera {
+      width: 95%;
+      background-color: none;
+      text-align: left;
+      margin: 0px auto; }
+
+    .apps-icons {
+      float: right;
+      width: 35%;
+      padding-top: 10px;
+      text-align: right; }
+
+    .apps-icons img {
+      width: 120px;
+      /*height: 35px;*/ }
+
+
+      /* MENUS */
+      @media (max-width: 992px) {
+        .nav-fill .nav-item {
+          -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+          text-align: left;
+        }
+      }
+
+
+      /*GRAFICOS*/
+      #contenedor-graficos {
+        width: 95%;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        border-radius: 15px;
+        margin: 0px auto;
+        text-align: center;
+        padding: 5px; }
+
+      .c3 text {
+        font-size: 13px; }
+
+      .fa-exchange {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg); }
+
+      .fa-trophy-down {
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        transform: rotate(-180deg); }
+
+      img.foto {
+        width: 200px;
+        /* height: 200px; */
+        /* border: dotted 2px; */
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        vertical-align: middle; }
+    </style>
   </head>
 
   <body>
 
     <!-- Header  -->
-    <header>
-      <div id="cabecera"> <a href="/"><img src="../img/logo_futmondo.jpg" alt="Logo"/></a>&nbsp;
-        <div class="app">
+    <header style="background-color: #FFF">
+      <div id="cabecera" class="d-none d-lg-block"> <a href="/"><img src="../img/banner_opium.png" alt="Logo"/></a>&nbsp;
+        <div class="apps-icons">
           <a href="https://itunes.apple.com/es/app/futmondo-manager-de-futbol/id663530434?mt=8" title="Ir a Apple Store" target="_blank">
           <img src="../img/ios_footer.png"></a>
           <a href="https://play.google.com/store/apps/details?id=com.mondosports.futmondo" title="Ir a Google Play" target="_blank">
@@ -38,58 +114,163 @@
     </header>
 
 
-    <!-- Menu -->
-    <div class="tabs">
-      <ul>
-        <li class="is-active"><a href="/">XV OPIUM LEAGUE</a></li>
-        <li><a href="/views/table.html">Clasificaciones</a></li>
-        <li><a href="/views/charts.html">Gráficos</a></li>
-        <li><a href="/views/rules.html">Reglamento</a></li>
-        <li><a href="/views/gallery.html">Participantes</a></li>
-        <li><a href="/views/history.html">Historia</a></li>
-      </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <a class="navbar-brand d-lg-none d-block" href="/">
+        <img src="../img/banner_opium.png" height="40" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav nav-fill w-100">
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <span><i class="fa fa-home" aria-hidden="true"></i></span>
+              <span>Home <span class="sr-only">(current)</span></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/table.html">
+              <span><i class="fa fa-table" aria-hidden="true"></i></span>
+              <span>Clasificación</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/views/charts.html">
+              <span><i class="fa fa-area-chart" aria-hidden="true"></i></span>
+              <span>Gráficos</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/cup.html">
+              <span><i class="fa fa-trophy" aria-hidden="true"></i></span>
+              <span>Copa</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/rules.html">
+              <span><i class="fa fa-file-text" aria-hidden="true"></i></span>
+              <span>Reglamento</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/gallery.html">
+              <span><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+              <span>Participantes</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/views/history.html">
+              <span><i class="fa fa-university" aria-hidden="true"></i></i></span>
+              <span>Historia</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="h3 text-center my-3">GRÁFICOS</div>
+
+
+    <span class="has-text-centered" ng-controller="ChartsController">
+
+    <!-- GRAFICOS -->
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-line-chart" aria-hidden="true"></i> EVOLUCIÓN POR JORNADA
+      </div>
+      <div class="card-body">
+        <div id="chart_position"></div>
+        <div id="chart_evolution"></div>
+      </div>
     </div>
 
-    <section class==section>
-      <div class="subtitle has-text-centered">GRÁFICOS</div>
-      <div id="contenedor-graficos" ng-controller="ChartsController">
-        <div class="subtitle has-text-centered">Evolucion por Jornada</div>
-        <div id="chart_jornada"></div>
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-bar-chart" aria-hidden="true"></i> GANADORES DE JORNADA
       </div>
-    </section>
-
-    <!-- Best/Worst Score -->
-    <section class="section has-text-centered" ng-controller="TableController as table">
-      <div class="subtitle has-text-centered">MEJOR / PEOR CLASIFICACION DE LA LIGA</div>
-      <div class="columns">
-        <div class="column">
-          <div><i class="fa fa-trophy" aria-hidden="true"></i> Mejor Jornada: </div>
-          <div>{{general_table.score_best.name}}: {{general_table.score_best.score}} puntos</div>
-          <img ng-src="{{general_table.score_best.image}}" class="foto" />
-        </div>
-        <div class="column">
-          <div><i class="fa fa-trophy" aria-hidden="true"></i> Peor Jornada: </div>
-          <div>{{general_table.score_worst.name}}: {{general_table.score_worst.score}} puntos</div>
-          <img ng-src="{{general_table.score_worst.image}}" class="foto" />
-        </div>
+      <div class="card-body">
+        <div id="chart_winners"></div>
       </div>
-      <span id="table_jornada" class="has-text-centered" ng-repeat="jornada in jornadas_table" ng-show="jornada[0].points" ng-cloak>
-      </span>
-    </section>
+    </div>
 
-    <!-- <p class="subtitle has-text-centered">PRÓXIMAMENTE ...</p>
-    <p class="has-text-centered"><img src="/img/charts.png" alt=""></p> -->
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-pie-chart" aria-hidden="true"></i> JORNADAS COMO LÍDER
+      </div>
+      <div class="card-body">
+        <div id="chart_top"></div>
+      </div>
+    </div>
 
-    <!-- Load c3.css -->
-    <link href="../css/c3.min.css" rel="stylesheet">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-exchange" aria-hidden="true"></i> MEJOR / PEOR JORNADA DE LA LIGA
+      </div>
+      <div class="card-body">
+        <!-- Best/Worst Score -->
+        <section class="text-center" ng-controller="TableController as table">
+          <div class="row">
+            <div class="col-sm-6">
+              <div><i class="fa fa-trophy" aria-hidden="true"></i> Mejor Jornada: </div>
+              <img ng-src="{{tables.score_best.shield}}" class="foto" />
+              <div>{{tables.score_best.team}}: {{tables.score_best.score}} puntos</div>
+            </div>
+            <div class="col-sm-6">
+              <div><i class="fa fa-trophy fa-trophy-down" aria-hidden="true"></i> Peor Jornada: </div>
+              <img ng-src="{{tables.score_worst.shield}}" class="foto" />
+              <div>{{tables.score_worst.team}}: {{tables.score_worst.score}} puntos</div>
+            </div>
+          </div>
+          <span id="table_jornada" class="text-center" ng-repeat="jornada in jornadas_table" ng-show="jornada[0].points" ng-cloak>
+          </span>
+        </section>
+      </div>
+    </div>
 
-    <!-- Load d3.js and c3.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" charset="utf-8"></script>
-    <script src="../js/c3.min.js"></script>
+    <!-- <span class="card">
+      <div class="card-content">
+        <p class="title is-5"><i class="fa fa-exchange" aria-hidden="true"></i> MEJOR / PEOR JORNADA DE LA LIGA</p>
+      </div>
+      <div class="card-image">
+        <section class="section has-text-centered" ng-controller="TableController as table">
+          <div class="columns">
+            <div class="column">
+              <div><i class="fa fa-trophy" aria-hidden="true"></i> Mejor Jornada: </div>
+              <img ng-src="{{tables.score_best.shield}}" class="foto" />
+              <div>{{tables.score_best.team}}: {{tables.score_best.score}} puntos</div>
+            </div>
+            <div class="column">
+              <div><i class="fa fa-trophy fa-trophy-down" aria-hidden="true"></i> Peor Jornada: </div>
+              <img ng-src="{{tables.score_worst.shield}}" class="foto" />
+              <div>{{tables.score_worst.team}}: {{tables.score_worst.score}} puntos</div>
+            </div>
+          </div>
+          <span id="table_jornada" class="has-text-centered" ng-repeat="jornada in jornadas_table" ng-show="jornada[0].points" ng-cloak>
+          </span>
+        </section>
+      </div>
+    </span> -->
+  </span>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="../js/table.js"></script>
-    <script src="../js/charts.js"></script>
+  <p>&nbsp;</p>
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <!-- Load d3.js and c3.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" charset="utf-8"></script>
+  <script src="../js/c3.min.js"></script>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/table.js"></script>
+  <script src="../js/charts.js"></script>
+
+
   </body>
 </html>

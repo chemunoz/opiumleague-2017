@@ -1,0 +1,62 @@
+/* CLASIFICACIONES */
+tr.champions {
+  background-color: $color-champions;
+  color: #000;
+}
+tr.uefa {
+  background-color: $color-uefa;
+  color: #000;
+}
+tr.intertoto {
+  background-color: $color-intertoto;
+  color: #000;
+}
+tr.resto {
+  background-color: $color-resto;
+  color: #000;
+}
+tr.descenso {
+  background-color: $color-descenso;
+  color: #FFF;
+}
+
+
+td.left-table{
+  text-align: left !important;
+}
+td.right-table{
+    text-align: right !important;
+}
+
+tbody{
+  tr:hover{
+    background-color: $color-hover !important;
+    color: #000 !important;
+  }
+  tr{
+    th:hover{
+      background-color: #FFF !important;
+      color: #000 !important;
+    }
+  }
+}
+
+
+/*Por jornada*/
+#table_jornada{
+  background-color: #ABC;
+  display: inline-block;
+  margin: 1px 3px 10px 3px;
+  padding: 0px;
+  @include border-radius(5px);
+  table{
+    width: 98%;
+  }
+  table tbody,
+  table{
+    thead{
+      font-size: 0.7em;
+    }
+  }
+
+}
