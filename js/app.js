@@ -45,7 +45,6 @@
           //Create each Match-day tables
 
           !calculate_jornadas[`jornada_${j+1}`] ? calculate_jornadas[`jornada_${j+1}`] = [] : null;
-          !calculate_jornadas[`jornada_${j+1}`] ? calculate_jornadas[`jornada_${j+1}`] = [] : null;
           calculate_jornadas[`jornada_${j+1}`].push({
             "id": $rootScope.players[i].id,
             "team": $rootScope.players[i].team,
@@ -134,8 +133,8 @@
         calculate_jornadas[jornada].sort(function(a, b){
           //note the minus before -cmp, for descending order
           return cmp(
-            [-cmp(a.score_general, b.score_general), cmp(a.team, b.team)],
-            [-cmp(b.score_general, a.score_general), cmp(b.team, a.team)]
+            [-cmp(a.score_general, b.score_general), -cmp(a.score_best-a.score_worst, b.score_best-b.score_worst)],
+            [-cmp(b.score_general, a.score_general), -cmp(b.score_best-b.score_worst, a.score_best-a.score_worst)]
           );
         });
 
@@ -218,5 +217,5 @@
       $rootScope.$broadcast('playersLoaded');
     });
   });
-  
+
 })();
