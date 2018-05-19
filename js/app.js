@@ -2,18 +2,16 @@
   let app = angular.module('opiumLeage', []);
   let season = "2017-2018";
 
-  //Generic comparison function
+  // Comparison function
   cmp = (x, y)=>{
     return (x > y) ? 1 : (x < y) ? -1 : 0;
   };
 
   //Generic average function
   Math.average = function(){
-    let cnt, tot, i;
-    cnt = arguments.length;
-    tot = i = 0;
-    while (i < cnt) tot += arguments[i++];
-    return Math.round((tot / cnt) * 100) / 100;
+    let arr = Array.from(arguments);
+    let tot = arr.reduce((sum, score)=> {return sum += score})
+    return Math.round((tot / arr.length) * 100) / 100;
   }
 
   //Generic sort function
@@ -26,49 +24,52 @@
     $rootScope.tables = [];
 
     $http.get("../data/players.json").then((response)=>{
-      console.log("Datos en bruto", response);
+      // console.log("Raw data", response);
 
       $rootScope.players = angular.copy(response.data[season]);
       console.log("Players", $rootScope.players);
 
+      //Calculate  PLAYERS DATA and unorderer jornadas
       let calculate_jornadas = {};
-      for (let i = 0; i < $rootScope.players.length; i++) {
-        $rootScope.players[i].score_general = 0;
-        $rootScope.players[i].score_jornada = [];
-        $rootScope.players[i].positions_jornada = [];
-        $rootScope.players[i].positions_general = [];
+      $rootScope.players.forEach((player)=>{
+        //Initialize
+        player.score_general = 0;
+        player.score_jornada = [];
+        player.positions_jornada = [];
+        player.positions_general = [];
 
-        for (let j = 0; j < $rootScope.players[i].points.filter((value)=>{return value !== null;}).length; j++) {
-          $rootScope.players[i].score_general += $rootScope.players[i].points[j] || 0;
-          $rootScope.players[i].score_jornada.push($rootScope.players[i].score_general);
+        //Create each jornada Object
+        player.points.filter((value)=>{return value !== null;}).forEach((score, index)=>{
+          player.score_general += score || 0;
+          player.score_jornada.push(player.score_general);
 
-          //Create each Match-day tables
-
-          !calculate_jornadas[`jornada_${j+1}`] ? calculate_jornadas[`jornada_${j+1}`] = [] : null;
-          calculate_jornadas[`jornada_${j+1}`].push({
-            "id": $rootScope.players[i].id,
-            "team": $rootScope.players[i].team,
-            "shield": $rootScope.players[i].shield,
-            "name": $rootScope.players[i].name,
-            "image": $rootScope.players[i].image,
-            "score_jornada": $rootScope.players[i].points[j],
-            "score_general": $rootScope.players[i].score_jornada[j]
+          !calculate_jornadas[`jornada_${index+1}`] ? calculate_jornadas[`jornada_${index+1}`] = [] : null;
+          calculate_jornadas[`jornada_${index+1}`].push({
+            id: player.id,
+            team: player.team,
+            shield: player.shield,
+            name: player.name,
+            image: player.image,
+            score_jornada: score,
+            score_general: player.score_general
           });
-        }
-      }
+        })
+      })
 
-      //Sort for Calculate Positions (jornada and general)
+
+
+      //SORT (by score) and calculate for TABLES (jornada and general) and other KPIs
       let count_jornada = 0;
-      let last_jornada = 0;
+      let last_jornada = Object.keys(calculate_jornadas).length || 0;;
       let penultima = [];
       let ultima = [];
       let season_points_average = [];
 
+
       for (jornada in calculate_jornadas){
-        (count_jornada === 0) ? last_jornada = Object.keys(calculate_jornadas).length : null;
         count_jornada += 1;
 
-        // SORT AND CALCULATE BY JORNADA
+        //JORNADA-TABLE POSITIONS: SORT BY SCORE and then BY TEAM NAME
         calculate_jornadas[jornada].sort(function(a, b){
           //note the minus before -cmp, for descending order
           return cmp(
@@ -77,15 +78,16 @@
           );
         });
 
-        //Calculate for JORNADA
+
+        //Create new properties by JORNADA for calculate after
         calculate_jornadas[jornada].score_best = {
-          name: "",
-          team: "",
+          name: '',
+          team: '',
           score: 0
         };
         calculate_jornadas[jornada].score_worst = {
-          name: "",
-          team: "",
+          name: '',
+          team: '',
           score: 1000
         };
         calculate_jornadas[jornada].score_average = 0;
@@ -93,43 +95,43 @@
 
 
         let points_average = [];
-        for (let i = 0; i < calculate_jornadas[jornada].length; i++){
-          // CALCULATE JORNADA POSITIONS
-          if (i > 0){
-            calculate_jornadas[jornada][i].score_jornada === calculate_jornadas[jornada][i-1].score_jornada ? calculate_jornadas[jornada][i].position_jornada = calculate_jornadas[jornada][i-1].position_jornada : calculate_jornadas[jornada][i].position_jornada = i + 1;
+        calculate_jornadas[jornada].forEach((team, index)=>{
+          // Calculate position number (and if there are more than one team sharing each position)
+          if (index > 0){
+            team.score_jornada === calculate_jornadas[jornada][index-1].score_jornada ? team.position_jornada = calculate_jornadas[jornada][index-1].position_jornada : team.position_jornada = index + 1;
           }else{
-            calculate_jornadas[jornada][i].position_jornada = i + 1;
+            team.position_jornada = index + 1;
           }
 
           // CALCULATE BEST, WORST and AVERAGE for each JORNADA
-          if (calculate_jornadas[jornada].score_best.score < calculate_jornadas[jornada][i].score_jornada){
-            calculate_jornadas[jornada].score_best.name = calculate_jornadas[jornada][i].name;
-            calculate_jornadas[jornada].score_best.team = calculate_jornadas[jornada][i].team;
-            calculate_jornadas[jornada].score_best.image = calculate_jornadas[jornada][i].image;
-            calculate_jornadas[jornada].score_best.shield = calculate_jornadas[jornada][i].shield;
-            calculate_jornadas[jornada].score_best.score = calculate_jornadas[jornada][i].score_jornada;
+          if (calculate_jornadas[jornada].score_best.score < team.score_jornada){
+            calculate_jornadas[jornada].score_best.name = team.name;
+            calculate_jornadas[jornada].score_best.team = team.team;
+            calculate_jornadas[jornada].score_best.image = team.image;
+            calculate_jornadas[jornada].score_best.shield = team.shield;
+            calculate_jornadas[jornada].score_best.score = team.score_jornada;
           }
-          if (calculate_jornadas[jornada].score_worst.score > calculate_jornadas[jornada][i].score_jornada){
-            calculate_jornadas[jornada].score_worst.name = calculate_jornadas[jornada][i].name;
-            calculate_jornadas[jornada].score_worst.team = calculate_jornadas[jornada][i].team;
-            calculate_jornadas[jornada].score_worst.image = calculate_jornadas[jornada][i].image;
-            calculate_jornadas[jornada].score_worst.shield = calculate_jornadas[jornada][i].shield;
-            calculate_jornadas[jornada].score_worst.score = calculate_jornadas[jornada][i].score_jornada;
+          if (calculate_jornadas[jornada].score_worst.score > team.score_jornada){
+            calculate_jornadas[jornada].score_worst.name = team.name;
+            calculate_jornadas[jornada].score_worst.team = team.team;
+            calculate_jornadas[jornada].score_worst.image = team.image;
+            calculate_jornadas[jornada].score_worst.shield = team.shield;
+            calculate_jornadas[jornada].score_worst.score = team.score_jornada;
           }
-          points_average.push(calculate_jornadas[jornada][i].score_jornada);
+          points_average.push(team.score_jornada);
 
-          let player = $.grep($rootScope.players, function(e){ return e.id == calculate_jornadas[jornada][i].id });
-          player[0].positions_jornada.push(calculate_jornadas[jornada][i].position_jornada);
+          let player = $.grep($rootScope.players, function(e){ return e.id == team.id });
+          player[0].positions_jornada.push(team.position_jornada);
 
-          calculate_jornadas[jornada][i].score_best = Math.max.apply(null, player[0].points.filter((value)=>{return value !== null;}));
-          calculate_jornadas[jornada][i].score_worst = Math.min.apply(null, player[0].points.filter((value)=>{return value !== null;}));
-          calculate_jornadas[jornada][i].score_average = Math.average.apply(null, player[0].points.filter((value)=>{return value !== null;}));
-          calculate_jornadas[jornada][i].num_jornadas = player[0].points.filter((value)=>{return value !== null;}).length;
-        }
+          team.score_best = Math.max.apply(null, player[0].points.filter((value)=>{return value !== null;}));
+          team.score_worst = Math.min.apply(null, player[0].points.filter((value)=>{return value !== null;}));
+          team.score_average = Math.average.apply(null, player[0].points.filter((value)=>{return value !== null;}));
+          team.num_jornadas = player[0].points.filter((value)=>{return value !== null;}).length;
+        })
         calculate_jornadas[jornada].score_average = Math.average.apply(null, points_average);
 
 
-        // CALCULATE  GENERAL POSITIONS
+        // GENERAL-TABLE POSITIONS: SORT BY SCORE and subtraction between BEST-SCORE and WORST-SCORE in the season
         calculate_jornadas[jornada].sort(function(a, b){
           //note the minus before -cmp, for descending order
           return cmp(
@@ -138,43 +140,44 @@
           );
         });
 
-
-        for (let i = 0; i < calculate_jornadas[jornada].length; i++){
+        calculate_jornadas[jornada].forEach((team, index)=>{
           // Calculate POSITIONS GENERAL
-          if (i > 0){
-            calculate_jornadas[jornada][i].score_general === calculate_jornadas[jornada][i-1].score_general ? calculate_jornadas[jornada][i].position_general = calculate_jornadas[jornada][i-1].position_general : calculate_jornadas[jornada][i].position_general = i + 1;
+          if (index > 0){
+            team.score_general === calculate_jornadas[jornada][index-1].score_general ? team.position_general = calculate_jornadas[jornada][index-1].position_general : team.position_general = index + 1;
           }else{
-            calculate_jornadas[jornada][i].position_general = i + 1;
+            team.position_general = index + 1;
           }
 
-          let player = $.grep($rootScope.players, function(e){ return e.id == calculate_jornadas[jornada][i].id });
-          player[0].positions_general.push(calculate_jornadas[jornada][i].position_general);
+          let player = $.grep($rootScope.players, function(e){ return e.id == team.id });
+          player[0].positions_general.push(team.position_general);
 
+
+          //Position Arrows
           if ((count_jornada + 1) === last_jornada){
-              penultima[i] = {
-                id: calculate_jornadas[jornada][i].id,
-                team: calculate_jornadas[jornada][i].team,
-                position: calculate_jornadas[jornada][i].position_general
-              }
+            penultima[index] = {
+              id: team.id,
+              team: team.team,
+              position: team.position_general
+            }
           }
           if (count_jornada === last_jornada){
-              let player2 = $.grep(penultima, function(e){return e.id == calculate_jornadas[jornada][i].id;});
+            let player2 = $.grep(penultima, function(e){return e.id == team.id;});
 
-              if(player2[0].position > calculate_jornadas[jornada][i].position_general){
-                // console.log(`${player2[0].team} GANÓ = (ANTES: ${player2[0].position} > AHORA: ${calculate_jornadas[jornada][i].position_general}`);
-                calculate_jornadas[jornada][i].updown = '../img/arrow_up.png';
-              }
-              if(player2[0].position < calculate_jornadas[jornada][i].position_general){
-                // console.log(`${player2[0].team} PERDIÓ = (ANTES: ${player2[0].position} > AHORA: ${calculate_jornadas[jornada][i].position_general}`);
-                calculate_jornadas[jornada][i].updown = '../img/arrow_down.png';
-              }
-              if(player2[0].position === calculate_jornadas[jornada][i].position_general){
-                // console.log(`${player2[0].team} IGUALÓ = (ANTES: ${player2[0].position} > AHORA: ${calculate_jornadas[jornada][i].position_general}`);
-                calculate_jornadas[jornada][i].updown = '../img/arrow_equal.png';
-              }
-              calculate_jornadas[jornada][i].updown_num = Math.abs(player2[0].position - calculate_jornadas[jornada][i].position_general);
+            if(player2[0].position > team.position_general){
+              // console.log(`${player2[0].team} GANÓ = (ANTES: ${player2[0].position} > AHORA: ${team.position_general}`);
+              team.updown = '../img/arrow_up.png';
+            }
+            if(player2[0].position < team.position_general){
+              // console.log(`${player2[0].team} PERDIÓ = (ANTES: ${player2[0].position} > AHORA: ${team.position_general}`);
+              team.updown = '../img/arrow_down.png';
+            }
+            if(player2[0].position === team.position_general){
+              // console.log(`${player2[0].team} IGUALÓ = (ANTES: ${player2[0].position} > AHORA: ${team.position_general}`);
+              team.updown = '../img/arrow_equal.png';
+            }
+            team.updown_num = Math.abs(player2[0].position - team.position_general);
           }
-        }
+        });
 
         // CALCULATE BEST, WORST and AVERAGE for whole SEASON
         !calculate_jornadas.score_best ? calculate_jornadas.score_best = {name: "", team: "", score: 0} : null;
@@ -197,6 +200,7 @@
         season_points_average.push(calculate_jornadas[jornada].score_average);
         calculate_jornadas.score_average = Math.average.apply(null, season_points_average);
 
+
       }
 
 
@@ -205,10 +209,10 @@
 
 
       // Calculate Champions for each Jornada and league's lider
-      for (let i = 0; i < $rootScope.players.length; i++) {
-        $rootScope.players[i].winner_jornada = $rootScope.players[i].positions_jornada.filter((value)=>{return value === 1;}).length;
-        $rootScope.players[i].top_clasificacion = $rootScope.players[i].positions_general.filter((value)=>{return value === 1;}).length;
-      }
+      $rootScope.players.forEach((player, index)=>{
+        player.winner_jornada = player.positions_jornada.filter((value)=>{return value === 1;}).length;
+        player.top_clasificacion = player.positions_general.filter((value)=>{return value === 1;}).length;
+      });
 
 
 
