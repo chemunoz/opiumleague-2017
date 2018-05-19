@@ -41,22 +41,31 @@ tbody{
   }
 }
 
+.historic_table{
+  font-size: 1rem;
+}
 
-/*Por jornada*/
-#table_jornada{
-  background-color: #ABC;
-  display: inline-block;
-  margin: 1px 3px 10px 3px;
-  padding: 0px;
-  @include border-radius(5px);
-  table{
-    width: 98%;
-  }
-  table tbody,
-  table{
-    thead{
-      font-size: 0.7em;
-    }
-  }
+img.foto-table {
+  width: 2.5rem;
+  height: 2.5rem;
+  @include border-radius(50%);
+  vertical-align: middle; }
 
+img.arrow {
+  width: 2rem; }
+
+@media (min-width: 576px) {
+  .historic_table {
+    display: inline-block;
+    margin: 1px 3px 10px 3px;
+    border: 1px solid;
+    @include border-radius(5px);
+  }
+}
+@media (min-width: 992px) {
+  img.foto-table {
+    width: 3rem;
+    height: 3rem;
+    @include border-radius(50%);
+    vertical-align: middle; }
 }

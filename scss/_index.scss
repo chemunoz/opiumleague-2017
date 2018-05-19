@@ -1,34 +1,65 @@
 /* INDEX */
-.main-title{
+.trans-background {
   color: #FFF;
-  font-size: 3em;
-  background: rgba(255,255,255, 0.3);
-  border-radius: 10px;
+  font-size: 2em;
+  background: rgba(255, 255, 255, 0.3);
+  @include border-radius(10px);
 }
 
-/* Banner Sponsors */
-#patrocinadores{
-  float: left;
-  width: 100%;
-  margin: 20px auto;
+.jumbotron{
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
   text-align: center;
-  border-radius: 0px 0px 10px 10px;
-  position: absolute;
-  bottom: 0px;
-  img{
-     @include border-radius(5px);
+  position: relative;
+  height: 90vh;
+  background: url('../img/background.png') center no-repeat;
+  background-size: cover;
+}
+
+img.shield {
+  width: 4rem !important;
+  height: 4rem !important;
+}
+@media (min-width: 576px) {
+  .jumbotron{
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    text-align: center;
+    position: relative;
+    height: 110vh;
+    background: url('../img/background.png') center no-repeat;
+    background-size: cover;
+  }
+}
+@media (min-width: 992px) {
+  .jumbotron{
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    text-align: center;
+    position: relative;
+    height: 78vh;
+    background: url('../img/background.png') center no-repeat;
+    background-size: cover;
+  }
+  img.shield {
+    width: 6rem !important;
+    height: 6rem !important;
   }
 }
 
-.bg {
-  /* The image used */
-  background-image: url("../img/background.png");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+@media (min-width: 1200px) {
+  .jumbotron{
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    text-align: center;
+    position: relative;
+    height: 90vh;
+    background: url('../img/background.png') center no-repeat;
+    background-size: cover;
+  }
+  img.shield {
+    @include border-radius(15px);
+    width: 8rem !important;
+    height: 8rem !important;
+  }
 }

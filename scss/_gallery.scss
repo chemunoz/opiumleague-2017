@@ -14,4 +14,12 @@
   display: inline-table;
   @include border-radius(15px);
   margin: 5px;
+  border: 1px solid;
+  font-size: 0.8rem;
+}
+
+img.foto {
+  width: 9rem;
+  @include border-radius(50%);
+  vertical-align: middle;
 }

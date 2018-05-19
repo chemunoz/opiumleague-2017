@@ -7,30 +7,89 @@
   background: #DDD;
 }
 
-.fa-trophy{
-  vertical-align: middle;
-  font-size: 2em;
-}
-
 .color-ligafantastica{
   color: $color-ligafantastica;
+  font-size: 1.75em;
 }
 
 .color-ligafutmondo{
   color: $color-futmondo;
+  font-size: 1.75em;
 }
 
 .color-mundial{
   color: $color-mundial;
+  font-size: 1.75em;
 }
 
 .color-eurocopa{
   color: $color-eurocopa;
+  font-size: 1.75em;
 }
 
-.history-legend{
-  @include border-radius(3px);
-  padding: 1.25rem 0;
-  position: relative;
-  text-align: center;
+#records .row{
+  padding: 0 10px;
 }
+
+#records .card {
+  width: 300px;
+  margin: 0 auto .75rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  @include border-radius(20px);
+}
+
+#records .card-top-section {
+  position: relative;
+  padding: 0 20px;
+  background: #084F83;
+}
+
+#records .card-block {
+  padding: 1.25rem 2rem;
+}
+
+#records .card-action {
+  border-top: 1px solid rgba(160,160,160,0.4);
+    padding: 20px;
+}
+
+#records .card-title {
+  margin-bottom: .75rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  letter-spacing: -0.03em;
+  font-weight: 900;
+}
+
+#records .card-img-top {
+    position: relative;
+    @include border-radius(50%);
+    width: 115px;
+    height: 115px;
+    margin: 0 auto;
+    background-size: cover;
+    bottom: 0px;
+    border: 3px solid #FFF;
+}
+
+#records .card-winner-name{
+  color: #FFF;
+  padding: 0 10px;
+}
+
+.tag{
+  background: #000;
+  color: #FFF;
+  font-size: 0.75em;
+  padding: 5px;
+  @include border-radius(10px);
+  float: left;
+  margin: 1px;
+}
+
+img.foto-table {
+  width: 40px;
+  height: 40px;
+  @include border-radius(50%);
+  vertical-align: middle; }

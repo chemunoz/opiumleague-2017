@@ -12,7 +12,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Graficos -->
     <link href="../css/c3.min.css" rel="stylesheet">
@@ -32,91 +32,12 @@
       ga('create', 'UA-92241042-1', 'auto');
       ga('send', 'pageview');
     </script>
-
-    <style>
-    /* CABECERA */
-    #cabecera {
-      width: 95%;
-      background-color: none;
-      text-align: left;
-      margin: 0px auto; }
-
-    .apps-icons {
-      float: right;
-      width: 35%;
-      padding-top: 10px;
-      text-align: right; }
-
-    .apps-icons img {
-      width: 120px;
-      /*height: 35px;*/ }
-
-
-      /* MENUS */
-      @media (max-width: 992px) {
-        .nav-fill .nav-item {
-          -webkit-box-flex: 1;
-          -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-          text-align: left;
-        }
-      }
-
-
-      /*GRAFICOS*/
-      #contenedor-graficos {
-        width: 95%;
-        -webkit-border-radius: 15px;
-        -moz-border-radius: 15px;
-        -ms-border-radius: 15px;
-        border-radius: 15px;
-        margin: 0px auto;
-        text-align: center;
-        padding: 5px; }
-
-      .c3 text {
-        font-size: 13px; }
-
-      .fa-exchange {
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        transform: rotate(90deg); }
-
-      .fa-trophy-down {
-        -webkit-transform: rotate(-180deg);
-        -moz-transform: rotate(-180deg);
-        -ms-transform: rotate(-180deg);
-        -o-transform: rotate(-180deg);
-        transform: rotate(-180deg); }
-
-      img.foto {
-        width: 200px;
-        /* height: 200px; */
-        /* border: dotted 2px; */
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        border-radius: 50%;
-        vertical-align: middle; }
-    </style>
   </head>
 
   <body>
 
     <!-- Header  -->
-    <header style="background-color: #FFF">
-      <div id="cabecera" class="d-none d-lg-block"> <a href="/"><img src="../img/banner_opium.png" alt="Logo"/></a>&nbsp;
-        <div class="apps-icons">
-          <a href="https://itunes.apple.com/es/app/futmondo-manager-de-futbol/id663530434?mt=8" title="Ir a Apple Store" target="_blank">
-          <img src="../img/ios_footer.png"></a>
-          <a href="https://play.google.com/store/apps/details?id=com.mondosports.futmondo" title="Ir a Google Play" target="_blank">
-          <img src="../img/android_footer.png"></a>
-        </div>
-      </div>
-    </header>
-
+    <span ng-include="'/views/_header.html'"></span>
 
     <!-- Navbar -->
     <span ng-include="'/views/_navbar.html'"></span>
@@ -170,12 +91,12 @@
           <div class="row">
             <div class="col-sm-6">
               <div><i class="fa fa-trophy" aria-hidden="true"></i> Mejor Jornada: </div>
-              <img ng-src="{{tables.score_best.shield}}" class="foto" />
+              <img ng-src="{{tables.score_best.shield}}" class="charts-foto" />
               <div>{{tables.score_best.team}}: {{tables.score_best.score}} puntos</div>
             </div>
             <div class="col-sm-6">
               <div><i class="fa fa-trophy fa-trophy-down" aria-hidden="true"></i> Peor Jornada: </div>
-              <img ng-src="{{tables.score_worst.shield}}" class="foto" />
+              <img ng-src="{{tables.score_worst.shield}}" class="charts-foto" />
               <div>{{tables.score_worst.team}}: {{tables.score_worst.score}} puntos</div>
             </div>
           </div>

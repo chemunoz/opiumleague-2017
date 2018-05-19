@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 /* TAGS */
 body, html {
   height: 100%;
@@ -17,104 +18,98 @@ a {
 ul {
   list-style: none; }
 
-section {
-  padding: 0.5rem 1.5rem !important; }
-
-table {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  font-weight: bold;
-  text-align: center; }
-
-table th, table td {
-  vertical-align: middle !important;
-  text-align: center !important; }
-
-li, ol, ul {
-  margin: 0 auto; }
-
-img.redonda {
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  border-radius: 15px; }
-
-img.foto {
-  width: 200px;
-  /* height: 200px; */
-  /* border: dotted 2px; */
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  vertical-align: middle; }
-
-img.foto-table {
-  width: 40px;
-  height: 40px;
-  /* border: dotted 2px; */
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
-  -ms-border-radius: 150px;
-  border-radius: 150px;
-  vertical-align: middle; }
-
-img.arrow {
-  width: 35px; }
-
-/*BULMA Class*/
-.subtitle {
-  font-size: 1.1rem; }
-
+/* MENUS */
+@media (max-width: 992px) {
+  .nav-fill .nav-item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: left; } }
 /*CABECERA*/
+header {
+  background-color: #FFF; }
+
 #cabecera {
   width: 95%;
   background-color: none;
   text-align: left;
-  margin: 0px auto; }
+  margin: 0px auto;
+  padding: 10px 0; }
+
+#opium-logo {
+  height: 55px; }
 
 .apps-icons {
   float: right;
   width: 35%;
-  padding-top: 10px;
+  padding-top: 5px;
   text-align: right; }
   .apps-icons img {
     width: 120px;
     /*height: 35px;*/ }
 
 /* INDEX */
-.main-title {
+.trans-background {
   color: #FFF;
-  font-size: 3em;
+  font-size: 2em;
   background: rgba(255, 255, 255, 0.3);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
   border-radius: 10px; }
 
-/* Banner Sponsors */
-#patrocinadores {
-  float: left;
-  width: 100%;
-  margin: 20px auto;
+.jumbotron {
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
   text-align: center;
-  border-radius: 0px 0px 10px 10px;
-  position: absolute;
-  bottom: 0px; }
-  #patrocinadores img {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    border-radius: 5px; }
-
-.bg {
-  /* The image used */
-  background-image: url("../img/background.png");
-  /* Full height */
-  height: 100%;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  height: 90vh;
+  background: url("../img/background.png") center no-repeat;
   background-size: cover; }
 
+img.shield {
+  width: 4rem !important;
+  height: 4rem !important; }
+
+@media (min-width: 576px) {
+  .jumbotron {
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    text-align: center;
+    position: relative;
+    height: 110vh;
+    background: url("../img/background.png") center no-repeat;
+    background-size: cover; } }
+@media (min-width: 992px) {
+  .jumbotron {
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    text-align: center;
+    position: relative;
+    height: 78vh;
+    background: url("../img/background.png") center no-repeat;
+    background-size: cover; }
+
+  img.shield {
+    width: 6rem !important;
+    height: 6rem !important; } }
+@media (min-width: 1200px) {
+  .jumbotron {
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    text-align: center;
+    position: relative;
+    height: 90vh;
+    background: url("../img/background.png") center no-repeat;
+    background-size: cover; }
+
+  img.shield {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    border-radius: 15px;
+    width: 8rem !important;
+    height: 8rem !important; } }
 /* CLASIFICACIONES */
 tr.champions {
   background-color: #FFFF00;
@@ -133,7 +128,7 @@ tr.resto {
   color: #000; }
 
 tr.descenso {
-  background-color: #F00;
+  background-color: #FF5555;
   color: #FFF; }
 
 td.left-table {
@@ -149,22 +144,39 @@ tbody tr th:hover {
   background-color: #FFF !important;
   color: #000 !important; }
 
-/*Por jornada*/
-#table_jornada {
-  background-color: #ABC;
-  display: inline-block;
-  margin: 1px 3px 10px 3px;
-  padding: 0px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px; }
-  #table_jornada table {
-    width: 98%; }
-  #table_jornada table tbody thead,
-  #table_jornada table thead {
-    font-size: 0.7em; }
+.historic_table {
+  font-size: 1rem; }
 
+img.foto-table {
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  vertical-align: middle; }
+
+img.arrow {
+  width: 2rem; }
+
+@media (min-width: 576px) {
+  .historic_table {
+    display: inline-block;
+    margin: 1px 3px 10px 3px;
+    border: 1px solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px; } }
+@media (min-width: 992px) {
+  img.foto-table {
+    width: 3rem;
+    height: 3rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: middle; } }
 /*CUP*/
 .cup-table {
   width: 85%; }
@@ -198,7 +210,17 @@ tbody tr th:hover {
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   border-radius: 15px;
-  margin: 5px; }
+  margin: 5px;
+  border: 1px solid;
+  font-size: 0.8rem; }
+
+img.foto {
+  width: 9rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  vertical-align: middle; }
 
 /*REGLAMENTO*/
 #contenedor-reglas {
@@ -213,17 +235,24 @@ tbody tr th:hover {
   margin: 0px auto; }
   #contenedor-reglas p {
     /*margin: 1px 1px 15px 1px;*/
-    color: #FFF; }
+    color: #FFF;
+    text-align: justify; }
   #contenedor-reglas ol {
-    margin: 1px 1px 1px 30px; }
+    margin: 1px 1px 1px 30px;
+    color: #FFF;
+    text-align: justify; }
+  #contenedor-reglas li {
+    font-size: 0.8rem; }
 
 .regla-titulo {
+  font-size: 0.9rem;
   font-weight: bold;
   font-style: italic;
   color: #000 !important;
   margin: 10px 1px 1px 1px; }
 
 .regla-texto {
+  font-size: 0.8rem;
   margin: 1px 1px 1px 30px; }
 
 /*GRAFICOS*/
@@ -254,6 +283,14 @@ tbody tr th:hover {
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
+img.charts-foto {
+  width: 200px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  vertical-align: middle; }
+
 /*HISTORIA*/
 .fila-par {
   background: #EEE; }
@@ -261,98 +298,129 @@ tbody tr th:hover {
 .fila-impar {
   background: #DDD; }
 
-.fa-trophy {
-  vertical-align: middle;
-  font-size: 2em; }
-
 .color-ligafantastica {
-  color: #00A0E3; }
+  color: #00A0E3;
+  font-size: 1.75em; }
 
 .color-ligafutmondo {
-  color: #2FB101; }
+  color: #2FB101;
+  font-size: 1.75em; }
 
 .color-mundial {
-  color: #FFBF00; }
+  color: #FFBF00;
+  font-size: 1.75em; }
 
 .color-eurocopa {
-  color: #C0C0C0; }
+  color: #C0C0C0;
+  font-size: 1.75em; }
 
-.history-legend {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
-  padding: 1.25rem 0;
+#records .row {
+  padding: 0 10px; }
+
+#records .card {
+  width: 300px;
+  margin: 0 auto .75rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px; }
+
+#records .card-top-section {
   position: relative;
-  text-align: center; }
+  padding: 0 20px;
+  background: #084F83; }
 
-/* PERFIL */
-.c3-line {
-  stroke-width: 5px; }
+#records .card-block {
+  padding: 1.25rem 2rem; }
 
-#curve_chart {
-  width: 100%;
-  height: 500px; }
+#records .card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.4);
+  padding: 20px; }
 
-.container.profile {
-  margin-top: 50px; }
+#records .card-title {
+  margin-bottom: .75rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  letter-spacing: -0.03em;
+  font-weight: 900; }
 
-.profile-heading {
-  margin: 20px 0;
-  padding-bottom: 30px; }
-  .profile-heading .name {
-    border-right: 1px solid #f1f1f1;
-    margin: -30px 0;
-    padding: 40px 30px 0 30px; }
-  .profile-heading .followers,
-  .profile-heading .following {
-    border-right: 1px solid #f1f1f1;
-    margin: -30px 0;
-    padding: 70px 30px; }
-  .profile-heading .likes {
-    margin: -30px 0;
-    padding: 70px 30px; }
-  .profile-heading .stat-key {
-    font-size: 20px;
-    font-weight: 200; }
-  .profile-heading .stat-val {
-    font-size: 35px;
-    font-weight: bold; }
+#records .card-img-top {
+  position: relative;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  width: 115px;
+  height: 115px;
+  margin: 0 auto;
+  background-size: cover;
+  bottom: 0px;
+  border: 3px solid #FFF; }
 
-.likes {
-  margin: -30px 0;
-  padding: 70px 30px; }
+#records .card-winner-name {
+  color: #FFF;
+  padding: 0 10px; }
 
-.profile-options {
-  background-color: #f1f1f1;
-  margin: -20px 0 20px 0; }
-  .profile-options .link a {
-    padding: 18px;
-    font-size: 18px; }
-  .profile-options .link .icon {
-    font-size: 16px;
-    padding-top: 2px; }
+.tag {
+  background: #000;
+  color: #FFF;
+  font-size: 0.75em;
+  padding: 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  float: left;
+  margin: 1px; }
 
-.tagline {
-  padding: 20px 0;
-  font-size: 16px;
-  line-height: 1.4; }
+img.foto-table {
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  vertical-align: middle; }
 
-.avatar {
-  float: right; }
+/* PROFILE */
+#profile img {
+  max-width: 100%; }
 
-.follow {
-  float: right; }
+#profile .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1); }
 
-.avatar img {
-  width: 256px;
-  border-radius: 200px; }
+#profile .header {
+  padding: 10px 0;
+  background: #DAE3E7;
+  /*#f5f5f5; */
+  border-top: 3px solid #3AAA64; }
 
-p.title.is-bold {
+.temporada {
+  float: left;
+  border: 1px solid;
+  margin: 5px 5px 0 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  background: #000;
+  color: #FFF;
+  font-size: 0.7rem; }
+
+.puntajes {
+  text-align: center;
+  font-size: 1.5rem;
   font-weight: bold; }
 
-.card .timestamp {
-  float: right;
-  color: #bbb; }
+.puntajes .numero {
+  font-size: 2.5rem;
+  border: 1px solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
 
 /*# sourceMappingURL=style.css.map */

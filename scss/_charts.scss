@@ -18,3 +18,9 @@
 .fa-trophy-down{
   @include transform(-180deg);
 }
+
+img.charts-foto {
+  width: 200px;
+  @include border-radius(50%);
+  vertical-align: middle;
+}
