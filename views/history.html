@@ -25,7 +25,7 @@
     </script>
   </head>
 
-  <body ng-controller="TableController">
+  <body>
 
     <!-- Header  -->
     <span ng-include="'/views/_header.html'"></span>
@@ -51,11 +51,11 @@
           </div>
         </div>
         <a class="carousel-control-prev" href="#carousel-id" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="carousel-control-prev-icon"></span>
           <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carousel-id" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="carousel-control-next-icon"></span>
           <span class="sr-only">Next</span>
         </a>
 
@@ -73,21 +73,14 @@
     <ul class="nav nav-tabs nav-fill my-3" id="myTab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="tab-league" data-toggle="tab" href="#league" role="tab" aria-controls="league" aria-selected="true">
-          <span><i class="fa fa-table" aria-hidden="true"></i></span>
+          <span><i class="fas fa-table"></i></span>
           <span class="d-none d-md-inline">OPIUM LEAGUE</span>
-          <span class="d-sm-inline d-md-none">LIGA</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="tab-other" data-toggle="tab" href="#other" role="tab" aria-controls="other" aria-selected="false">
-          <span class="icon is-small"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
-          <span class="d-none d-md-inline">OTRAS COMPETICIONES</span>
-          <span class="d-sm-inline d-md-none">OTROS</span>
+          <span class="d-sm-inline d-md-none">REGISTROS LIGA</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="tab-records" data-toggle="tab" href="#records" role="tab" aria-controls="records" aria-selected="false">
-          <span class="icon is-small"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+          <span class="icon is-small"><i class="far fa-clock"></i></span>
           <span class="d-none d-md-inline">PALMARÉS</span>
           <span class="d-sm-inline d-md-none">PALMARÉS</span>
         </a>
@@ -109,62 +102,65 @@
           </thead>
           <tbody>
             <tr class="fila-impar">
-              <td>2009 - 2010</td>
-              <td class="left-table"><img src="../img/shields/ru.png" class="foto-table" alt="Los Antimerengues"> Los Antimerengues</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><i class="fa fa-trophy color-ligafantastica" aria-hidden="true"></i> <img src="../img/players/ru.png" class="foto-table"/> Ru</td>
+              <td class="align-middle">2009 - 2010</td>
+              <td class="left-table align-middle"><img src="../img/shields/ru.png" class="foto-table" alt="Los Antimerengues"> Los Antimerengues</td>
+              <td class="text-left align-middle d-none d-md-table-cell"><i class="fas fa-trophy align-middle color-ligafantastica"></i> <img src="../img/players/ru.png" class="foto-table"/> Ru</td>
               <td class="text-center align-middle d-none d-md-table-cell">14</td>
             </tr>
             <tr class="fila-par">
-              <td>2010 - 2011</td>
-              <td class="left-table"><img src="../img/shields/dioni.png" class="foto-table" alt="R. Cuervos C.F."> R. Cuervos C.F.</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><i class="fa fa-trophy color-ligafantastica" aria-hidden="true"></i> <img src="../img/players/dioni.png" class="foto-table"/> Dioni</td>
+              <td class="align-middle">2010 - 2011</td>
+              <td class="left-table align-middle"><img src="../img/shields/dioni.png" class="foto-table" alt="R. Cuervos C.F."> R. Cuervos C.F.</td>
+              <td class="text-left align-middle d-none d-md-table-cell"><i class="fas fa-trophy align-middle color-ligafantastica"></i> <img src="../img/players/dioni.png" class="foto-table"/> Dioni</td>
               <td class="text-center align-middle d-none d-md-table-cell">18</td>
             </tr>
             <tr class="fila-impar">
-              <td>2011 - 2012</td>
-              <td class="left-table"><img src="../img/shields/dioni.png" class="foto-table" alt="R. Cuervos C.F."> R. Cuervos C.F.</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><i class="fa fa-trophy color-ligafantastica" aria-hidden="true"></i> <img src="../img/players/dioni.png" class="foto-table"/> Dioni</td>
+              <td class="align-middle">2011 - 2012</td>
+              <td class="left-table align-middle"><img src="../img/shields/dioni.png" class="foto-table" alt="R. Cuervos C.F."> R. Cuervos C.F.</td>
+              <td class="text-left align-middle d-none d-md-table-cell"><i class="fas fa-trophy align-middle color-ligafantastica"></i> <img src="../img/players/dioni.png" class="foto-table"/> Dioni</td>
               <td class="text-center align-middle d-none d-md-table-cell">23</td>
             </tr>
             <tr class="fila-par">
-              <td>2012 - 2013</td>
-              <td class="left-table"><img src="../img/shields/che.png" class="foto-table" alt="Los Antimerengues"> Amunt Che</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><i class="fa fa-trophy color-ligafantastica" aria-hidden="true"></i> <img src="../img/players/che.png" class="foto-table"/> Che</td>
+              <td class="align-middle">2012 - 2013</td>
+              <td class="left-table align-middle"><img src="../img/shields/che.png" class="foto-table" alt="Los Antimerengues"> Amunt Che</td>
+              <td class="text-left align-middle d-none d-md-table-cell"><i class="fas fa-trophy align-middle color-ligafantastica"></i> <img src="../img/players/che.png" class="foto-table"/> Che</td>
               <td class="text-center align-middle d-none d-md-table-cell">18</td>
             </tr>
             <tr class="fila-impar">
-              <td>2013 - 2014</td>
-              <td class="left-table"><img src="../img/shields/dioni.png" class="foto-table" alt="R. Cuervos C.F."> R. Cuervos C.F.</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><i class="fa fa-trophy color-ligafantastica" aria-hidden="true"></i> <img src="../img/players/dioni.png" class="foto-table"/> Dioni</td>
+              <td class="align-middle">2013 - 2014</td>
+              <td class="left-table align-middle"><img src="../img/shields/dioni.png" class="foto-table" alt="R. Cuervos C.F."> R. Cuervos C.F.</td>
+              <td class="text-left align-middle d-none d-md-table-cell"><i class="fas fa-trophy align-middle color-ligafantastica"></i> <img src="../img/players/dioni.png" class="foto-table"/> Dioni</td>
               <td class="text-center align-middle d-none d-md-table-cell">7</td>
             </tr>
             <tr class="fila-par">
-              <td>2014 - 2015</td>
-              <td class="left-table"><img src="../img/shields/dioni.png" class="foto-table" alt="Real Ru Cobarde"> Real Ru Cobarde</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><i class="fa fa-trophy color-ligafantastica" aria-hidden="true"></i> <img src="../img/players/dioni.png" class="foto-table"/> Dioni</td>
+              <td class="align-middle">2014 - 2015</td>
+              <td class="left-table align-middle"><img src="../img/shields/dioni.png" class="foto-table" alt="Real Ru Cobarde"> Real Ru Cobarde</td>
+              <td class="text-left align-middle d-none d-md-table-cell"><i class="fas fa-trophy align-middle color-ligafantastica"></i> <img src="../img/players/dioni.png" class="foto-table"/> Dioni</td>
               <td class="text-center align-middle d-none d-md-table-cell">8</td>
             </tr>
             <tr class="fila-impar">
-              <td>2015 - 2016</td>
-              <td class="left-table"><img src="../img/shields/borja_ramos.png" class="foto-table" alt="Bierzo Power"> Bierzo Power</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><i class="fa fa-trophy color-ligafantastica" aria-hidden="true"></i> <img src="../img/players/borja_ramos.jpg" class="foto-table"/> Borja Ramos</td>
+              <td class="align-middle">2015 - 2016</td>
+              <td class="left-table align-middle"><img src="../img/shields/borja_ramos.png" class="foto-table" alt="Bierzo Power"> Bierzo Power</td>
+              <td class="text-left align-middle d-none d-md-table-cell"><i class="fas fa-trophy align-middle color-ligafantastica"></i> <img src="../img/players/borja_ramos.jpg" class="foto-table"/> Borja Ramos</td>
               <td class="text-center align-middle d-none d-md-table-cell">23</td>
             </tr>
             <tr class="fila-par">
-              <td>2016 - 2017</td>
-              <td class="left-table"><img src="../img/logo_opium_icono.png" class="foto-table" alt="Sabeko Areucas"> Sabeko Areucas</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><i class="fa fa-trophy color-ligafutmondo" aria-hidden="true"></i> <img src="../img/players/chema.png" class="foto-table"/> Chema</td>
+              <td class="align-middle">2016 - 2017</td>
+              <td class="left-table align-middle"><img src="../img/logo_opium_icono.png" class="foto-table" alt="Sabeko Areucas"> Sabeko Areucas</td>
+              <td class="text-left align-middle d-none d-md-table-cell"><i class="fas fa-trophy align-middle color-ligafutmondo"></i> <img src="../img/players/chema.png" class="foto-table"/> Chema</td>
+              <td class="text-center align-middle d-none d-md-table-cell">23</td>
+            </tr>
+            <tr class="fila-impar">
+              <td class="align-middle">2017 - 2018</td>
+              <td class="left-table align-middle"><img src="../img/shields/fran.png" class="foto-table" alt="Rino's Boys"> Rino's Boys</td>
+              <td class="text-left align-middle d-none d-md-table-cell"><i class="fas fa-trophy align-middle color-ligafutmondo"></i> <img src="../img/players/fran.png" class="foto-table"/> Fran</td>
               <td class="text-center align-middle d-none d-md-table-cell">23</td>
             </tr>
           </tbody>
         </table>
+        <div style="height: 50px;"></div>
       </section>
     </div>
 
-
-    <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="tab-other">
-      <p class="h3 text-center">PRÓXIMAMENTE...</p>
-    </div>
 
     <!-- PALMARÉS -->
     <div class="tab-pane fade" id="records" role="tabpanel" aria-labelledby="tab-records">
@@ -179,21 +175,19 @@
             <span class="card-winner-name">DIONI</span>
           </div>
           <div class="card-block px-2">
-            <div class="content float-left w-50">
+            <div class="content float-left text-left w-50">
               <div>Ligas</div>
               <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
               <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
               <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
               <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
-              <div>Champions</div>
+              <div>FO Cup</div>
               -
             </div>
             <div class="content float-left text-right w-50">
-              <div>Mundial/Eurocopa</div>
-              <img src="../img/cups/copa_mundo_amarilla.png" alt="" style="height: 31px">
-              <img src="../img/cups/copa_mundo_amarilla.png" alt="" style="height: 31px">
-              <img src="../img/cups/copa_europa_gris.png" alt="" style="height: 31px">
-              <div>FO Cup</div>
+              <div>Champions</div>
+              -
+              <div>UEFA</div>
               -
             </div>
           </div>
@@ -216,16 +210,16 @@
             <span class="card-winner-name">RU</span>
           </div>
           <div class="card-block px-2">
-            <div class="content float-left w-50">
+            <div class="content float-left text-left w-50">
               <div>Ligas</div>
               <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
-              <div>Champions</div>
+              <div>FO Cup</div>
               -
             </div>
             <div class="content float-left text-right w-50">
-              <div>Mundial/Eurocopa</div>
+              <div>Champions</div>
               -
-              <div>FO Cup</div>
+              <div>UEFA</div>
               -
             </div>
           </div>
@@ -248,16 +242,16 @@
             <span class="card-winner-name">CHE</span>
           </div>
           <div class="card-block px-2">
-            <div class="content float-left w-50">
+            <div class="content float-left text-left w-50">
               <div>Ligas</div>
               <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
-              <div>Champions</div>
+              <div>FO Cup</div>
               -
             </div>
             <div class="content float-left text-right w-50">
-              <div>Mundial/Eurocopa</div>
+              <div>Champions</div>
               -
-              <div>FO Cup</div>
+              <div>UEFA</div>
               -
             </div>
           </div>
@@ -285,16 +279,16 @@
             <span class="card-winner-name">BORJA</span>
           </div>
           <div class="card-block px-2">
-            <div class="content float-left w-50">
+            <div class="content float-left text-left w-50">
               <div>Ligas</div>
               <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
-              <div>Champions</div>
+              <div>FO Cup</div>
               -
             </div>
             <div class="content float-left text-right w-50">
-              <div>Mundial/Eurocopa</div>
+              <div>Champions</div>
               -
-              <div>FO Cup</div>
+              <div>UEFA</div>
               -
             </div>
           </div>
@@ -316,16 +310,16 @@
             <span class="card-winner-name">CHEMA</span>
           </div>
           <div class="card-block px-2">
-            <div class="content float-left w-50">
+            <div class="content float-left text-left w-50">
               <div>Ligas</div>
               <img src="../img/cups/copa_liga_verde.png" alt="" style="height: 31px">
-              <div>Champions</div>
+              <div>FO Cup</div>
               -
             </div>
             <div class="content float-left text-right w-50">
-              <div>Mundial/Eurocopa</div>
+              <div>Champions</div>
               -
-              <div>FO Cup</div>
+              <div>UEFA</div>
               -
             </div>
           </div>
@@ -338,63 +332,30 @@
           </div>
         </div>
 
-        <!-- IVAN -->
-        <!-- <div class="card">
-          <div class="card-top-section">
-            <img src="../img/players/ivan.png" class='card-img-top' />
-            <span class="card-winner-name">IVAN</span>
-          </div>
-          <div class="card-block px-2">
-            <div class="content float-left w-50">
-              <div>Ligas</div>
-              -
-              <div>Champions</div>
-              -
-            </div>
-            <div class="content float-left text-right w-50">
-              <div>Mundial/Eurocopa</div>
-              <img src="../img/cups/copa_mundo_amarilla.png" alt="" style="height: 31px">
-              <div>FO Cup</div>
-              -
-            </div>
-          </div>
-          <div class="card-action" style="padding: 5px;">
-            <div>Participaciones:</div>
-            <div style="text-align: center;">
-              <span class="tag">2009-2010</span>
-              <span class="tag">2010-2011</span>
-              <span class="tag">2011-2012</span>
-              <span class="tag">2012-2013</span>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- DAVID -->
+        <!-- FRAN -->
         <div class="card">
           <div class="card-top-section">
             <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
-            <img src="../img/players/ortega.png" class='card-img-top' />
-            <span class="card-winner-name">DAVID</span>
+            <img src="../img/players/fran.png" class='card-img-top' />
+            <span class="card-winner-name">FRAN</span>
           </div>
           <div class="card-block px-2">
-            <div class="content float-left w-50">
+            <div class="content float-left text-left w-50">
               <div>Ligas</div>
-              -
-              <div>Champions</div>
+              <img src="../img/cups/copa_liga_verde.png" alt="" style="height: 31px">
+              <div>FO Cup</div>
               -
             </div>
             <div class="content float-left text-right w-50">
-              <div>Mundial/Eurocopa</div>
-              <img src="../img/cups/copa_europa_gris.png" alt="" style="height: 31px">
-              <div>FO Cup</div>
+              <div>Champions</div>
+              -
+              <div>UEFA</div>
               -
             </div>
           </div>
           <div class="card-action" style="padding: 5px;">
             <div>Participaciones:</div>
             <div style="text-align: center;">
-              <span class="tag">2009-2010</span>
-              <span class="tag">2010-2011</span>
               <span class="tag">2011-2012</span>
               <span class="tag">2012-2013</span>
               <span class="tag">2013-2014</span>
@@ -414,16 +375,16 @@
             <span class="card-winner-name">Will</span>
           </div>
           <div class="card-block px-2">
-            <div class="content float-left w-50">
+            <div class="content float-left text-left w-50">
               <div>Ligas</div>
               -
-              <div>1 Champions</div>
-              <img src="../img/cups/copa_champions_negra.png" alt="" style="height: 31px">
+              <div>FO Cup</div>
+              -
             </div>
             <div class="content float-left text-right w-50">
-              <div>Mundial/Eurocopa</div>
-              -
-              <div>FO Cup</div>
+              <div>Champions</div>
+              <img src="../img/cups/copa_champions_negra.png" alt="" style="height: 31px">
+              <div>UEFA</div>
               -
             </div>
           </div>
@@ -451,10 +412,7 @@
           <img src="../img/cups/copa_champions_negra.png" alt="" style="height: 31px"> CHAMPIONS LEAGUE
         </div>
         <div class="md-col-6 my-2 mr-2">
-          <img src="../img/cups/copa_mundo_amarilla.png" alt="" style="height: 31px"> MUNDIAL
-        </div>
-        <div class="md-col-6 my-2 mr-2">
-          <img src="../img/cups/copa_europa_gris.png" alt="" style="height: 31px"> EUROCOPA
+          <img src="../img/cups/copa_uefa_negra.png" alt="" style="height: 31px"> UEFA
         </div>
       </div>
 
@@ -476,6 +434,5 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
     <script src="../js/app.js"></script>
-    <script src="../js/table.js"></script>
   </body>
 </html>
