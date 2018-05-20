@@ -177,8 +177,12 @@ img.arrow {
     -ms-border-radius: 50%;
     border-radius: 50%;
     vertical-align: middle; } }
-/*CUP*/
+/*CHAMPIONS*/
+.tab-pane {
+  text-align: center; }
+
 .cup-table {
+  margin: auto;
   width: 85%; }
   .cup-table td {
     width: 33%; }
@@ -269,7 +273,7 @@ img.foto {
 .c3 text {
   font-size: 13px; }
 
-.fa-exchange {
+.fa-exchange-alt {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
