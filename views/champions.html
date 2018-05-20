@@ -1,16 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es" ng-app="opiumLeage">
   <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="/img/icon-iphone.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/icon-ipad.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/icon-iphone4.png" />
-    <title>Opium League :: Copa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" sizes="128x128" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon" href="../img/icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/icon-iphone4.png" />
+    <title>Opium League :: Champions</title>
+
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" type="text/css" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -25,463 +28,77 @@
   <body>
 
     <!-- Header  -->
-    <header>
-      <div id="cabecera"> <a href="/"><img src="../img/banner_opium.png" alt="Logo"/></a>&nbsp;
-        <div class="apps-icons">
-          <a href="https://itunes.apple.com/es/app/futmondo-manager-de-futbol/id663530434?mt=8" title="Ir a Apple Store" target="_blank">
-          <img src="../img/ios_footer.png"></a>
-          <a href="https://play.google.com/store/apps/details?id=com.mondosports.futmondo" title="Ir a Google Play" target="_blank">
-          <img src="../img/android_footer.png"></a>
-        </div>
-      </div>
-    </header>
+    <span ng-include="'/views/_header.html'"></span>
+    <!-- Navbar -->
+    <span ng-include="'/views/_navbar.html'"></span>
 
+    <div class="h3 text-center my-3">OPIUM CHAMPIONS LEAGUE</div>
 
-    <!-- Menu -->
-    <div class="tabs is-boxed">
-      <ul>
-        <li>
-          <a href="/">
-            <span><img src="../img/logo_opium_icono.png" style="height: 30px; width: 30px;" alt=""></span>
-            <span>IX OPIUM LEAGUE</span>
-          </a>
-        </li>
-        <li>
-          <a href="/views/table.html">
-            <span class="icon is-small"><i class="fa fa-table" aria-hidden="true"></i></span>
-            <span>Clasificación</span>
-          </a>
-        </li>
-        <li>
-          <a href="/views/charts.html">
-            <span class="icon is-small"><i class="fa fa-area-chart" aria-hidden="true"></i></span>
-            <span>Gráficos</span>
-          </a>
-        </li>
-        <li class="is-active">
-          <a href="/views/cup.html">
-            <span class="icon is-small"><i class="fa fa-trophy" aria-hidden="true"></i></span>
-            <span>COPA</span>
-          </a>
-        </li>
-        <li>
-          <a href="/views/rules.html">
-            <span class="icon is-small"><i class="fa fa-file-text" aria-hidden="true"></i></span>
-            <span>Reglamento</span>
-          </a>
-        </li>
-        <li>
-          <a href="/views/gallery.html">
-            <span class="icon is-small"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
-            <span>Participantes</span>
-          </a>
-        </li>
-        <li>
-          <a href="/views/history.html">
-            <span class="icon is-small"><i class="fa fa-university" aria-hidden="true"></i></i></span>
-            <span>Historia</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="subtitle has-text-centered">OPIUM CUP</div>
-
-    <!-- Tabs -->
-    <div id="tab_header" class="tabs is-toggle is-toggle-rounded">
-      <ul>
-        <li class="item" data-option="1">
-          <a>
-            <span class="icon is-small"><i class="fa fa-table" aria-hidden="true"></i></span>
-            <span>GRUPO A</span>
-          </a>
-        </li>
-        <li class="item" data-option="2">
-          <a>
-            <span class="icon is-small"><i class="fa fa-table" aria-hidden="true"></i></span>
-            <span>GRUPO B</span>
-          </a>
-        </li>
-        <li class="item" data-option="3">
-          <a>
-            <span class="icon is-small"><i class="fa fa-table" aria-hidden="true"></i></span>
-            <span>GRUPO C</span>
-          </a>
-        </li>
-        <li class="item" data-option="4">
-          <a>
-            <span class="icon is-small"><i class="fa fa-table" aria-hidden="true"></i></span>
-            <span>GRUPO D</span>
-          </a>
-        </li>
-        <li class="item" data-option="5">
-          <a>
-            <span class="icon is-small"><i class="fa fa-table" aria-hidden="true"></i></span>
-            <span>GRUPO E</span>
-          </a>
-        </li>
-        <li class="item" data-option="6">
-          <a>
-            <span class="icon is-small"><i class="fa fa-table" aria-hidden="true"></i></span>
-            <span>GRUPO F</span>
-          </a>
-        </li>
-        <li class="item is-active" data-option="7">
-          <a>
-            <span class="icon is-small"><i class="fa fa-arrows-alt" aria-hidden="true"></i></span>
-            <span>CRUCES</span>
-          </a>
-        </li>
-        <li class="item" data-option="8">
-          <a>
-            <span class="icon is-small"><i class="fa fa-file-text" aria-hidden="true"></i></span>
-            <span>NORMAS</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <!-- TABS -->
+    <ul class="nav nav-tabs nav-fill my-3" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link" id="tab-A" data-toggle="tab" href="#A" role="tab" aria-controls="A" aria-selected="true">
+          <span><i class="fas fa-table"></i></span>
+          <span class="d-none d-md-inline">GRUPO A</span>
+          <span class="d-sm-inline d-md-none">A</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-B" data-toggle="tab" href="#B" role="tab" aria-controls="B" aria-selected="true">
+          <span><i class="fas fa-table"></i></span>
+          <span class="d-none d-md-inline">GRUPO B</span>
+          <span class="d-sm-inline d-md-none">B</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-C" data-toggle="tab" href="#C" role="tab" aria-controls="C" aria-selected="true">
+          <span><i class="fas fa-table"></i></span>
+          <span class="d-none d-md-inline">GRUPO C</span>
+          <span class="d-sm-inline d-md-none">C</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-D" data-toggle="tab" href="#D" role="tab" aria-controls="D" aria-selected="true">
+          <span><i class="fas fa-table"></i></span>
+          <span class="d-none d-md-inline">GRUPO D</span>
+          <span class="d-sm-inline d-md-none">D</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-E" data-toggle="tab" href="#E" role="tab" aria-controls="E" aria-selected="true">
+          <span><i class="fas fa-table"></i></span>
+          <span class="d-none d-md-inline">GRUPO E</span>
+          <span class="d-sm-inline d-md-none">E</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-F" data-toggle="tab" href="#F" role="tab" aria-controls="F" aria-selected="true">
+          <span><i class="fas fa-table"></i></span>
+          <span class="d-none d-md-inline">GRUPO F</span>
+          <span class="d-sm-inline d-md-none">F</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" id="tab-cruces" data-toggle="tab" href="#cruces" role="tab" aria-controls="cruces" aria-selected="true">
+          <span><i class="fas fa-expand-arrows-alt"></i></span>
+          <span class="d-none d-md-inline">CRUCES</span>
+          <span class="d-sm-inline d-md-none">CRUCES</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-normas" data-toggle="tab" href="#normas" role="tab" aria-controls="normas" aria-selected="true">
+          <span><i class="far fa-file-alt"></i></span>
+          <span class="d-none d-md-inline">NORMAS</span>
+          <span class="d-sm-inline d-md-none">NORMAS</span>
+        </a>
+      </li>
+    </ul>
 
 
 
-    <section id="tab_container" class="section">
-      <!-- CRUCES -->
-      <div id="group-n" class="container_item has-text-centered is-active" data-item="7">
-        <div>
-          <div><h2>CAMPEÓN COPA 2017-2018</h2></div>
-          <a href="/views/profile.html?id=12"><img src="../img/shields/will.png" class="foto" alt="Williessous"> <h3>Williessous</h3></a>
-        </div>
-        <br>
-        <img src="../img/cruces.png" style="width: 60%;"alt="">
-
-
-        <!-- FINAL -->
-        <table class="table cup-table">
-          <tr>
-            <th colspan="3">FINAL (01/04/2018)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/fran.png" class="foto-table" alt="Rinos Boys"> Rino's Boys</a></td>
-            <td class="has-text-centered is-dark">57</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=12"><img src="../img/shields/will.png" class="foto-table" alt="Williessous"> Williessous</a></td>
-            <td class="has-text-centered is-success">71</td>
-          </tr>
-        </table>
-
-
-        <!-- SEMIS -->
-        <table class="table cup-table">
-          <tr>
-            <th colspan="3">SEMIFINALES (11/03/2018 y 18/03/2018)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=4"><img src="../img/shields/borja_ramos.png" class="foto-table" alt="Bierzo Power"> Bierzo Power</a></td>
-            <td class="has-text-centered">68</td>
-            <td class="has-text-centered">61</td>
-            <td class="has-text-centered is-dark">129</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=12"><img src="../img/shields/will.png" class="foto-table" alt="Williessous"> Williessous</a></td>
-            <td class="has-text-centered">78</td>
-            <td class="has-text-centered">74</td>
-            <td class="has-text-centered is-success">152 (+23)</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/fran.png" class="foto-table" alt="Rinos Boys"> Rino's Boys</a></td>
-            <td class="has-text-centered">67</td>
-            <td class="has-text-centered">75</td>
-            <td class="has-text-centered is-success">142 (+1)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=6"><img src="../img/shields/che.png" class="foto-table" alt="Amunt Che"> Amunt Che</a></td>
-            <td class="has-text-centered">71</td>
-            <td class="has-text-centered">70</td>
-            <td class="has-text-centered is-dark">141</td>
-          </tr>
-        </table>
-
-
-
-        <!-- CUARTOS -->
-        <table class="table cup-table">
-          <tr>
-            <th colspan="3">CUARTOS DE FINAL (28/02/2018 y 04/03/2018)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=4"><img src="../img/shields/borja_ramos.png" class="foto-table" alt="Bierzo Power"> Bierzo Power</a></td>
-            <td class="has-text-centered">64</td>
-            <td class="has-text-centered">71</td>
-            <td class="has-text-centered is-success">135 (+28)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=19"><img src="../img/shields/david_munoz.png" class="foto-table" alt="New Tikis"> New Tikis</a></td>
-            <td class="has-text-centered">54</td>
-            <td class="has-text-centered">53</td>
-            <td class="has-text-centered is-dark">107</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=12"><img src="../img/shields/will.png" class="foto-table" alt="Williessous"> Williessous</a></td>
-            <td class="has-text-centered">77</td>
-            <td class="has-text-centered">79</td>
-            <td class="has-text-centered is-success">156 (+18)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=8"><img src="../img/shields/diego.png" class="foto-table" alt="Orgullo de Runner"> Orgullo de Runner</a></td>
-            <td class="has-text-centered">83</td>
-            <td class="has-text-centered">55</td>
-            <td class="has-text-centered is-dark">138</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=17"><img src="../img/shields/ortega.png" class="foto-table" alt="David Valcan"> David Valcan</a></td>
-            <td class="has-text-centered">63</td>
-            <td class="has-text-centered">73</td>
-            <td class="has-text-centered is-dark">136</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/fran.png" class="foto-table" alt="Rinos Boys"> Rino's Boys</a></td>
-            <td class="has-text-centered">92</td>
-            <td class="has-text-centered">72</td>
-            <td class="has-text-centered is-success">164 (+28)</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=18"><img src="../img/shields/nandelas.png" class="foto-table" alt="Infican Viajes"> Infican Viajes</a></td>
-            <td class="has-text-centered">40</td>
-            <td class="has-text-centered">75</td>
-            <td class="has-text-centered is-dark">115</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=6"><img src="../img/shields/che.png" class="foto-table" alt="Amunt Che"> Amunt Che</a></td>
-            <td class="has-text-centered">75</td>
-            <td class="has-text-centered">84</td>
-            <td class="has-text-centered is-success">159 (+44)</td>
-          </tr>
-        </table>
-
-
-
-        <!-- OCTAVOS -->
-        <table class="table cup-table">
-          <tr>
-            <th colspan="3">OCTAVOS DE FINAL (18/02/2018 y 25/02/2018)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=4"><img src="../img/shields/borja_ramos.png" class="foto-table" alt="Bierzo Power"> Bierzo Power</a></td>
-            <td class="has-text-centered">65</td>
-            <td class="has-text-centered">68</td>
-            <td class="has-text-centered is-success">133 (+8)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=21"><img src="../img/shields/paloma.png" class="foto-table" alt="Palmira Chonici"> Palmira Chonici</a></td>
-            <td class="has-text-centered">65</td>
-            <td class="has-text-centered">60</td>
-            <td class="has-text-centered is-dark">125</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=19"><img src="../img/shields/david_munoz.png" class="foto-table" alt="New Tikis"> New Tikis</a></td>
-            <td class="has-text-centered">71</td>
-            <td class="has-text-centered">97</td>
-            <td class="has-text-centered is-success">168 (+35)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=15"><img src="../img/shields/raul.png" class="foto-table" alt="Dojo Cobra KAI"> Dojo Cobra KAI</a></td>
-            <td class="has-text-centered">52</td>
-            <td class="has-text-centered">81</td>
-            <td class="has-text-centered is-dark">133</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=12"><img src="../img/shields/will.png" class="foto-table" alt="Williessous"> Williessous</a></td>
-            <td class="has-text-centered">58</td>
-            <td class="has-text-centered">86</td>
-            <td class="has-text-centered is-success">144 (+16)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/vicente.png" class="foto-table" alt="Wayne Team"> Wayne Team</a></td>
-            <td class="has-text-centered">45</td>
-            <td class="has-text-centered">83</td>
-            <td class="has-text-centered is-dark">128</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=13"><img src="../img/shields/ovidiu.png" class="foto-table" alt="Ovi Dan"> Ovi Dan</a></td>
-            <td class="has-text-centered">71</td>
-            <td class="has-text-centered">79</td>
-            <td class="has-text-centered is-dark">150</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=8"><img src="../img/shields/diego.png" class="foto-table" alt="Orgullo de Runner"> Orgullo de Runner</a></td>
-            <td class="has-text-centered">69</td>
-            <td class="has-text-centered">89</td>
-            <td class="has-text-centered is-success">158 (+8)</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=14"><img src="../img/shields/luis.png" class="foto-table" alt="Porrua City"> Porrua City</a></td>
-            <td class="has-text-centered">79</td>
-            <td class="has-text-centered">97</td>
-            <td class="has-text-centered is-dark">176</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=17"><img src="../img/shields/ortega.png" class="foto-table" alt="David Valcan"> David Valcan</a></td>
-            <td class="has-text-centered">92</td>
-            <td class="has-text-centered">89</td>
-            <td class="has-text-centered is-success">181 (+5)</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/fran.png" class="foto-table" alt="Rinos Boys"> Rino's Boys</a></td>
-            <td class="has-text-centered">70</td>
-            <td class="has-text-centered">78</td>
-            <td class="has-text-centered is-success">148 (+35)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=7"><img src="../img/shields/carlos_julio.png" class="foto-table" alt="Cabimas"> Cabimas</a></td>
-            <td class="has-text-centered">39</td>
-            <td class="has-text-centered">74</td>
-            <td class="has-text-centered is-dark">113</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=18"><img src="../img/shields/nandelas.png" class="foto-table" alt="Infican Viajes"> Infican Viajes</a></td>
-            <td class="has-text-centered">86</td>
-            <td class="has-text-centered">99</td>
-            <td class="has-text-centered is-success">185 (+13)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=16"><img src="../img/shields/ekaitz.png" class="foto-table" alt="Yellow Storm F.C."> Yellow Storm F.C.</a></td>
-            <td class="has-text-centered">70</td>
-            <td class="has-text-centered">102</td>
-            <td class="has-text-centered is-dark">172</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=0"><img src="../img/shields/jc.png" class="foto-table" alt="Frente Popular"> Frente Popular</a></td>
-            <td class="has-text-centered">81</td>
-            <td class="has-text-centered">96</td>
-            <td class="has-text-centered is-dark">177</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=6"><img src="../img/shields/che.png" class="foto-table" alt="Amunt Che"> Amunt Che</a></td>
-            <td class="has-text-centered">87</td>
-            <td class="has-text-centered">102</td>
-            <td class="has-text-centered is-success">189 (+12)</td>
-          </tr>
-        </table>
-      </div>
-
-
-      <!-- NORMAS -->
-      <div id="group-n" class="container_item subtitle" data-item="8">
-        <div class="has-text-centered">I OPIUM CUP</div>
-        <div class="has-text-centered">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/CzEltcB-DiQ?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
-        
-        <div style="width: 80%">
-          <article class="message" style="position: relative; right: -12%;">
-            <div class="message-header">
-              <p>INTRODUCCIÓN</p>
-              <button class="delete" aria-label="delete"></button>
-            </div>
-            <div class="message-body">
-              - Se juega con los mismos equipos de la Liga, así que no hay que hacer nada extra, ni exige nada diferente.<br>
-              - Se competirá con los puntos que se obtengan en la jornada de Liga que toque y se compararán con los del rival.<br>
-              - La modalidad de la competición será mixta, con una primera fase de liguilla y después cruces puros (como la Champions)
-            </div>
-          </article>
-
-          <article class="message is-primary" style="position: relative; right: -12%;">
-            <div class="message-header">
-              <p>LIGUILLA</p>
-              <button class="delete" aria-label="delete"></button>
-            </div>
-            <div class="message-body">
-              - Se harán 6 grupos: 5 grupos de 4 equipos y 1 grupo de 3 equipos (somos 23).<br>
-              - Clasifican 16 equipos: Todos los primeros y segundos de cada grupo y los 4 mejores terceros<br>
-              - Para determinar cuáles son los 4 mejores terceros y dado que hay un grupo de 3 equipos, sólo se tendrá en cuenta las jornadas en las que se enfrenten con el 1º y el 2º clasificado de su grupo.<br>
-              - Comienza el 7 de Enero y termina el 11 de Febrero<br>
-              - El ganador estará exento de pagar los 10€ la próxima liga, a modo de premio como Campeón de Copa.
-            </div>
-          </article>
-
-          <article class="message is-info" style="position: relative; right: -12%;">
-            <div class="message-header">
-              <p>CRUCES</p>
-              <button class="delete" aria-label="delete"></button>
-            </div>
-            <div class="message-body">
-              - Octavos de final<br>
-              Ida 18 Febrero<br>
-              Vta 25 Febrero<br><br>
-
-              - Cuartos de final<br>
-              Ida 28 Febrero<br>
-              Vta 4 Marzo<br><br>
-
-              - Semifinales<br>
-              Ida 11 Marzo<br>
-              Vta 18 Marzo<br><br>
-
-              - Final<br>
-              1 Abril
-            </div>
-          </article>
-        </div>
-      </div>
-
-
-
-      <!-- GRUPO A -->
-      <div id="group-a" class="container_item subtitle has-text-centered" data-item="1">GRUPO A
+    <!-- GRUPO A -->
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade" id="A" role="tabpanel" aria-labelledby="tab-A">
         <!-- Clasificación -->
         <table class="table">
           <thead>
@@ -641,7 +258,7 @@
 
 
       <!-- GRUPO B -->
-      <div id="group-b" class="container_item subtitle has-text-centered" data-item="2">GRUPO B
+      <div class="tab-pane fade" id="B" role="tabpanel" aria-labelledby="tab-B">
         <!-- Clasificación -->
         <table class="table">
           <thead>
@@ -711,16 +328,16 @@
         </table>
 
         <!-- Resultados -->
-        <table class="table is-striped cup-table">
+        <table class="table cup-table">
           <tr>
             <th colspan="3">JORNADA 1 (05/01/2018 - 08/01/2018)</th>
           </tr>
-          <tr>
+          <tr class="fila-impar">
             <td class="left-table"><a href="/views/profile.html?id=9"><img src="../img/shields/juanan.png" class="foto-table" alt="Balonmpedica Porrua"> Balompedica Porrua</a></td>
             <td class="has-text-centered">27 - 67</td>
             <td class="right-table"><a href="/views/profile.html?id=5">Meneillos <img src="../img/shields/serious.png" class="foto-table" alt="Meneillos"></a></td>
           </tr>
-          <tr>
+          <tr class="fila-par">
             <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/fran.png" class="foto-table" alt="Rinos Boys"> Rino's Boys</a></td>
             <td class="has-text-centered">77 - 70</td>
             <td class="right-table"><a href="/views/profile.html?id=18">Infican Viajes <img src="../img/shields/nandelas.png" class="foto-table" alt="Infican Viajes"></a></td>
@@ -800,7 +417,7 @@
 
 
 
-      <div id="group-c" class="container_item subtitle has-text-centered" data-item="3">GRUPO C
+      <div class="tab-pane fade" id="C" role="tabpanel" aria-labelledby="tab-C">
         <!-- Clasificación -->
         <table class="table">
           <thead>
@@ -959,7 +576,7 @@
 
 
 
-      <div id="group-d" class="container_item subtitle has-text-centered" data-item="4">GRUPO D
+      <div class="tab-pane fade" id="D" role="tabpanel" aria-labelledby="tab-D">
         <!-- Clasificación -->
         <table class="table">
           <thead>
@@ -1118,7 +735,7 @@
 
 
 
-      <div id="group-e" class="container_item subtitle has-text-centered" data-item="5">GRUPO E
+      <div class="tab-pane fade" id="E" role="tabpanel" aria-labelledby="tab-E">
         <!-- Clasificación -->
         <table class="table">
           <thead>
@@ -1276,7 +893,7 @@
 
 
 
-      <div id="group-f" class="container_item subtitle has-text-centered" data-item="6">GRUPO F
+      <div class="tab-pane fade" id="F" role="tabpanel" aria-labelledby="tab-F">
         <!-- Clasificación -->
         <table class="table">
           <thead>
@@ -1432,22 +1049,360 @@
           </tr>
         </table>
       </div>
-    </section>
 
 
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <!-- CRUCES -->
+      <div class="tab-pane fade show active" id="cruces" role="tabpanel" aria-labelledby="tab-cruces">
+        <div class="text-center">
+          <div class="h4">CAMPEÓN CHAMPIONS LEAGUE 2017-2018</div>
+          <a href="/views/profile.html?id=12"><img src="../img/shields/will.png" class="foto" alt="Williessous"> <h3>Williessous</h3></a>
+        </div>
+        <div class="text-center"><img src="../img/cruces.png" style="width: 60%;" alt=""></div>
 
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#tab_header ul li.item').on('click', function() {
-          let number = $(this).data('option');
-          $('#tab_header ul li.item').removeClass('is-active');
-          $(this).addClass('is-active');
-          $('#tab_container .container_item').removeClass('is-active');
-          $('div[data-item="' + number + '"]').addClass('is-active');
-        });
-      });
-    </script>
+
+        <!-- Final -->
+        <table class="table cup-table">
+          <tr>
+            <th colspan="3">FINAL (01/04/2018)</th>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/fran.png" class="foto-table" alt="Rinos Boys"> Rino's Boys</a></td>
+            <td class="has-text-centered is-dark">57</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=12"><img src="../img/shields/will.png" class="foto-table" alt="Williessous"> Williessous</a></td>
+            <td class="has-text-centered is-success">71</td>
+          </tr>
+        </table>
+
+
+        <!-- Semis -->
+        <table class="table cup-table">
+          <tr>
+            <th colspan="3">SEMIFINALES (11/03/2018 y 18/03/2018)</th>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=4"><img src="../img/shields/borja_ramos.png" class="foto-table" alt="Bierzo Power"> Bierzo Power</a></td>
+            <td class="has-text-centered">68</td>
+            <td class="has-text-centered">61</td>
+            <td class="has-text-centered is-dark">129</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=12"><img src="../img/shields/will.png" class="foto-table" alt="Williessous"> Williessous</a></td>
+            <td class="has-text-centered">78</td>
+            <td class="has-text-centered">74</td>
+            <td class="has-text-centered is-success">152 (+23)</td>
+          </tr>
+
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/fran.png" class="foto-table" alt="Rinos Boys"> Rino's Boys</a></td>
+            <td class="has-text-centered">67</td>
+            <td class="has-text-centered">75</td>
+            <td class="has-text-centered is-success">142 (+1)</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=6"><img src="../img/shields/che.png" class="foto-table" alt="Amunt Che"> Amunt Che</a></td>
+            <td class="has-text-centered">71</td>
+            <td class="has-text-centered">70</td>
+            <td class="has-text-centered is-dark">141</td>
+          </tr>
+        </table>
+
+
+        <!-- Cuartos -->
+        <table class="table cup-table">
+          <tr>
+            <th colspan="3">CUARTOS DE FINAL (28/02/2018 y 04/03/2018)</th>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=4"><img src="../img/shields/borja_ramos.png" class="foto-table" alt="Bierzo Power"> Bierzo Power</a></td>
+            <td class="has-text-centered">64</td>
+            <td class="has-text-centered">71</td>
+            <td class="has-text-centered is-success">135 (+28)</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=19"><img src="../img/shields/david_munoz.png" class="foto-table" alt="New Tikis"> New Tikis</a></td>
+            <td class="has-text-centered">54</td>
+            <td class="has-text-centered">53</td>
+            <td class="has-text-centered is-dark">107</td>
+          </tr>
+
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=12"><img src="../img/shields/will.png" class="foto-table" alt="Williessous"> Williessous</a></td>
+            <td class="has-text-centered">77</td>
+            <td class="has-text-centered">79</td>
+            <td class="has-text-centered is-success">156 (+18)</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=8"><img src="../img/shields/diego.png" class="foto-table" alt="Orgullo de Runner"> Orgullo de Runner</a></td>
+            <td class="has-text-centered">83</td>
+            <td class="has-text-centered">55</td>
+            <td class="has-text-centered is-dark">138</td>
+          </tr>
+
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=17"><img src="../img/shields/ortega.png" class="foto-table" alt="David Valcan"> David Valcan</a></td>
+            <td class="has-text-centered">63</td>
+            <td class="has-text-centered">73</td>
+            <td class="has-text-centered is-dark">136</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/fran.png" class="foto-table" alt="Rinos Boys"> Rino's Boys</a></td>
+            <td class="has-text-centered">92</td>
+            <td class="has-text-centered">72</td>
+            <td class="has-text-centered is-success">164 (+28)</td>
+          </tr>
+
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=18"><img src="../img/shields/nandelas.png" class="foto-table" alt="Infican Viajes"> Infican Viajes</a></td>
+            <td class="has-text-centered">40</td>
+            <td class="has-text-centered">75</td>
+            <td class="has-text-centered is-dark">115</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=6"><img src="../img/shields/che.png" class="foto-table" alt="Amunt Che"> Amunt Che</a></td>
+            <td class="has-text-centered">75</td>
+            <td class="has-text-centered">84</td>
+            <td class="has-text-centered is-success">159 (+44)</td>
+          </tr>
+        </table>
+
+
+        <!-- Octavos -->
+        <table class="table cup-table">
+          <tr>
+            <th colspan="3">OCTAVOS DE FINAL (18/02/2018 y 25/02/2018)</th>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=4"><img src="../img/shields/borja_ramos.png" class="foto-table" alt="Bierzo Power"> Bierzo Power</a></td>
+            <td class="has-text-centered">65</td>
+            <td class="has-text-centered">68</td>
+            <td class="has-text-centered is-success">133 (+8)</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=21"><img src="../img/shields/paloma.png" class="foto-table" alt="Palmira Chonici"> Palmira Chonici</a></td>
+            <td class="has-text-centered">65</td>
+            <td class="has-text-centered">60</td>
+            <td class="has-text-centered is-dark">125</td>
+          </tr>
+
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=19"><img src="../img/shields/david_munoz.png" class="foto-table" alt="New Tikis"> New Tikis</a></td>
+            <td class="has-text-centered">71</td>
+            <td class="has-text-centered">97</td>
+            <td class="has-text-centered is-success">168 (+35)</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=15"><img src="../img/shields/raul.png" class="foto-table" alt="Dojo Cobra KAI"> Dojo Cobra KAI</a></td>
+            <td class="has-text-centered">52</td>
+            <td class="has-text-centered">81</td>
+            <td class="has-text-centered is-dark">133</td>
+          </tr>
+
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=12"><img src="../img/shields/will.png" class="foto-table" alt="Williessous"> Williessous</a></td>
+            <td class="has-text-centered">58</td>
+            <td class="has-text-centered">86</td>
+            <td class="has-text-centered is-success">144 (+16)</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/vicente.png" class="foto-table" alt="Wayne Team"> Wayne Team</a></td>
+            <td class="has-text-centered">45</td>
+            <td class="has-text-centered">83</td>
+            <td class="has-text-centered is-dark">128</td>
+          </tr>
+
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=13"><img src="../img/shields/ovidiu.png" class="foto-table" alt="Ovi Dan"> Ovi Dan</a></td>
+            <td class="has-text-centered">71</td>
+            <td class="has-text-centered">79</td>
+            <td class="has-text-centered is-dark">150</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=8"><img src="../img/shields/diego.png" class="foto-table" alt="Orgullo de Runner"> Orgullo de Runner</a></td>
+            <td class="has-text-centered">69</td>
+            <td class="has-text-centered">89</td>
+            <td class="has-text-centered is-success">158 (+8)</td>
+          </tr>
+
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=14"><img src="../img/shields/luis.png" class="foto-table" alt="Porrua City"> Porrua City</a></td>
+            <td class="has-text-centered">79</td>
+            <td class="has-text-centered">97</td>
+            <td class="has-text-centered is-dark">176</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=17"><img src="../img/shields/ortega.png" class="foto-table" alt="David Valcan"> David Valcan</a></td>
+            <td class="has-text-centered">92</td>
+            <td class="has-text-centered">89</td>
+            <td class="has-text-centered is-success">181 (+5)</td>
+          </tr>
+
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/fran.png" class="foto-table" alt="Rinos Boys"> Rino's Boys</a></td>
+            <td class="has-text-centered">70</td>
+            <td class="has-text-centered">78</td>
+            <td class="has-text-centered is-success">148 (+35)</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=7"><img src="../img/shields/carlos_julio.png" class="foto-table" alt="Cabimas"> Cabimas</a></td>
+            <td class="has-text-centered">39</td>
+            <td class="has-text-centered">74</td>
+            <td class="has-text-centered is-dark">113</td>
+          </tr>
+
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=18"><img src="../img/shields/nandelas.png" class="foto-table" alt="Infican Viajes"> Infican Viajes</a></td>
+            <td class="has-text-centered">86</td>
+            <td class="has-text-centered">99</td>
+            <td class="has-text-centered is-success">185 (+13)</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=16"><img src="../img/shields/ekaitz.png" class="foto-table" alt="Yellow Storm F.C."> Yellow Storm F.C.</a></td>
+            <td class="has-text-centered">70</td>
+            <td class="has-text-centered">102</td>
+            <td class="has-text-centered is-dark">172</td>
+          </tr>
+
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+
+          <tr class="fila-impar">
+            <td class="left-table"><a href="/views/profile.html?id=0"><img src="../img/shields/jc.png" class="foto-table" alt="Frente Popular"> Frente Popular</a></td>
+            <td class="has-text-centered">81</td>
+            <td class="has-text-centered">96</td>
+            <td class="has-text-centered is-dark">177</td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table"><a href="/views/profile.html?id=6"><img src="../img/shields/che.png" class="foto-table" alt="Amunt Che"> Amunt Che</a></td>
+            <td class="has-text-centered">87</td>
+            <td class="has-text-centered">102</td>
+            <td class="has-text-centered is-success">189 (+12)</td>
+          </tr>
+        </table>
+      </div>
+
+
+
+      <!-- NORMAS -->
+      <div class="tab-pane fade" id="normas" role="tabpanel" aria-labelledby="tab-normas">
+        <div class="text-center">SORTEO GRUPOS</div>
+        <div class="text-center">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/CzEltcB-DiQ?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div style="width: 80%">
+          <article class="message" style="position: relative; right: -12%;">
+            <div class="message-header">
+              <p>INTRODUCCIÓN</p>
+              <button class="delete" aria-label="delete"></button>
+            </div>
+            <div class="message-body">
+              - Se juega con los mismos equipos de la Liga, así que no hay que hacer nada extra, ni exige nada diferente.<br>
+              - Se competirá con los puntos que se obtengan en la jornada de Liga que toque y se compararán con los del rival.<br>
+              - La modalidad de la competición será mixta, con una primera fase de liguilla y después cruces puros (como la Champions)
+            </div>
+          </article>
+
+          <article class="message is-primary" style="position: relative; right: -12%;">
+            <div class="message-header">
+              <p>LIGUILLA</p>
+              <button class="delete" aria-label="delete"></button>
+            </div>
+            <div class="message-body">
+              - Se harán 6 grupos: 5 grupos de 4 equipos y 1 grupo de 3 equipos (somos 23).<br>
+              - Clasifican 16 equipos: Todos los primeros y segundos de cada grupo y los 4 mejores terceros<br>
+              - Para determinar cuáles son los 4 mejores terceros y dado que hay un grupo de 3 equipos, sólo se tendrá en cuenta las jornadas en las que se enfrenten con el 1º y el 2º clasificado de su grupo.<br>
+              - Comienza el 7 de Enero y termina el 11 de Febrero<br>
+              - El ganador estará exento de pagar los 10€ la próxima liga, a modo de premio como Campeón de Copa.
+            </div>
+          </article>
+
+          <article class="message is-info" style="position: relative; right: -12%;">
+            <div class="message-header">
+              <p>CRUCES</p>
+              <button class="delete" aria-label="delete"></button>
+            </div>
+            <div class="message-body">
+              - Octavos de final<br>
+              Ida 18 Febrero<br>
+              Vta 25 Febrero<br><br>
+
+              - Cuartos de final<br>
+              Ida 28 Febrero<br>
+              Vta 4 Marzo<br><br>
+
+              - Semifinales<br>
+              Ida 11 Marzo<br>
+              Vta 18 Marzo<br><br>
+
+              - Final<br>
+              1 Abril
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/champions.js"></script>
   </body>
 </html>
