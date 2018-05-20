@@ -160,7 +160,7 @@
               position: team.position_general
             }
           }
-          if (count_jornada === last_jornada){
+          if (count_jornada === last_jornada && last_jornada > 1){
             let player2 = $.grep(penultima, function(e){return e.id == team.id;});
 
             if(player2[0].position > team.position_general){
@@ -176,7 +176,12 @@
               team.updown = '../img/arrow_equal.png';
             }
             team.updown_num = Math.abs(player2[0].position - team.position_general);
+          }else{
+            //When there only 1 jornada there is not "penultima"
+            team.updown = '../img/arrow_equal.png';
+            team.updown_num = 0;
           }
+
         });
 
         // CALCULATE BEST, WORST and AVERAGE for whole SEASON
