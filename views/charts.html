@@ -10,7 +10,7 @@
     <title>Opium League :: Gráficos</title>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 
@@ -49,86 +49,125 @@
     <span class="has-text-centered" ng-controller="ChartsController">
 
     <!-- GRAFICOS -->
-    <div id="chart_position" style="width:100%; height:600px;"></div>
-    <div id="chart_evolution" style="width:100%; height:600px;"></div>
-    <div id="chart_winners" style="width:100%; height:600px;"></div>
-    <div id="chart_top" style="width:100%; height:600px;"></div>
-    <!-- <div class="card">
-      <div class="card-header">
-        <i class="fa fa-line-chart" aria-hidden="true"></i> EVOLUCIÓN POR JORNADA
-      </div>
-      <div class="card-body">
-        <div id="chart_position"></div>
-        <div id="chart_evolution"></div>
-      </div>
-    </div> -->
-<!--
-    <div class="card">
-      <div class="card-header">
-        <i class="fa fa-bar-chart" aria-hidden="true"></i> GANADORES DE JORNADA
-      </div>
-      <div class="card-body">
-        <div id="chart_winners"></div>
-      </div>
-    </div> -->
-
-    <!-- <div class="card">
-      <div class="card-header">
-        <i class="fa fa-pie-chart" aria-hidden="true"></i> JORNADAS COMO LÍDER
-      </div>
-      <div class="card-body">
-
-      </div>
-    </div> -->
-
-    <div class="card">
-      <div class="card-header">
-        <i class="fa fa-exchange" aria-hidden="true"></i> MEJOR / PEOR JORNADA DE LA LIGA
-      </div>
-      <div class="card-body">
-        <!-- Best/Worst Score -->
-        <section class="text-center" ng-controller="TableController as table">
-          <div class="row">
-            <div class="col-sm-6">
-              <div><i class="fa fa-trophy" aria-hidden="true"></i> Mejor Jornada: </div>
-              <img ng-src="{{tables.score_best.shield}}" class="charts-foto" />
-              <div>{{tables.score_best.team}}: {{tables.score_best.score}} puntos</div>
-            </div>
-            <div class="col-sm-6">
-              <div><i class="fa fa-trophy fa-trophy-down" aria-hidden="true"></i> Peor Jornada: </div>
-              <img ng-src="{{tables.score_worst.shield}}" class="charts-foto" />
-              <div>{{tables.score_worst.team}}: {{tables.score_worst.score}} puntos</div>
-            </div>
+    <div class="container-fluid">
+      <div class="card-deck">
+          <div class="card">
+              <div class="card-header text-left"><i class="far fa-chart-bar fa-2x align-middle"></i> <span class="h5 align-middle">GANADORES DE JORNADA</span></div>
+              <div class="card-block text-center">
+                <div id="chart_jornada_winner" style="width:100%; height:300px;"></div>
+              </div>
+              <div class="card-footer text-center">
+              </div>
           </div>
-          <span id="table_jornada" class="text-center" ng-repeat="jornada in jornadas_table" ng-show="jornada[0].points" ng-cloak>
-          </span>
-        </section>
+          <div class="card">
+              <div class="card-header text-left"><img src="../img/cups/copa_liga_negra.png" style="height: 32px;"> <span class="h5 align-middle">JORNADAS COMO LÍDER</span></div>
+              <div class="card-block text-center">
+                <div id="chart_leader" style="width:100%; height:300px;"></div>
+              </div>
+              <div class="card-footer text-center">
+              </div>
+          </div>
       </div>
+
+      <br>
+
+      <div class="card-deck">
+          <div class="card">
+              <div class="card-header text-left"><img src="../img/cups/copa_champions_negra.png" style="height: 32px;"> <span class="h5 align-middle">JORNADAS EN CHAMPIONS</span></div>
+              <div class="card-block text-center">
+                <div id="chart_champions" style="width:100%; height:300px;"></div>
+              </div>
+              <div class="card-footer text-center">
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-header text-left"><img src="../img/cups/copa_uefa_negra.png" style="height: 32px;"> <span class="h5 align-middle">JORNADAS EN UEFA</span></div>
+              <div class="card-block text-center">
+                <div id="chart_uefa" style="width:100%; height:300px;"></div>
+              </div>
+              <div class="card-footer text-center">
+              </div>
+          </div>
+      </div>
+
+
+      <br>
+
+      <div class="card-deck">
+          <div class="card">
+              <div class="card-header text-left"><img src="../img/cups/copa_intertoto_negra.png" style="height: 32px;"> <span class="h5 align-middle">JORNADAS EN INTERTOTO</span></div>
+              <div class="card-block text-center">
+                <div id="chart_intertoto" style="width:100%; height:300px;"></div>
+              </div>
+              <div class="card-footer text-center">
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-header text-left"><i class="fas fa-fire fa-2x align-middle" style="color: #FF5555;"></i> <span class="h5 align-middle">JORNADAS EN DESCENSO</span></div>
+              <div class="card-block text-center">
+                <div id="chart_descenso" style="width:100%; height:300px;"></div>
+              </div>
+              <div class="card-footer text-center">
+              </div>
+          </div>
+      </div>
+
+      <br>
+
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-header text-left"><i class="fas fa-chart-line fa-2x align-middle"></i> <span class="h5 align-middle">EVOLUCIÓN DE POSICIONES EN LA GENERAL</span></div>
+          <div class="card-block text-center">
+            <div id="chart_position_evolution" style="width:100%; height:600px;"></div>
+          </div>
+          <div class="card-footer text-center"></div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-header text-left"><i class="fas fa-chart-line fa-2x align-middle"></i> <span class="h5 align-middle">EVOLUCIÓN DE POSICIONES EN LA JORNADA</span></div>
+          <div class="card-block text-center">
+            <div id="chart_score_evolution" style="width:100%; height:600px;"></div>
+          </div>
+          <div class="card-footer text-center"></div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-header text-left"><i class="fas fa-exchange-alt fa-2x align-middle"></i> <span class="h5 align-middle">MEJOR / PEOR JORNADA DE LA LIGA</span></div>
+          <div class="card-block text-center">
+            <!-- Best/Worst Score -->
+            <section class="text-center" ng-controller="TableController as table">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div><i class="fas fa-trophy" aria-hidden="true"></i> Mejor Jornada: </div>
+                  <img ng-src="{{tables.score_best.shield}}" class="charts-foto" />
+                  <div>{{tables.score_best.team}}: {{tables.score_best.score}} puntos</div>
+                </div>
+                <div class="col-sm-6">
+                  <div><i class="fas fa-trophy fa-trophy-down" aria-hidden="true"></i> Peor Jornada: </div>
+                  <img ng-src="{{tables.score_worst.shield}}" class="charts-foto" />
+                  <div>{{tables.score_worst.team}}: {{tables.score_worst.score}} puntos</div>
+                </div>
+              </div>
+              <span id="table_jornada" class="text-center" ng-repeat="jornada in jornadas_table" ng-show="jornada[0].points" ng-cloak>
+              </span>
+            </section>
+          </div>
+          <div class="card-footer text-center"></div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- <span class="card">
-      <div class="card-content">
-        <p class="title is-5"><i class="fa fa-exchange" aria-hidden="true"></i> MEJOR / PEOR JORNADA DE LA LIGA</p>
-      </div>
-      <div class="card-image">
-        <section class="section has-text-centered" ng-controller="TableController as table">
-          <div class="columns">
-            <div class="column">
-              <div><i class="fa fa-trophy" aria-hidden="true"></i> Mejor Jornada: </div>
-              <img ng-src="{{tables.score_best.shield}}" class="foto" />
-              <div>{{tables.score_best.team}}: {{tables.score_best.score}} puntos</div>
-            </div>
-            <div class="column">
-              <div><i class="fa fa-trophy fa-trophy-down" aria-hidden="true"></i> Peor Jornada: </div>
-              <img ng-src="{{tables.score_worst.shield}}" class="foto" />
-              <div>{{tables.score_worst.team}}: {{tables.score_worst.score}} puntos</div>
-            </div>
-          </div>
-          <span id="table_jornada" class="has-text-centered" ng-repeat="jornada in jornadas_table" ng-show="jornada[0].points" ng-cloak>
-          </span>
-        </section>
-      </div>
-    </span> -->
+
+
   </span>
 
   <p>&nbsp;</p>
