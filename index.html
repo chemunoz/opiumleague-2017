@@ -37,12 +37,69 @@
     <div class="jumbotron">
       <section class="container">
         <div class="trans-background">IX OPIUM LEAGUE</div>
+
+        <button type="button" class="btn btn-primary my-3" data-toggle="modal" data-target="#newsModal">
+          <i class="fas fa-gift"></i> NOVEDADES 2018-2019
+        </button>
+        <div class="trans-background" style="color: #000;"><i class="far fa-clock"></i> <span id="countdown"></span></div>
         <div class="trans-background mt-3" ng-controller="IndexController">
           <span ng-repeat="player in players_shields" ng-cloak>
             <a href="/views/profile.html?id={{player.id}}"><img class="shield" ng-src="{{player.shield}}" alt="{{player.team}}"/></a>
           </span>
         </div>
       </section>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newsModalLabel"><img src="./img/logo_opium_icono.png" style="float: left; height: 40px;" alt=""> <span class="ml-3" style="vertical-align: middle;">NOVEDADES Y NOTICIAS PARA LA TEMPORADA 2018-2019</span></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>La X Opium League arrancará el fin de semana del 18 de agosto, con la 1ª jornada de la Liga Santander.</p>
+            <p>Para el X aniversario tiramos la casa por la ventana y el Comité de la Opium League ha elaborado algunos cambios, con el fin de que la competición sea aún más atractiva para los participantes.</p>
+            <p>En esta nueva edición:</p>
+            <ul>
+              <li><span class="font-weight-bold">1.- SEGUIMOS EN FUTMONDO</span>
+                <p>Volveremos a contar con la plataforma Futmondo, en su modo clásico prensa.</p>
+              </li>
+              <li><span class="font-weight-bold">2.- LA "COPA" SE RENOMBRA A "OPIUM CHAMPIONS LEAGUE"</span>
+                <p>Además de la Opium League, contaremos por 2º año con la Copa, que a partir de este año denominaremos “Opium Champions League”, donde los participantes se enfrentarán siguiendo un formato similar al de la Liga de Campeones, contando con una primera fase de liguilla, para pasar a la fase de eliminatorias directas.</p>
+                <p>El ganador obtendrá 10€ como premio</p>
+              </li>
+              <li><span class="font-weight-bold">3.- NUEVA COMPETICIÓN, "OPIUM EUROPA LEAGUE"</span>
+                <p>Nace con el fin de que todos los equipos luchen por un título o títulos el mayor número de jornadas. Participarán los equipos que hayan quedado eliminados en la fase de liguilla de la "OPIUM CHAMPIONS LEAGUE" y se jugará a eliminatorias directas a ida y vuelta.</p>
+                <p>El ganador obtendrá 5€ como premio</p>
+              </li>
+              <li><span class="font-weight-bold">4.- NUEVA COMPETICIÓN, "FO CUP"</span>
+                <p>Por último, contaremos con la Futmondo Opium CUP, aprovechando nuevamente el soporte de Futmondo en su modo Copa, que enfrentará a los participantes de la Opium League mediante eliminatorias directas a ida y vuelta.</p>
+                <p>El ganador obtendrá 10€ como premio</p>
+              </li>
+              <li><span class="font-weight-bold">5.- CALENDARIO POR DEFINIR</span>
+                <p>Las fechas de la Champions, Europa League y la FO CUP, se concretarán al comienzo de temporada.</p>
+              </li>
+              <li><span class="font-weight-bold">6.- SE MANTIENEN PREMIOS ESPECIALES, BAJA SU CUANTÍA</span>
+                <p>Debido a que a partir de éste año tendremos 2 competiciones nuevas que se unen a las 2 que ya dispustamos el año pasado y para evitar quitar estos premios "a la regularidad" hemos decidido rebajar la cuantía del premio de cada una. Así que quedan así:</p>
+                <ul>
+                  <li>A.- Equipo con más jornadas ganadas: 5€</li>
+                  <li>B.- Equipo con la máxima puntuación en una jornada: 5€</li>
+                </ul>
+              </li>
+              <li><span class="font-weight-bold">7.- ACTUALIZACIONES MÁS RAPIDAS</span>
+                <p>De cara a la próxima temporada vamos a instaurar un sistema de publicación distribuido de cara a que tengáis las puntuaciones, la clasificación y los gráficos actualizados lo más rápido posible. Seguramente, antes que el propio Futmondo!! ;D</p>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">CERRAR</button>
+          </div>
+        </div>
+      </div>
     </div>
 
 

@@ -65,7 +65,13 @@ header {
   position: relative;
   height: 90vh;
   background: url("../img/background.png") center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  padding-top: 15px; }
+
+#countdown {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 0px; }
 
 img.shield {
   width: 4rem !important;
