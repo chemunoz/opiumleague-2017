@@ -102,10 +102,10 @@
                           'uefa': (player.position_general == 5 || player.position_general == 6),
                           'intertoto': player.position_general == 7,
                           'descenso': player.position_general > general_table.length - 3}">
-                <th class="text-center align-middle">{{player.position_general}}</th>
+                <td class="text-center align-middle">{{player.position_general}}</td>
                 <td class="text-center align-middle"><img ng-src="{{player.updown}}" class="arrow" /> {{player.updown_num}}</td>
-                <td class="align-middle"><a href="profile.html?id={{player.id}}" class="text-dark"><img ng-src="{{player.shield}}" class="foto-table" /> {{player.team}}</a></td>
-                <td class="align-middle d-none d-md-table-cell"><a href="profile.html?id={{player.id}}" class="text-dark"><img ng-src="{{player.image}}" class="foto-table" /> {{player.name}}</a></td>
+                <td class="text-left align-middle"><a href="profile.html?id={{player.id}}" class="text-dark"><img ng-src="{{player.shield}}" class="foto-table" /> {{player.team}}</a></td>
+                <td class="text-left align-middle d-none d-md-table-cell"><a href="profile.html?id={{player.id}}" class="text-dark"><img ng-src="{{player.image}}" class="foto-table" /> {{player.name}}</a></td>
                 <td class="text-center align-middle d-none d-sm-table-cell">{{player.num_jornadas}}</td>
                 <td class="text-center align-middle font-weight-bold">{{player.score_general}}</td>
                 <td class="text-center align-middle d-none d-sm-table-cell">{{player.score_best}}</td>
@@ -138,7 +138,7 @@
                            'uefa': (player_jornada.position_general == 5 || player_jornada.position_general == 6),
                            'intertoto': player_jornada.position_general == 7,
                            'descenso': player_jornada.position_general > jornada.length - 3}">
-                  <th class="text-center align-middle">{{player_jornada.position_general}}</th>
+                  <td class="text-center align-middle">{{player_jornada.position_general}}</td>
                   <td class="text-left align-middle"><a href="profile.html?id={{player_jornada.id}}"><img ng-src="{{player_jornada.shield}}" class="foto-table" /> {{player_jornada.team}}</a></td>
                   <td class="text-center align-middle font-weight-bold">{{player_jornada.score_general}}</td>
                 </tr>
@@ -168,7 +168,7 @@
               <tbody ng-repeat="player_jornada in jornada">
                 <tr ng-class="{'champions': player_jornada.position_jornada == 1,
                                'descenso': player_jornada.position_jornada == jornada.length}">
-                  <th class="text-center align-middle">{{player_jornada.position_jornada}}</th>
+                  <td class="text-center align-middle">{{player_jornada.position_jornada}}</td>
                   <td class="text-left align-middle"><a href="profile.html?id={{player_jornada.id}}"><img ng-src="{{player_jornada.shield}}" class="foto-table" /> {{player_jornada.team}}</a></td>
                   <td class="text-center align-middle font-weight-bold">{{player_jornada.score_jornada}}</td>
                 </tr>
