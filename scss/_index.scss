@@ -1,7 +1,7 @@
 /* INDEX */
 .trans-background {
   color: #FFF;
-  font-size: 2em;
+  font-size: 1.5em;
   background: rgba(255, 255, 255, 0.3);
   @include border-radius(10px);
 }
@@ -11,15 +11,15 @@
   border-radius: 0 !important;
   text-align: center;
   position: relative;
-  height: 90vh;
+  height: 100vh;
   background: url('../img/background.png') center no-repeat;
   background-size: cover;
-  padding-top: 15px;
+  padding: 15px 0 0 0;
 }
 
 #countdown{
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-top:0px;
 }
 
