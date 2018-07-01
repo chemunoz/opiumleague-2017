@@ -1,6 +1,6 @@
 (function() {
   let app = angular.module('opiumLeage', []);
-  let season = "2017-2018";
+  let season = "2018-2019";
 
   // Comparison function
   cmp = (x, y)=>{
