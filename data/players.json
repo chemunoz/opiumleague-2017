@@ -1,4 +1,258 @@
 {
+  "2018-2019":[
+    {
+      "id": 0,
+      "name": "JC",
+      "team": "Frente Popular",
+      "shield": "/img/shields/jc.png",
+      "image": "/img/players/jc.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2009-2010", "2010-2011",	"2011-2012", "2012-2013", "2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 1,
+      "name": "Chente",
+      "team": "Wayne team",
+      "shield": "/img/shields/vicente.png",
+      "image": "/img/players/vicente.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2012-2013", "2014-2015", "2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 2,
+      "name": "Dani R.",
+      "team": "FotografiaDanyRuiz",
+      "shield": "/img/shields/dani_negro.png",
+      "image": "/img/players/dani_negro.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 3,
+      "name": "Fran",
+      "team": "Rino's Boys",
+      "shield": "/img/shields/fran.png",
+      "image": "/img/players/fran.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2011-2012", "2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 4,
+      "name": "Borja",
+      "team": "Bierzo Power",
+      "shield": "/img/shields/borja_ramos.png",
+      "image": "/img/players/borja_ramos.jpg",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 5,
+      "name": "Serious",
+      "team": "Meneillos",
+      "shield": "/img/shields/serious.png",
+      "image": "/img/players/serious.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 6,
+      "name": "Che",
+      "team": "Amunt Che",
+      "shield": "/img/shields/che.png",
+      "image": "/img/players/che.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2009-2010", "2010-2011",	"2011-2012", "2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 7,
+      "name": "Carlos Julio",
+      "team": "Cabimas FC",
+      "shield": "/img/shields/carlos_julio.png",
+      "image": "/img/players/carlos_julio.jpg",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 8,
+      "name": "Diego",
+      "team": "Orgullo de Runner",
+      "shield": "/img/shields/diego.png",
+      "image": "/img/players/diego.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 9,
+      "name": "Juanan",
+      "team": "Balompédica Porrua",
+      "shield": "/img/shields/juanan.png",
+      "image": "/img/players/juanan.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 10,
+      "name": "Adolfo",
+      "team": "Galizano 17-18",
+      "shield": "/img/shields/adolfo.png",
+      "image": "/img/players/adolfo.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2009-2010", "2010-2011",	"2011-2012", "2012-2013", "2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 11,
+      "name": "Will",
+      "team": "Williessous",
+      "shield": "/img/shields/will.png",
+      "image": "/img/players/will.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 12,
+      "name": "Ovidiu",
+      "team": "Ovi Dan",
+      "shield": "/img/shields/ovidiu.png",
+      "image": "/img/players/ovidiu.jpg",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2017-2018", "2018-2019"]
+    },
+    {
+      "id": 13,
+      "name": "Luis",
+      "team": "Porrua City",
+      "shield": "/img/shields/luis.png",
+      "image": "/img/players/luis.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2009-2010", "2010-2011",	"2011-2012", "2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 14,
+      "name": "Raúl",
+      "team": "Dojo Cobra KAI",
+      "shield": "/img/shields/raul.png",
+      "image": "/img/players/raul.jpg",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2012-2013", "2013-2014", "2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 15,
+      "name": "Ekaitz",
+      "team": "Yellow Storm F.C.",
+      "shield": "/img/shields/ekaitz.png",
+      "image": "/img/players/ekaitz.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2017-2018", "2018-2019"]
+    },
+    {
+      "id": 16,
+      "name": "David O.",
+      "team": "David Valcan",
+      "shield": "/img/shields/ortega.png",
+      "image": "/img/players/ortega.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2009-2010", "2010-2011",	"2011-2012", "2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 17,
+      "name": "Nando",
+      "team": "Infican Viajes",
+      "shield": "/img/shields/nandelas.png",
+      "image": "/img/players/nandelas.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 18,
+      "name": "David M.",
+      "team": "New tikis",
+      "shield": "/img/shields/david_munoz.png",
+      "image": "/img/players/david_munoz.jpg",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2015-2016", "2016-2017", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 19,
+      "name": "Mario",
+      "team": "Cipriano Escanciano",
+      "shield": "/img/shields/mario.png",
+      "image": "/img/players/mario.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2009-2010", "2010-2011",	"2011-2012", "2012-2013", "2014-2015", "2015-2016", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 20,
+      "name": "Paloma",
+      "team": "Palmira Chonici",
+      "shield": "/img/shields/paloma.png",
+      "image": "/img/players/paloma.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2009-2010", "2010-2011",	"2011-2012", "2012-2013", "2015-2016", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 21,
+      "name": "Dani S.",
+      "team": "Wiki Team",
+      "shield": "/img/shields/danilo.png",
+      "image": "/img/players/danilo.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2009-2010",	"2011-2012", "2012-2013", "2015-2016", "2017-2018", "2018-2019"]
+    },
+    {
+      "id": 22,
+      "name": "Rafa Pereira",
+      "team": "Luso Tinto",
+      "shield": "/img/shields/rafa_pereira.png",
+      "image": "/img/players/rafa_pereira.jpg",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2016-2017", "2018-2019"]
+    },
+    {
+      "id": 23,
+      "name": "Felipe",
+      "team": "El Tiki",
+      "shield": "/img/shields/felipe.png",
+      "image": "/img/players/felipe.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2018-2019"]
+    },
+    {
+      "id": 24,
+      "name": "Borja Losas",
+      "team": "Asturgijon",
+      "shield": "/img/shields/borja.png",
+      "image": "/img/players/borja.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2012-2013", "2013-2014", "2015-2016", "2016-2017", "2018-2019"]
+    },
+    {
+      "id": 25,
+      "name": "Alex",
+      "team": "Heisember",
+      "shield": "/img/shields/alex_carneiro.png",
+      "image": "/img/players/alex_carneiro.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2018-2019"]
+    },
+    {
+      "id": 26,
+      "name": "Javi",
+      "team": "C. Juventud Cambados",
+      "shield": "/img/shields/javi_bsh.png",
+      "image": "/img/players/javi_bsh.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2009-2010", "2010-2011", "2018-2019"]
+    },
+    {
+      "id": 27,
+      "name": "Daniel Gonzalez",
+      "team": "Caracas FC",
+      "shield": "/img/shields/daniel_gonzalez.png",
+      "image": "/img/players/daniel_gonzalez.png",
+      "points": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "seasons": ["2018-2019"]
+    }
+  ],
   "2017-2018":[
     {
       "id": 0,
