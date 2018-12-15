@@ -9,8 +9,17 @@
 
 #profile .header {
   padding: 10px 0;
-  background: #DAE3E7; /*#f5f5f5; */
   border-top: 3px solid #3AAA64;
+  // background-image: url(../img/banner.jpeg);
+  // background-repeat: no-repeat, repeat;
+  // background-size: 69%;
+}
+
+#positions_chart,
+#points_chart{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
 }
 
 .temporada{
@@ -26,12 +35,18 @@
 
 .puntajes{
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
+  padding: 5px;
 }
 
 .puntajes .numero{
-  font-size: 2.5rem;
+  font-size: 2rem;
   border: 1px solid;
   @include border-radius(10px);
+}
+
+.profile-trophy{
+  height: 30px;
+  margin-right: 10px;
 }

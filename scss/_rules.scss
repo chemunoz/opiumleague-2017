@@ -22,6 +22,14 @@
 }
 
 .regla-titulo{
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #000 !important;
+  margin: 10px 1px 1px 1px;
+}
+
+.regla-subtitulo{
   font-size: 0.9rem;
   font-weight: bold;
   font-style: italic;
@@ -31,5 +39,22 @@
 
 .regla-texto{
   font-size: 0.8rem;
-  margin: 1px 1px 1px 30px;
+  margin: 1px 1px 1px 15px;
+}
+
+.regla-titulo-margen{
+  margin: 5px 1px 1px 10px;
+}
+
+.regla-texto-margen{
+  margin: 1px 1px 1px 40px;
+}
+
+div{
+  .hr{
+    height: 1px;
+    background: #fff;
+    margin-top: 3px;
+    margin-bottom: 10px;
+  }
 }

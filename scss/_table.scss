@@ -1,4 +1,9 @@
 /* CLASIFICACIONES */
+.table td{
+  padding: .4rem !important;
+  vertical-align: middle;
+}
+
 tr.champions {
   background-color: $color-champions;
   color: #000;
@@ -25,15 +30,21 @@ td.left-table{
   text-align: left !important;
 }
 td.right-table{
-    text-align: right !important;
+  text-align: right !important;
+}
+td.center-table{
+  text-align: center !important;
 }
 
 tbody{
-  tr:hover{
+  tr.fila:hover{
     background-color: $color-hover !important;
     color: #000 !important;
   }
-  tr{
+  tr:hover a{
+    color: #000 !important;
+  }
+  tr.fila{
     th:hover{
       background-color: #FFF !important;
       color: #000 !important;
@@ -43,12 +54,20 @@ tbody{
 
 .historic_table{
   font-size: 1rem;
+  .title{
+    font-size: 1.2rem;
+  }
 }
 
-img.foto-table {
-  width: 2.5rem;
-  height: 2.5rem;
+img.table-foto {
+  width: 2rem;
+  height: 2rem;
   @include border-radius(50%);
+  vertical-align: middle; }
+
+img.table-shield {
+  width: 2.3rem;
+  height: 2.3rem;
   vertical-align: middle; }
 
 img.arrow {
@@ -63,9 +82,14 @@ img.arrow {
   }
 }
 @media (min-width: 992px) {
-  img.foto-table {
-    width: 3rem;
-    height: 3rem;
+  img.table-foto {
+    width: 2.5rem;
+    height: 2.5rem;
     @include border-radius(50%);
+    vertical-align: middle; }
+
+  img.table-shield {
+    width: 2.8rem;
+    height: 2.8rem;
     vertical-align: middle; }
 }
