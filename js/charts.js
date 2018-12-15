@@ -116,16 +116,15 @@
           });
         }
       }
-      console.log(position_series);
+      console.log("Position Series: ", position_series);
+      console.log("Position Evolution: ", position_evolution);
 
 
 
 
 
 
-
-
-
+      // GRAFICO 'GANADORES DE JORNADA'
       Highcharts.chart('chart_jornada_winner', {
         chart: {
           type: 'column'
@@ -174,6 +173,9 @@
       });
 
 
+
+
+      // GRAFICO 'JORNADAS COMO LÍDER'
       Highcharts.chart('chart_leader', {
         chart: {
           plotBackgroundColor: null,
@@ -211,6 +213,8 @@
       });
 
 
+
+      // GRAFICO 'JORNADAS EN CHAMPIONS'
       Highcharts.chart('chart_champions', {
         chart: {
           plotBackgroundColor: null,
@@ -219,7 +223,7 @@
           type: 'pie'
         },
         title: {
-          text: null // 'JORNADAS COMO LÍDER'
+          text: null // 'JORNADAS EN CHAMPIONS'
         },
         credits: {
           enabled: false
@@ -247,6 +251,9 @@
         }]
       });
 
+
+
+      // GRAFICO 'JORNADAS EN UEFA'
       Highcharts.chart('chart_uefa', {
         chart: {
           plotBackgroundColor: null,
@@ -255,7 +262,7 @@
           type: 'pie'
         },
         title: {
-          text: null // 'JORNADAS COMO LÍDER'
+          text: null // 'JORNADAS EN EUROPA LEAGUE'
         },
         credits: {
           enabled: false
@@ -283,6 +290,8 @@
         }]
       });
 
+
+      // GRAFICO 'JORNADAS EN INTERTOTO'
       Highcharts.chart('chart_intertoto', {
         chart: {
           plotBackgroundColor: null,
@@ -291,7 +300,7 @@
           type: 'pie'
         },
         title: {
-          text: null // 'JORNADAS COMO LÍDER'
+          text: null // 'JORNADAS EN INTERTOTO'
         },
         credits: {
           enabled: false
@@ -319,6 +328,9 @@
         }]
       });
 
+
+
+      // GRAFICO 'JORNADAS EN DESCENSO'
       Highcharts.chart('chart_descenso', {
         chart: {
           plotBackgroundColor: null,
@@ -327,7 +339,7 @@
           type: 'pie'
         },
         title: {
-          text: null // 'JORNADAS COMO LÍDER'
+          text: null // 'JORNADAS EN DESCENSO'
         },
         credits: {
           enabled: false
@@ -358,9 +370,10 @@
 
 
 
+      // GRAFICO 'EVOLUCION POSICION GENERAL'
       Highcharts.chart('chart_position_evolution', {
         chart: {
-          type: 'line'
+          zoomType: 'xy'
         },
         title: {
           text: null // 'EVOLUCIÓN DE POSICIONES EN LA GENERAL'
@@ -371,29 +384,52 @@
         credits: {
           enabled: false
         },
-        xAxis: {
-          categories: categorias
+        plotOptions: {
+          series: {
+            dataLabels: {
+              format: '{y}',
+              enabled: true,
+              color: '#294469',
+              shadow: false,
+              // align: 'right',
+              // x: -25,
+              // style: {"fontSize": "10px", "textShadow": "0px" }
+            },
+            pointPadding: 0.1,
+            groupPadding: 0
+         }
         },
+        xAxis: [{
+          categories: categorias,
+          min: position_evolution[0].data.length - 5,
+          max: position_evolution[0].data.length - 1,
+          scrollbar: {
+            enabled: true
+          }
+        }],
         yAxis: {
           title: {
-            text: null // 'Posición General'
+              text: null, // 'Media',
+              style: {
+                  color: Highcharts.getOptions().colors[1]
+              }
+          },
+          labels: {
+              format: '{value}  pts',
+              style: {
+                  color: Highcharts.getOptions().colors[1]
+              }
           },
           reversed: true
-        },
-        plotOptions: {
-          line: {
-            dataLabels: {
-              enabled: true
-            },
-            enableMouseTracking: false
-          }
         },
         series: position_evolution
       });
 
+
+      // GRAFICO 'EVOLUCION POSICIONES JORNADA'
       Highcharts.chart('chart_score_evolution', {
         chart: {
-          type: 'line'
+          zoomType: 'xy'
         },
         title: {
           text: null // 'EVOLUCIÓN DE POSICIONES EN LA JORNADA'
@@ -404,22 +440,43 @@
         credits: {
           enabled: false
         },
+        plotOptions: {
+          series: {
+            dataLabels: {
+              format: '{y}',
+              enabled: true,
+              color: '#294469',
+              shadow: false,
+              // align: 'right',
+              // x: -25,
+              // style: {"fontSize": "10px", "textShadow": "0px" }
+            },
+            pointPadding: 0.1,
+            groupPadding: 0
+         }
+        },
         xAxis: {
-          categories: categorias
+          categories: categorias,
+          min: score_evolution[0].data.length - 5,
+          max: score_evolution[0].data.length - 1,
+          scrollbar: {
+            enabled: true
+          }
         },
         yAxis: {
           title: {
-            text: null // 'Posición General'
+              text: null, // 'Media',
+              style: {
+                  color: Highcharts.getOptions().colors[1]
+              }
+          },
+          labels: {
+              format: '{value}  pts',
+              style: {
+                  color: Highcharts.getOptions().colors[1]
+              }
           },
           reversed: true
-        },
-        plotOptions: {
-          line: {
-            dataLabels: {
-              enabled: true
-            },
-            enableMouseTracking: false
-          }
         },
         series: score_evolution
       });
