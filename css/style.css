@@ -63,7 +63,7 @@ header {
   border-radius: 0 !important;
   text-align: center;
   position: relative;
-  height: 110vh;
+  height: 130vh;
   background: url("../img/background.png") center no-repeat;
   background-size: cover;
   padding: 15px 0 0 0; }
@@ -105,7 +105,7 @@ img.shield {
     border-radius: 0 !important;
     text-align: center;
     position: relative;
-    height: 90vh;
+    height: 125vh;
     background: url("../img/background.png") center no-repeat;
     background-size: cover; }
 
@@ -117,6 +117,10 @@ img.shield {
     width: 8rem !important;
     height: 8rem !important; } }
 /* CLASIFICACIONES */
+.table td {
+  padding: .4rem !important;
+  vertical-align: middle; }
+
 tr.champions {
   background-color: #FFFF00;
   color: #000; }
@@ -143,23 +147,35 @@ td.left-table {
 td.right-table {
   text-align: right !important; }
 
-tbody tr:hover {
+td.center-table {
+  text-align: center !important; }
+
+tbody tr.fila:hover {
   background-color: #0F0 !important;
   color: #000 !important; }
-tbody tr th:hover {
+tbody tr:hover a {
+  color: #000 !important; }
+tbody tr.fila th:hover {
   background-color: #FFF !important;
   color: #000 !important; }
 
 .historic_table {
   font-size: 1rem; }
+  .historic_table .title {
+    font-size: 1.2rem; }
 
-img.foto-table {
-  width: 2.5rem;
-  height: 2.5rem;
+img.table-foto {
+  width: 2rem;
+  height: 2rem;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  vertical-align: middle; }
+
+img.table-shield {
+  width: 2.3rem;
+  height: 2.3rem;
   vertical-align: middle; }
 
 img.arrow {
@@ -175,31 +191,85 @@ img.arrow {
     -ms-border-radius: 5px;
     border-radius: 5px; } }
 @media (min-width: 992px) {
-  img.foto-table {
-    width: 3rem;
-    height: 3rem;
+  img.table-foto {
+    width: 2.5rem;
+    height: 2.5rem;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
+    vertical-align: middle; }
+
+  img.table-shield {
+    width: 2.8rem;
+    height: 2.8rem;
     vertical-align: middle; } }
-/*CHAMPIONS*/
+/*COMPETITIONS*/
+.cruces-img {
+  width: 90%;
+  vertical-align: middle; }
+
 .tab-pane {
-  text-align: center; }
+  text-align: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%; }
 
 .cup-table {
   margin: auto;
-  width: 85%; }
-  .cup-table td {
-    width: 33%; }
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+  table-layout: fixed; }
+  .cup-table .equipo {
+    width: 40%;
+    vertical-align: middle;
+    padding: 0.25rem 0.50rem 0.25rem 0.25rem; }
+  .cup-table .resultado {
+    width: 20%;
+    vertical-align: middle;
+    padding: 0; }
   .cup-table th {
     text-align: left !important; }
+
+.cup-difference {
+  font-size: 0.8rem;
+  top: -5px;
+  position: relative; }
+
+.cup-score {
+  font-size: 1.6rem;
+  font-weight: bold; }
+
+.cup-win-pre {
+  background-color: #F2FBEF; }
+
+.cup-lose-pre {
+  background-color: #F8E0E0; }
 
 #tab_container .container_item {
   display: none; }
 #tab_container .container_item.is-active {
   display: block; }
 
+.nav-link {
+  padding: .5rem .5rem; }
+
+.homeaway-result {
+  background-color: #000;
+  padding: 3px 10px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.6rem; }
+
+@media (min-width: 576px) {
+  .cruces-img {
+    width: 70%;
+    vertical-align: middle; } }
+@media (min-width: 992px) {
+  .cruces-img {
+    width: 65%;
+    vertical-align: middle; } }
 /*GALERIA*/
 #contenedor {
   width: 95%;
@@ -221,6 +291,7 @@ img.arrow {
   -ms-border-radius: 15px;
   border-radius: 15px;
   margin: 5px;
+  padding: 4px;
   border: 1px solid;
   font-size: 0.8rem; }
 
@@ -255,6 +326,13 @@ img.foto {
     font-size: 0.8rem; }
 
 .regla-titulo {
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #000 !important;
+  margin: 10px 1px 1px 1px; }
+
+.regla-subtitulo {
   font-size: 0.9rem;
   font-weight: bold;
   font-style: italic;
@@ -263,7 +341,19 @@ img.foto {
 
 .regla-texto {
   font-size: 0.8rem;
-  margin: 1px 1px 1px 30px; }
+  margin: 1px 1px 1px 15px; }
+
+.regla-titulo-margen {
+  margin: 5px 1px 1px 10px; }
+
+.regla-texto-margen {
+  margin: 1px 1px 1px 40px; }
+
+div .hr {
+  height: 1px;
+  background: #fff;
+  margin-top: 3px;
+  margin-bottom: 10px; }
 
 /*GRAFICOS*/
 #contenedor-graficos {
@@ -295,13 +385,18 @@ img.foto {
 
 img.charts-foto {
   width: 200px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
   vertical-align: middle; }
 
 /*HISTORIA*/
+.histo-img {
+  width: 90%;
+  vertical-align: middle; }
+
+.text-marked {
+  font-weight: bold;
+  text-decoration: underline;
+  color: red; }
+
 .fila-par {
   background: #EEE; }
 
@@ -324,6 +419,20 @@ img.charts-foto {
   color: #C0C0C0;
   font-size: 1.75em; }
 
+.tablemap {
+  table-layout: fixed;
+  width: 100%;
+  font-size: 0.75rem; }
+
+.equipo {
+  width: 140px; }
+
+.nombre {
+  width: 160px; }
+
+.orden {
+  width: 40px; }
+
 #records .row {
   padding: 0 10px; }
 
@@ -339,7 +448,8 @@ img.charts-foto {
 #records .card-top-section {
   position: relative;
   padding: 0 20px;
-  background: #084F83; }
+  background: #084F83;
+  border-radius: 20px 20px 0 0; }
 
 #records .card-block {
   padding: 1.25rem 2rem; }
@@ -364,14 +474,18 @@ img.charts-foto {
   border-radius: 50%;
   width: 115px;
   height: 115px;
-  margin: 0 auto;
+  margin: 5px auto;
   background-size: cover;
   bottom: 0px;
-  border: 3px solid #FFF; }
+  border: 3px solid #FFF;
+  float: left; }
 
 #records .card-winner-name {
   color: #FFF;
-  padding: 0 10px; }
+  padding: 0 10px;
+  float: left;
+  position: relative;
+  top: 3rem; }
 
 .tag {
   background: #000;
@@ -394,6 +508,18 @@ img.foto-table {
   border-radius: 50%;
   vertical-align: middle; }
 
+#historyTabContent .table td,
+#historyTabContent .table th {
+  padding: .5rem !important; }
+
+@media (min-width: 576px) {
+  .histo-img {
+    width: 70%;
+    vertical-align: middle; } }
+@media (min-width: 992px) {
+  .histo-img {
+    width: 60%;
+    vertical-align: middle; } }
 /* PROFILE */
 #profile img {
   max-width: 100%; }
@@ -403,9 +529,13 @@ img.foto-table {
 
 #profile .header {
   padding: 10px 0;
-  background: #DAE3E7;
-  /*#f5f5f5; */
   border-top: 3px solid #3AAA64; }
+
+#positions_chart,
+#points_chart {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%; }
 
 .temporada {
   float: left;
@@ -422,15 +552,20 @@ img.foto-table {
 
 .puntajes {
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold; }
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px; }
 
 .puntajes .numero {
-  font-size: 2.5rem;
+  font-size: 2rem;
   border: 1px solid;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px; }
+
+.profile-trophy {
+  height: 30px;
+  margin-right: 10px; }
 
 /*# sourceMappingURL=style.css.map */
