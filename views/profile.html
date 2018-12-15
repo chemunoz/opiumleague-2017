@@ -10,12 +10,16 @@
     <title>Opium League :: Perfil Equipo</title>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
     <link rel="stylesheet" href="../css/style.css">
+
     <!-- Charts -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -25,6 +29,14 @@
       ga('create', 'UA-92241042-1', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-5854652030354122",
+        enable_page_level_ads: true
+      });
+    </script> -->
   </head>
 
 
@@ -34,13 +46,13 @@
     <span ng-include="'/views/_header.html'"></span>
 
     <!-- Menu -->
-    <span ng-include="'/views/_navbar.html'"></span>
+    <span ng-include="'/views/_navbar.html?v.0.0'"></span>
 
 
     <!--  Perfil  -->
     <section id="profile" class="section">
       <header class="header">
-          <div class="container">
+          <div class="container-fluid px-3">
 
             <div class="row">
               <div class="col-sm-12">
@@ -49,53 +61,66 @@
             </div>
 
             <div class="row" style="margin-top: 0px;">
-              <div class="col-sm-3">
-                <a href="#"> <img class="rounded-circle" ng-src="{{player.shield}}" title={{player.team}} alt={{player.team}} ></a>
+              <div class="col-sm-3 text-center">
+                <a href="#"> <img class="" ng-src="/img/shields/300/{{player.shield}}" title={{player.team}} alt={{player.team}} ></a>
               </div>
 
               <div class="col-sm-9 col-lg-6">
-                <h6>PUNTOS</h6>
+                <h6>RESUMEN TEMPORADA</h6>
                 <div class="row">
-                  <div class="col-sm-4 puntajes"><div class="numero">{{player.score_general}}</div> <span>puntos</span></div>
-                  <div class="col-sm-4 puntajes"><div class="numero">{{player.top_clasificacion}}</div> <span>jor. líder</span></div>
-                  <div class="col-sm-4 puntajes"><div class="numero">{{player.winner_jornada}}</div> <span>jor. ganadas</span></div>
+                  <div class="col-md-3 col-6 puntajes"><div class="numero">{{player.score_general}}</div> <span>pts total</span></div>
+                  <div class="col-md-3 col-6 puntajes"><div class="numero">{{player.score_max}}</div> <span>pts max</span></div>
+                  <div class="col-md-3 col-6 puntajes"><div class="numero"><img src="../img/cups/copa_liga_negra.png" style="height: 30px; position: relative; top: -4px;"> {{player.top_clasificacion}}</div> <span>jor. líder</span></div>
+                  <div class="col-md-3 col-6 puntajes"><div class="numero"><i class="fas fa-medal"></i> {{player.winner_jornada}}</div> <span>jor. ganadas</span></div>
                 </div>
-                <h6>PARTICIPACIONES</h6>
-                <span ng-repeat="temporada in player.seasons" style="text-align: center;">
-                  <div class="temporada">{{temporada}}</div>
-                </span>
+                  <div class="row">
+                  <div class="col-md-3 offset-md-3 col-6 puntajes"><div class="numero"><img src="../img/arrow_up.png" class="arrow" style="position: relative; top: -4px;" /> {{player.positions_general_differences_max}}</div> <span>max subida</span></div>
+                  <div class="col-md-3 col-6 puntajes"><div class="numero"><img src="../img/arrow_down.png" class="arrow" style="position: relative; top: -4px;"/> {{player.positions_general_differences_min}}</div> <span>max caída</span></div>
+                </div>
+                <div class="row my-3">
+                  <div class="col">
+                    <h6>PARTICIPACIONES</h6>
+                    <span ng-repeat="temporada in player.seasons" style="text-align: center;">
+                      <div class="temporada">{{temporada}}</div>
+                    </span>
+                  </div>
+                </div>
+                <div class="row mt-3" ng-if="player.trophies.length > 0">
+                  <div class="col">
+                    <h6>PALMARÉS</h6>
+                    <span ng-repeat="trofeo in player.trophies track by $index" style="text-align: center;">
+                      <img ng-src="../img/cups/{{trofeo}}" class="profile-trophy" title="" alt="" >
+                    </span>
+                  </div>
+                </div>
               </div>
 
               <div class="col-sm-3 d-none d-lg-block">
-                <img class="rounded-circle" ng-src="{{player.image}}" title={{player.name}} alt={{player.name}} >
+                <img class="rounded-circle text-center" ng-src="/img/players/{{player.image}}" title={{player.name}} alt={{player.name}} >
               </div>
             </div>
           </div>
       </header>
 
         <div class="container-fluid">
-          <!-- <div class="row">
+          <!-- <div class="row mb-3">
             <div class="col-sm-12">
-              <div class="card card-block text-xs-left">
+              <div class="card card-block text-xs-left p-3">
                 <h5><i class="fa fa-user fa-fw"></i>Biography</h5>
-
                   <p>Rick Sanchez C-137 is the father of Beth Smith, and the grandfather of Morty and Summer Smith. Aged 60 years old, he is said to have been away from the family for around fourteen years prior to the events of the show's first episode, "Pilot". He frequently travels on adventures through space and other planets and dimensions with his grandson Morty.</p>
               </div>
             </div>
           </div> -->
 
-          <div class="row">
-            <div class="col-sm-12">
+          <div class="row mb-3">
+            <div class="col-sm-12 col-md-6 mb-3">
                 <div class="card card-block">
-                  <div id="points_chart"></div>
+                  <center><div id="points_chart"></div></center>
                 </div>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-md-6 mb-3">
                 <div class="card card-block">
-                  <div id="positions_chart"></div>
+                  <center><div id="positions_chart"></div></center>
                 </div>
             </div>
           </div>
@@ -108,10 +133,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-    <!-- Charts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" charset="utf-8"></script>
-    <script src="../js/c3.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
     <script src="../js/app.js"></script>

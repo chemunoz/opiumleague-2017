@@ -10,18 +10,14 @@
     <title>Opium League :: Gráficos</title>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 
     <!-- Graficos -->
-    <link href="../css/c3.min.css" rel="stylesheet">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
-
-
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -32,6 +28,14 @@
       ga('create', 'UA-92241042-1', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-5854652030354122",
+        enable_page_level_ads: true
+      });
+    </script> -->
   </head>
 
   <body>
@@ -40,7 +44,7 @@
     <span ng-include="'/views/_header.html'"></span>
 
     <!-- Navbar -->
-    <span ng-include="'/views/_navbar.html'"></span>
+    <span ng-include="'/views/_navbar.html?v.0.0'"></span>
 
 
     <div class="h3 text-center my-3">GRÁFICOS</div>
@@ -52,7 +56,7 @@
     <div class="container-fluid">
       <div class="card-deck">
           <div class="card">
-              <div class="card-header text-left"><i class="far fa-chart-bar fa-2x align-middle"></i> <span class="h5 align-middle">GANADORES DE JORNADA</span></div>
+              <div class="card-header text-left"><i class="fas fa-medal fa-2x align-middle"></i> <span class="h5 align-middle">GANADORES DE JORNADA</span></div>
               <div class="card-block text-center">
                 <div id="chart_jornada_winner" style="width:100%; height:300px;"></div>
               </div>
@@ -144,15 +148,15 @@
           <div class="card-block text-center">
             <!-- Best/Worst Score -->
             <section class="text-center" ng-controller="TableController as table">
-              <div class="row">
+              <div class="row my-3">
                 <div class="col-sm-6">
                   <div><i class="fas fa-trophy" aria-hidden="true"></i> Mejor Jornada: </div>
-                  <img ng-src="{{tables.score_best.shield}}" class="charts-foto" />
+                  <img ng-src="../img/shields/300/{{tables.score_best.shield}}" class="charts-foto" />
                   <div>{{tables.score_best.team}}: {{tables.score_best.score}} puntos</div>
                 </div>
                 <div class="col-sm-6">
                   <div><i class="fas fa-trophy fa-trophy-down" aria-hidden="true"></i> Peor Jornada: </div>
-                  <img ng-src="{{tables.score_worst.shield}}" class="charts-foto" />
+                  <img ng-src="../img/shields/300/{{tables.score_worst.shield}}" class="charts-foto" />
                   <div>{{tables.score_worst.team}}: {{tables.score_worst.score}} puntos</div>
                 </div>
               </div>
@@ -179,9 +183,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-  <!-- Load d3.js and c3.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" charset="utf-8"></script>
-  <script src="../js/c3.min.js"></script>
 
   <script src="../js/app.js"></script>
   <script src="../js/table.js"></script>

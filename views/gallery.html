@@ -10,7 +10,7 @@
     <title>Opium League :: Jugadores</title>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../css/style.css">
@@ -23,6 +23,14 @@
       ga('create', 'UA-92241042-1', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-5854652030354122",
+        enable_page_level_ads: true
+      });
+    </script> -->
   </head>
 
 
@@ -31,16 +39,16 @@
     <span ng-include="'/views/_header.html'"></span>
 
     <!-- Navbar -->
-    <span ng-include="'/views/_navbar.html'"></span>
+    <span ng-include="'/views/_navbar.html?v.0.0'"></span>
 
 
     <!--  Gallery  -->
-    <section class="section">
+    <section class="section mb-3">
       <div class="h3 text-center my-3">PARTICIPANTES</div>
       <div id="contenedor" ng-controller="GalleryController as gallery">
         <div class="subcontenedor" ng-repeat="player in players_name" ng-cloak>
           <div>{{player.team}}</div>
-          <img class="foto" ng-src="{{player.image}}" title={{player.name}}><br>
+          <img class="foto" ng-src="/img/players/{{player.image}}" title={{player.name}}><br>
           <div>{{player.name}}</div>
         </div>
       </div>

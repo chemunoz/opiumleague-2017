@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="es" ng-app="opiumLeage">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" sizes="128x128" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon" href="../img/icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/icon-iphone4.png" />
+    <title>Opium League :: Europa League</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-92241042-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-5854652030354122",
+        enable_page_level_ads: true
+      });
+    </script> -->
+  </head>
+
+  <body>
+
+    <!-- Header  -->
+    <span ng-include="'/views/_header.html'"></span>
+    <!-- Navbar -->
+    <span ng-include="'/views/_navbar.html?v.0.0'"></span>
+
+    <div class="h5 text-center my-3"><img src="../img/cups/copa_uefa_negra.png" style="height: 40px; vertical-align: bottom; margin-right: 10px;"> OPIUM EUROPA LEAGUE</div>
+    <hr>
+
+    <div class="text-center mb-2"><i class="far fa-clock"></i> Inicio: <span id="countdown-EuropaLeague"></div>
+
+    <!-- <div class="text-center my-3">
+      <div class="h4">CAMPEÓN 2018</div>
+      <a href="/views/profile.html?id=13"><img src="../img/shields/150/juanan.png" class="foto" alt="Balompedica Porrua"> <h3>Balompedica Porrua</h3></a>
+    </div> -->
+
+    <!-- CRUCES -->
+    <div class="text-center"><img id="cruces-uefa" class="cruces-img" src="../img/cruces_uefa.png" alt=""></div>
+
+    <!-- RESULTADOS -->
+    <div class="h4 text-center mt-3">RESULTADOS</div>
+
+    <!-- TABS -->
+    <ul class="nav nav-tabs nav-fill my-3" id="myTab" role="tablist">
+      <!-- <li class="nav-item">
+        <a class="nav-link" id="tab-A" data-toggle="tab" href="#A" role="tab" aria-controls="A" aria-selected="true">
+          <span><i class="fas fa-table"></i></span>
+          <span class="d-none d-md-inline">RONDA PREVIA</span>
+          <span class="d-sm-inline d-md-none">PREV</span>
+        </a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link active" id="tab-B" data-toggle="tab" href="#B" role="tab" aria-controls="B" aria-selected="true">
+          <span><i class="fas fa-table"></i></span>
+          <span class="d-none d-md-inline">OCTAVOS</span>
+          <span class="d-sm-inline d-md-none">8º</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-C" data-toggle="tab" href="#C" role="tab" aria-controls="C" aria-selected="true">
+          <span><i class="fas fa-table"></i></span>
+          <span class="d-none d-md-inline">CUARTOS</span>
+          <span class="d-sm-inline d-md-none">4º</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-D" data-toggle="tab" href="#D" role="tab" aria-controls="D" aria-selected="true">
+          <span><i class="fas fa-table"></i></span>
+          <span class="d-none d-md-inline">SEMIFINALES</span>
+          <span class="d-sm-inline d-md-none">SE</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-E" data-toggle="tab" href="#E" role="tab" aria-controls="E" aria-selected="true">
+          <span><i class="fas fa-table"></i></span>
+          <span class="d-none d-md-inline">FINAL</span>
+          <span class="d-sm-inline d-md-none">FI</span>
+        </a>
+      </li>
+    </ul>
+
+
+    <!-- RESULTADOS -->
+    <div class="container tab-content mb-5" id="myTabContent">
+      <!-- RONDA PREVIA -->
+    <!--   <div class="tab-pane fade" id="A" role="tabpanel" aria-labelledby="tab-A">
+
+        <table class="table cup-table">
+          <tr>
+            <th colspan="3">RONDA PREVIA (17/02/2019 y 24/02/2019)</th>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado">0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado">0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado">0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado">0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+        </table>
+      </div> -->
+
+      <!-- OCTAVOS -->
+      <div class="tab-pane fade show active" id="B" role="tabpanel" aria-labelledby="tab-B">
+        <!-- Resultados -->
+        <table class="table cup-table">
+          <tr>
+            <th colspan="3">OCTAVOS FINAL (17/02/2019 y 24/02/2019)</th>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+
+        </table>
+      </div>
+
+      <!-- CUARTOS -->
+      <div class="tab-pane fade" id="C" role="tabpanel" aria-labelledby="tab-C">
+        <!-- Resultados -->
+        <table class="table cup-table">
+          <tr>
+            <th colspan="3">CUARTOS FINAL (03/03/2019 y 10/03/2019)</th>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- SEMIS -->
+      <div class="tab-pane fade" id="D" role="tabpanel" aria-labelledby="tab-D">
+        <!-- Resultados -->
+        <table class="table cup-table">
+          <tr>
+            <th colspan="3">SEMIFINALES (17/03/2019 y 31/03/2019)</th>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">IDA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+          <tr class="fila-par">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado"><span class="homeaway-result">VUELTA</span><br>0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- FINAL -->
+      <div class="tab-pane fade" id="E" role="tabpanel" aria-labelledby="tab-E">
+        <!-- Resultados -->
+        <table class="table cup-table">
+          <tr>
+            <th colspan="3">FINAL (03/04/2019)</th>
+          </tr>
+          <tr class="fila-impar">
+            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-center resultado">0 - 0</td>
+            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/competitions.js"></script>
+  </body>
+</html>

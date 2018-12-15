@@ -10,10 +10,17 @@
     <title>Opium League :: Clasificaciones</title>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Gráficos -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://blacklabel.github.io/grouped_categories/grouped-categories.js" charset="utf-8"></script>
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -23,6 +30,14 @@
       ga('create', 'UA-92241042-1', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-5854652030354122",
+        enable_page_level_ads: true
+      });
+    </script> -->
   </head>
 
   <body>
@@ -30,7 +45,7 @@
     <!-- Header  -->
     <span ng-include="'/views/_header.html'"></span>
     <!-- Navbar -->
-    <span ng-include="'/views/_navbar.html'"></span>
+    <span ng-include="'/views/_navbar.html?v.0.0'"></span>
 
     <div class="h3 text-center my-3">HISTORIA</div>
 
@@ -70,356 +85,1108 @@
 
 
     <!-- TABS -->
-    <ul class="nav nav-tabs nav-fill my-3" id="myTab" role="tablist">
+    <ul class="nav nav-tabs nav-fill mt-3" id="historyTab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="tab-league" data-toggle="tab" href="#league" role="tab" aria-controls="league" aria-selected="true">
-          <span><i class="fas fa-table"></i></span>
-          <span class="d-none d-md-inline">OPIUM LEAGUE</span>
-          <span class="d-sm-inline d-md-none">REGISTROS LIGA</span>
+        <a class="nav-link active" id="tab-history" data-toggle="tab" href="#history" role="tab" aria-controls="history" aria-selected="true">
+          <span><i class="far fa-clock"></i></span>
+          <span class="d-none d-md-inline">ORIGENES</span>
+          <span class="d-sm-inline d-md-none">ORIG.</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-league" data-toggle="tab" href="#league" role="tab" aria-controls="league" aria-selected="true">
+          <span><i class="fas fa-trophy"></i></span>
+          <span class="d-none d-md-inline">CAMPEONES</span>
+          <span class="d-sm-inline d-md-none">CAMP.</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="tab-records" data-toggle="tab" href="#records" role="tab" aria-controls="records" aria-selected="false">
-          <span class="icon is-small"><i class="fas fa-trophy"></i></span>
+          <span class="icon is-small"><i class="far fa-address-card"></i></span>
           <span class="d-none d-md-inline">PALMARÉS</span>
-          <span class="d-sm-inline d-md-none">PALMARÉS</span>
+          <span class="d-sm-inline d-md-none">PALM.</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-participations" data-toggle="tab" href="#participations" role="tab" aria-controls="participations" aria-selected="false">
+          <span class="icon is-small"><i class="fas fa-table"></i></span>
+          <span class="d-none d-md-inline">PARTICIPACIONES</span>
+          <span class="d-sm-inline d-md-none">PARTI.</span>
         </a>
       </li>
     </ul>
 
-  <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="league" role="tabpanel" aria-labelledby="tab-league">
-      <section class="section">
-        <div class="h4 text-center">CAMPEONES OPIUM LEAGUE</div>
-        <table class="table">
-          <thead class="thead-light">
-            <tr>
-              <th class="text-center align-middle">Temporada</th>
-              <th class="text-center align-middle">Equipo</th>
-              <th class="text-left align-middle d-none d-md-table-cell">Campeón</th>
-              <th class="text-center align-middle d-none d-md-table-cell">Equipos</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="fila-impar">
-              <td class="align-middle">2009 - 2010</td>
-              <td class="left-table align-middle"><img src="../img/shields/ru.png" class="foto-table" alt="Los Antimerengues"> Los Antimerengues</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px"> <img src="../img/players/ru.png" class="foto-table"/> Ru</td>
-              <td class="text-center align-middle d-none d-md-table-cell">14</td>
-            </tr>
-            <tr class="fila-par">
-              <td class="align-middle">2010 - 2011</td>
-              <td class="left-table align-middle"><img src="../img/shields/dioni.png" class="foto-table" alt="R. Cuervos C.F."> R. Cuervos C.F.</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px"> <img src="../img/players/dioni.png" class="foto-table"/> Dioni</td>
-              <td class="text-center align-middle d-none d-md-table-cell">18</td>
-            </tr>
-            <tr class="fila-impar">
-              <td class="align-middle">2011 - 2012</td>
-              <td class="left-table align-middle"><img src="../img/shields/dioni.png" class="foto-table" alt="R. Cuervos C.F."> R. Cuervos C.F.</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px"> <img src="../img/players/dioni.png" class="foto-table"/> Dioni</td>
-              <td class="text-center align-middle d-none d-md-table-cell">23</td>
-            </tr>
-            <tr class="fila-par">
-              <td class="align-middle">2012 - 2013</td>
-              <td class="left-table align-middle"><img src="../img/shields/che.png" class="foto-table" alt="Los Antimerengues"> Amunt Che</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px"> <img src="../img/players/che.png" class="foto-table"/> Che</td>
-              <td class="text-center align-middle d-none d-md-table-cell">18</td>
-            </tr>
-            <tr class="fila-impar">
-              <td class="align-middle">2013 - 2014</td>
-              <td class="left-table align-middle"><img src="../img/shields/dioni.png" class="foto-table" alt="R. Cuervos C.F."> R. Cuervos C.F.</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px"> <img src="../img/players/dioni.png" class="foto-table"/> Dioni</td>
-              <td class="text-center align-middle d-none d-md-table-cell">7</td>
-            </tr>
-            <tr class="fila-par">
-              <td class="align-middle">2014 - 2015</td>
-              <td class="left-table align-middle"><img src="../img/shields/dioni.png" class="foto-table" alt="Real Ru Cobarde"> Real Ru Cobarde</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px"> <img src="../img/players/dioni.png" class="foto-table"/> Dioni</td>
-              <td class="text-center align-middle d-none d-md-table-cell">8</td>
-            </tr>
-            <tr class="fila-impar">
-              <td class="align-middle">2015 - 2016</td>
-              <td class="left-table align-middle"><img src="../img/shields/borja_ramos.png" class="foto-table" alt="Bierzo Power"> Bierzo Power</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px"> <img src="../img/players/borja_ramos.jpg" class="foto-table"/> Borja Ramos</td>
-              <td class="text-center align-middle d-none d-md-table-cell">23</td>
-            </tr>
-            <tr class="fila-par">
-              <td class="align-middle">2016 - 2017</td>
-              <td class="left-table align-middle"><img src="../img/logo_opium_icono.png" class="foto-table" alt="Sabeko Areucas"> Sabeko Areucas</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/cups/copa_liga_verde.png" alt="" style="height: 31px"> <img src="../img/players/chema.png" class="foto-table"/> Chema</td>
-              <td class="text-center align-middle d-none d-md-table-cell">23</td>
-            </tr>
-            <tr class="fila-impar">
-              <td class="align-middle">2017 - 2018</td>
-              <td class="left-table align-middle"><img src="../img/shields/fran.png" class="foto-table" alt="Rino's Boys"> Rino's Boys</td>
-              <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/cups/copa_liga_verde.png" alt="" style="height: 31px"> <img src="../img/players/fran.png" class="foto-table"/> Fran</td>
-              <td class="text-center align-middle d-none d-md-table-cell">23</td>
-            </tr>
-          </tbody>
-        </table>
-        <div style="height: 50px;"></div>
-      </section>
-    </div>
-
-
-    <!-- PALMARÉS -->
-    <div class="tab-pane fade" id="records" role="tabpanel" aria-labelledby="tab-records">
-      <div class="h3 text-center">GANADORES</div>
-      <div class="row">
-
-        <!-- DIONI -->
-        <div class="card">
-          <div class="card-top-section">
-            <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
-            <img src="../img/players/dioni.png" class='card-img-top' />
-            <span class="card-winner-name">DIONI</span>
-          </div>
-          <div class="card-block px-2">
-            <div class="content float-left text-left w-50">
-              <div>Ligas</div>
-              <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
-              <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
-              <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
-              <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
-              <div>FO Cup</div>
-              -
-            </div>
-            <div class="content float-left text-right w-50">
-              <div>Champions</div>
-              -
-              <div>Europa League</div>
-              -
-            </div>
-          </div>
-          <div class="card-action" style="padding: 5px;">
-            <div>Participaciones:</div>
-            <div style="text-align: center;">
-              <span class="tag">2010-2011</span>
-              <span class="tag">2011-2012</span>
-              <span class="tag">2013-2014</span>
-              <span class="tag">2014-2015</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- RU -->
-        <div class="card">
-          <div class="card-top-section">
-            <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
-            <img src="../img/players/ru.png" class='card-img-top' />
-            <span class="card-winner-name">RU</span>
-          </div>
-          <div class="card-block px-2">
-            <div class="content float-left text-left w-50">
-              <div>Ligas</div>
-              <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
-              <div>FO Cup</div>
-              -
-            </div>
-            <div class="content float-left text-right w-50">
-              <div>Champions</div>
-              -
-              <div>Europa League</div>
-              -
-            </div>
-          </div>
-          <div class="card-action" style="padding: 5px;">
-            <div>Participaciones:</div>
-            <div style="text-align: center;">
-              <span class="tag">2009-2010</span>
-              <span class="tag">2010-2011</span>
-              <span class="tag">2011-2012</span>
-              <span class="tag">2014-2015</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- CHE -->
-        <div class="card">
-          <div class="card-top-section">
-            <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
-            <img src="../img/players/che.png" class='card-img-top' />
-            <span class="card-winner-name">CHE</span>
-          </div>
-          <div class="card-block px-2">
-            <div class="content float-left text-left w-50">
-              <div>Ligas</div>
-              <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
-              <div>FO Cup</div>
-              -
-            </div>
-            <div class="content float-left text-right w-50">
-              <div>Champions</div>
-              -
-              <div>Europa League</div>
-              -
-            </div>
-          </div>
-          <div class="card-action" style="padding: 5px;">
-            <div>Participaciones:</div>
-            <div style="text-align: center;">
-              <span class="tag">2009-2010</span>
-              <span class="tag">2010-2011</span>
-              <span class="tag">2011-2012</span>
-              <span class="tag">2012-2013</span>
-              <span class="tag">2013-2014</span>
-              <span class="tag">2014-2015</span>
-              <span class="tag">2015-2016</span>
-              <span class="tag">2016-2017</span>
-              <span class="tag">2017-2018</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- BORJA RAMOS -->
-        <div class="card">
-          <div class="card-top-section">
-            <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
-            <img src="../img/players/borja_ramos.jpg" class='card-img-top' />
-            <span class="card-winner-name">BORJA</span>
-          </div>
-          <div class="card-block px-2">
-            <div class="content float-left text-left w-50">
-              <div>Ligas</div>
-              <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px">
-              <div>FO Cup</div>
-              -
-            </div>
-            <div class="content float-left text-right w-50">
-              <div>Champions</div>
-              -
-              <div>Europa League</div>
-              -
-            </div>
-          </div>
-          <div class="card-action" style="padding: 5px;">
-            <div>Participaciones:</div>
-            <div style="text-align: center;">
-              <span class="tag">2015-2016</span>
-              <span class="tag">2016-2017</span>
-              <span class="tag">2017-2018</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- CHEMA -->
-        <div class="card">
-          <div class="card-top-section">
-            <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
-            <img src="../img/players/chema.png" class='card-img-top' />
-            <span class="card-winner-name">CHEMA</span>
-          </div>
-          <div class="card-block px-2">
-            <div class="content float-left text-left w-50">
-              <div>Ligas</div>
-              <img src="../img/cups/copa_liga_verde.png" alt="" style="height: 31px">
-              <div>FO Cup</div>
-              -
-            </div>
-            <div class="content float-left text-right w-50">
-              <div>Champions</div>
-              -
-              <div>Europa League</div>
-              -
-            </div>
-          </div>
-          <div class="card-action" style="padding: 5px;">
-            <div>Participaciones:</div>
-            <div style="text-align: center;">
-              <span class="tag">2011-2012</span>
-              <span class="tag">2016-2017</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- FRAN -->
-        <div class="card">
-          <div class="card-top-section">
-            <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
-            <img src="../img/players/fran.png" class='card-img-top' />
-            <span class="card-winner-name">FRAN</span>
-          </div>
-          <div class="card-block px-2">
-            <div class="content float-left text-left w-50">
-              <div>Ligas</div>
-              <img src="../img/cups/copa_liga_verde.png" alt="" style="height: 31px">
-              <div>FO Cup</div>
-              -
-            </div>
-            <div class="content float-left text-right w-50">
-              <div>Champions</div>
-              -
-              <div>Europa League</div>
-              -
-            </div>
-          </div>
-          <div class="card-action" style="padding: 5px;">
-            <div>Participaciones:</div>
-            <div style="text-align: center;">
-              <span class="tag">2011-2012</span>
-              <span class="tag">2012-2013</span>
-              <span class="tag">2013-2014</span>
-              <span class="tag">2014-2015</span>
-              <span class="tag">2015-2016</span>
-              <span class="tag">2016-2017</span>
-              <span class="tag">2017-2018</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- WILL -->
-        <div class="card">
-          <div class="card-top-section">
-            <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
-            <img src="../img/players/will.png" class='card-img-top' />
-            <span class="card-winner-name">WILL</span>
-          </div>
-          <div class="card-block px-2">
-            <div class="content float-left text-left w-50">
-              <div>Ligas</div>
-              -
-              <div>FO Cup</div>
-              -
-            </div>
-            <div class="content float-left text-right w-50">
-              <div>Champions</div>
-              <img src="../img/cups/copa_champions_negra.png" alt="" style="height: 31px">
-              <div>Europa League</div>
-              -
-            </div>
-          </div>
-          <div class="card-action" style="padding: 5px;">
-            <div>Participaciones:</div>
-            <div style="text-align: center;">
-              <span class="tag">2015-2016</span>
-              <span class="tag">2016-2017</span>
-              <span class="tag">2017-2018</span>
-            </div>
-          </div>
-        </div>
-
+    <div class="tab-content" id="historyTabContent">
+      <div class="tab-pane fade show active" id="history" role="tabpanel" aria-labelledby="tab-history">
+        <section class="container section p-3">
+          <div class="h4 text-center mt-3">ORIGENES</div>
+          <p class="mb-3">
+            A principios de los años 90 eran tiempos oscuros donde los chandals de tactel, el eurodance y el VHS dominaban el mundo y donde, futbolísticamente hablando, el Dream Team de Cruyff había jubilado a la Quinta del Buitre.
+            Allí vamos a aparcar nuestra máquina del tiempo y centrarnos en un nombre propio que puede empañar los ojos de muchos: la Liga Fantástica Marca.
+          </p>
+          <img src="https://i.blogs.es/6686a9/lfm/1366_2000.jpg" class="histo-img" alt="">
+          <p class="mt-3">
+            El popular diario deportivo Marca tomó la idea de la liga Fantasy que habían creado en Inglaterra para la Premier League (inspirada a su vez en las populares Fantasy Leagues yankees de la NFL) y puso en marcha la Liga Fantástica Marca <span class="text-marked">en el año 1994</span>. Los expertos del periódico y los principales agentes de futbolistas de la época valoraban a todos los jugadores de la Liga española y nosotros, con un presupuesto ajustado, teníamos que pensar nuestro equipo, rellenar una plantilla y mandarla <span class="text-marked">por carta</span> a la sede del diario.
+          </p>
+          <p>
+            Los cambios también eran por carta (al poco tiempo empezaron a ser <span class="text-marked">por teléfono</span>), las puntuaciones basadas en los puntos Marca de cada partido y en unas cuantas estadísticas (goles a favor, goles en contra, tarjetas...) y los premios cuantiosos (100.000 pesetas al mejor de la jornada) por lo que era una cosa seria y había que afinar mucho si querías ver tu nombre en los listados publicados los lunes.
+            Esta LFM fue toda una revolución, una fiebre: la semana en la que empezaba el juego los periódicos volaban de los kioskos (todos queríamos tener muchos equipos para aumentar nuestras remotas posibilidades) y Correos se veía desbordada ante la avalancha de cartas.
+            El mundo de los managers deportivos en España era todo campo antes de la LFM y en torno a ella se empezó a edificar a lo loco: no hubo publicación deportiva que no intentara su propio Fantasy. La mayoría duraron poco.
+          </p>
+          <p style="text-align: right;">
+            <small>(Extracto del artículo de <a href="https://www.xataka.com/aplicaciones/jugadores-de-managers-online-de-futbol-los-que-quieren-matar-a-comunio-os-saludan" target="_blank">Xataka</a>)</small>
+          </p>
+        </section>
+      </div>
+      <!-- CAMPEONES -->
+      <div class="tab-pane fade" id="league" role="tabpanel" aria-labelledby="tab-league">
+        <section class="section">
+          <div class="h4 text-center mt-3">TÍTULOS POR TEMPORADA</div>
+          <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th class="text-center align-middle">Temporada</th>
+                <th class="text-center align-middle">Título</th>
+                <th class="text-center align-middle">Equipo</th>
+                <th class="text-left align-middle d-none d-md-table-cell">Jugador</th>
+                <th class="text-center align-middle d-none d-md-table-cell">Equipos</th>
+                <th class="text-center align-middle d-none d-md-table-cell">Web</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="fila-impar">
+                <td class="align-middle">2009 - 2010</td>
+                <td class="text-center align-middle"><img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px"></td>
+                <td class="left-table align-middle"><img src="../img/shields/150/ru.png" class="table-shield" alt="Los Antimerengues"> Los Antimerengues</td>
+                <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/players/ru.jpg" class="table-foto"/> Ru</td>
+                <td class="text-center align-middle d-none d-md-table-cell">14</td>
+                <td class="text-center align-middle d-none d-md-table-cell">-</td>
+              </tr>
+              <tr class="fila-par">
+                <td class="align-middle">2010 - 2011</td>
+                <td class="text-center align-middle"><img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px"></td>
+                <td class="left-table align-middle"><img src="../img/shields/150/dioni.png" class="table-shield" alt="R. Cuervos C.F."> R. Cuervos C.F.</td>
+                <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/players/dioni.jpg" class="table-foto"/> Dioni</td>
+                <td class="text-center align-middle d-none d-md-table-cell">18</td>
+                <td class="text-center align-middle d-none d-md-table-cell">-</td>
+              </tr>
+              <tr class="fila-impar">
+                <td class="align-middle">2011 - 2012</td>
+                <td class="text-center align-middle"><img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px"></td>
+                <td class="left-table align-middle"><img src="../img/shields/150/dioni.png" class="table-shield" alt="R. Cuervos C.F."> R. Cuervos C.F.</td>
+                <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/players/dioni.jpg" class="table-foto"/> Dioni</td>
+                <td class="text-center align-middle d-none d-md-table-cell">23</td>
+                <td class="text-center align-middle d-none d-md-table-cell">-</td>
+              </tr>
+              <tr class="fila-par">
+                <td class="align-middle">2012 - 2013</td>
+                <td class="text-center align-middle"><img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px"></td>
+                <td class="left-table align-middle"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> Amunt Che</td>
+                <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/players/che.jpg" class="table-foto"/> Che</td>
+                <td class="text-center align-middle d-none d-md-table-cell">18</td>
+                <td class="text-center align-middle d-none d-md-table-cell"><a href="../2012-2013"><i class="fas fa-laptop"></i></a></td>
+              </tr>
+              <tr class="fila-impar">
+                <td class="align-middle">2013 - 2014</td>
+                <td class="text-center align-middle"><img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px"></td>
+                <td class="left-table align-middle"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> Amunt Che</td>
+                <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/players/che.jpg" class="table-foto"/> Che</td>
+                <td class="text-center align-middle d-none d-md-table-cell">7</td>
+                <td class="text-center align-middle d-none d-md-table-cell">-</td>
+              </tr>
+              <tr class="fila-par">
+                <td class="align-middle">2014 - 2015</td>
+                <td class="text-center align-middle"><img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px"></td>
+                <td class="left-table align-middle"><img src="../img/shields/150/dioni.png" class="table-shield" alt="Real Ru Cobarde"> Real Ru Cobarde</td>
+                <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/players/dioni.jpg" class="table-foto"/> Dioni</td>
+                <td class="text-center align-middle d-none d-md-table-cell">8</td>
+                <td class="text-center align-middle d-none d-md-table-cell">-</td>
+              </tr>
+              <tr class="fila-impar">
+                <td class="align-middle">2015 - 2016</td>
+                <td class="text-center align-middle"><img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px"></td>
+                <td class="left-table align-middle"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> Bierzo Power</td>
+                <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/players/borja_ramos.jpg" class="table-foto"/> Borja Ramos</td>
+                <td class="text-center align-middle d-none d-md-table-cell">23</td>
+                <td class="text-center align-middle d-none d-md-table-cell"><a href="../2015-2016"><i class="fas fa-laptop"></i></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="align-middle">2016 - 2017</td>
+                <td class="text-center align-middle"><img src="../img/cups/copa_liga_verde.png" alt="Liga Futmondo" style="height: 31px"></td>
+                <td class="left-table align-middle"><img src="../img/logo_opium_icono.png" class="table-shield" alt="Sabeko Areucas"> Sabeko Areucas</td>
+                <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/players/chema.jpg" class="table-foto"/> Chema</td>
+                <td class="text-center align-middle d-none d-md-table-cell">23</td>
+                <td class="text-center align-middle d-none d-md-table-cell"><a href="../2016-2017"><i class="fas fa-laptop"></i></a></td>
+              </tr>
+              <tr class="fila-impar">
+                <td class="align-middle">2017 - 2018</td>
+                <td class="text-center align-middle"><img src="../img/cups/copa_champions_negra.png" alt="Opium Champions League" style="height: 31px"></td>
+                <td class="left-table align-middle"><img src="../img/shields/150/will.png" class="table-shield" alt="Rino's Boys"> Williessous</td>
+                <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/players/will.jpg" class="table-foto"/> Will</td>
+                <td class="text-center align-middle d-none d-md-table-cell">23</td>
+                <td class="text-center align-middle d-none d-md-table-cell"><a href="../2017-2018"><i class="fas fa-laptop"></i></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="align-middle">2017 - 2018</td>
+                <td class="text-center align-middle"><img src="../img/cups/copa_liga_verde.png" alt="Liga Futmondo" style="height: 31px"></td>
+                <td class="left-table align-middle"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> Rino's Boys</td>
+                <td class="text-left align-middle d-none d-md-table-cell"><img src="../img/players/fran.jpg" class="table-foto"/> Fran</td>
+                <td class="text-center align-middle d-none d-md-table-cell">23</td>
+                <td class="text-center align-middle d-none d-md-table-cell"><a href="../2017-2018"><i class="fas fa-laptop"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </div>
 
-      <div class="mt-5 ml-5">LEYENDA</div>
-        <div class="mb-5 mx-5" style="border: solid 1px; border-radius: 5px; padding: 15px;">
-          <div class="my-2 mr-2 text-left">
-            <img src="../img/cups/copa_liga_azul.png" alt="" style="height: 31px"> LIGA FANTÁSTICA MARCA
+
+      <!-- PALMARÉS -->
+      <div class="tab-pane fade" id="records" role="tabpanel" aria-labelledby="tab-records">
+        <div class="h3 text-center mt-3">GANADORES</div>
+        <div class="row">
+
+          <!-- DIONI -->
+          <div class="card">
+            <div class="card-top-section">
+              <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
+              <img src="../img/players/dioni.jpg" class='card-img-top' />
+              <span class="card-winner-name">DIONI</span>
+            </div>
+            <div class="card-block px-2">
+              <div class="content float-left text-left w-50">
+                <div>Ligas</div>
+                <img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px">
+                <img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px">
+                <img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px">
+                <div>FO Cup</div>
+                -
+              </div>
+              <div class="content float-left text-right w-50">
+                <div>Champions</div>
+                -
+                <div>Europa League</div>
+                -
+              </div>
+            </div>
+            <div class="card-action" style="padding: 5px;">
+              <div>Participaciones:</div>
+              <div style="text-align: center;">
+                <span class="tag" style="background-color: #00A0E3;">2010-2011</span>
+                <span class="tag" style="background-color: #00A0E3;">2011-2012</span>
+                <span class="tag" style="background-color: #00A0E3;">2014-2015</span>
+              </div>
+            </div>
           </div>
-          <div class="my-2 mr-2 text-left">
-            <img src="../img/cups/copa_liga_verde.png" alt="" style="height: 31px"> LIGA FUTMONDO
+
+          <!-- CHE -->
+          <div class="card">
+            <div class="card-top-section">
+              <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
+              <img src="../img/players/che.jpg" class='card-img-top' />
+              <span class="card-winner-name">CHE</span>
+            </div>
+            <div class="card-block px-2">
+              <div class="content float-left text-left w-50">
+                <div>Ligas</div>
+                <img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px">
+                <img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px">
+                <div>FO Cup</div>
+                -
+              </div>
+              <div class="content float-left text-right w-50">
+                <div>Champions</div>
+                -
+                <div>Europa League</div>
+                -
+              </div>
+            </div>
+            <div class="card-action" style="padding: 5px;">
+              <div>Participaciones:</div>
+              <div style="text-align: center;">
+                <span class="tag">2009-2010</span>
+                <span class="tag">2010-2011</span>
+                <span class="tag">2011-2012</span>
+                <span class="tag" style="background-color: #00A0E3;">2012-2013</span>
+                <span class="tag" style="background-color: #00A0E3;">2013-2014</span>
+                <span class="tag">2014-2015</span>
+                <span class="tag">2015-2016</span>
+                <span class="tag">2016-2017</span>
+                <span class="tag">2017-2018</span>
+              </div>
+            </div>
           </div>
-          <div class="my-2 mr-2 text-left">
-            <img src="../img/cups/copa_champions_negra.png" alt="" style="height: 31px"> CHAMPIONS LEAGUE
+
+          <!-- RU -->
+          <div class="card">
+            <div class="card-top-section">
+              <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
+              <img src="../img/players/ru.jpg" class='card-img-top' />
+              <span class="card-winner-name">RU</span>
+            </div>
+            <div class="card-block px-2">
+              <div class="content float-left text-left w-50">
+                <div>Ligas</div>
+                <img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px">
+                <div>FO Cup</div>
+                -
+              </div>
+              <div class="content float-left text-right w-50">
+                <div>Champions</div>
+                -
+                <div>Europa League</div>
+                -
+              </div>
+            </div>
+            <div class="card-action" style="padding: 5px;">
+              <div>Participaciones:</div>
+              <div style="text-align: center;">
+                <span class="tag" style="background-color: #00A0E3;">2009-2010</span>
+                <span class="tag">2010-2011</span>
+                <span class="tag">2011-2012</span>
+                <span class="tag">2014-2015</span>
+              </div>
+            </div>
           </div>
-          <div class="my-2 mr-2 text-left">
-            <img src="../img/cups/copa_uefa_negra.png" alt="" style="height: 31px"> EUROPA LEAGUE
+
+          <!-- BORJA RAMOS -->
+          <div class="card">
+            <div class="card-top-section">
+              <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
+              <img src="../img/players/borja_ramos.jpg" class='card-img-top' />
+              <span class="card-winner-name">BORJA</span>
+            </div>
+            <div class="card-block px-2">
+              <div class="content float-left text-left w-50">
+                <div>Ligas</div>
+                <img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px">
+                <div>FO Cup</div>
+                -
+              </div>
+              <div class="content float-left text-right w-50">
+                <div>Champions</div>
+                -
+                <div>Europa League</div>
+                -
+              </div>
+            </div>
+            <div class="card-action" style="padding: 5px;">
+              <div>Participaciones:</div>
+              <div style="text-align: center;">
+                <span class="tag" style="background-color: #00A0E3;">2015-2016</span>
+                <span class="tag">2016-2017</span>
+                <span class="tag">2017-2018</span>
+              </div>
+            </div>
           </div>
-          <div class="my-2 mr-2 text-left">
-            <img src="../img/cups/copa_facup_negra.png" alt="" style="height: 31px"> FO Cup
+
+          <!-- CHEMA -->
+          <div class="card">
+            <div class="card-top-section">
+              <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
+              <img src="../img/players/chema.jpg" class='card-img-top' />
+              <span class="card-winner-name">CHEMA</span>
+            </div>
+            <div class="card-block px-2">
+              <div class="content float-left text-left w-50">
+                <div>Ligas</div>
+                <img src="../img/cups/copa_liga_verde.png" alt="Liga Futmondo" style="height: 31px">
+                <div>FO Cup</div>
+                -
+              </div>
+              <div class="content float-left text-right w-50">
+                <div>Champions</div>
+                -
+                <div>Europa League</div>
+                -
+              </div>
+            </div>
+            <div class="card-action" style="padding: 5px;">
+              <div>Participaciones:</div>
+              <div style="text-align: center;">
+                <span class="tag">2011-2012</span>
+                <span class="tag" style="background-color: #2FB101;">2016-2017</span>
+              </div>
+            </div>
           </div>
+
+          <!-- FRAN -->
+          <div class="card">
+            <div class="card-top-section">
+              <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
+              <img src="../img/players/fran.jpg" class='card-img-top' />
+              <span class="card-winner-name">FRAN</span>
+            </div>
+            <div class="card-block px-2">
+              <div class="content float-left text-left w-50">
+                <div>Ligas</div>
+                <img src="../img/cups/copa_liga_verde.png" alt="Liga Futmondo" style="height: 31px">
+                <div>FO Cup</div>
+                -
+              </div>
+              <div class="content float-left text-right w-50">
+                <div>Champions</div>
+                -
+                <div>Europa League</div>
+                -
+              </div>
+            </div>
+            <div class="card-action" style="padding: 5px;">
+              <div>Participaciones:</div>
+              <div style="text-align: center;">
+                <span class="tag">2011-2012</span>
+                <span class="tag">2012-2013</span>
+                <span class="tag">2013-2014</span>
+                <span class="tag">2014-2015</span>
+                <span class="tag">2015-2016</span>
+                <span class="tag">2016-2017</span>
+                <span class="tag" style="background-color: #2FB101;">2017-2018</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- WILL -->
+          <div class="card">
+            <div class="card-top-section">
+              <!-- <div class="card-img-top" style="background: url(../img/players/dioni.png) center top no-repeat;"></div> -->
+              <img src="../img/players/will.jpg" class='card-img-top' />
+              <span class="card-winner-name">WILL</span>
+            </div>
+            <div class="card-block px-2">
+              <div class="content float-left text-left w-50">
+                <div>Ligas</div>
+                -
+                <div>FO Cup</div>
+                -
+              </div>
+              <div class="content float-left text-right w-50">
+                <div>Champions</div>
+                <img src="../img/cups/copa_champions_negra.png" alt="Opium Champions League" style="height: 31px">
+                <div>Europa League</div>
+                -
+              </div>
+            </div>
+            <div class="card-action" style="padding: 5px;">
+              <div>Participaciones:</div>
+              <div style="text-align: center;">
+                <span class="tag">2015-2016</span>
+                <span class="tag">2016-2017</span>
+                <span class="tag">2017-2018</span>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
+
+      <div class="tab-pane fade" id="participations" role="tabpanel" aria-labelledby="tab-participations">
+      <div class="h4 text-center mt-3">PARTICIPACIONES</div>
+
+        <div id="container" class="chart-container"></div>
+        <!-- <div id="container" style="min-width: 400px; height: 500px; margin: 0 auto"></div> -->
+
+        <div class="h5">DETALLE</div>
+        <small>Nombre de equipo en cada temporada</small>
+        <div style="overflow-x:auto;">
+          <table class="table table-hover table-striped tablemap">
+            <thead class="bg-warning">
+              <tr>
+                <th class="orden">##</th>
+                <th class="nombre">Nombre</th>
+                <th class="equipo">2009-2010</th>
+                <th class="equipo">2010-2011</th>
+                <th class="equipo">2011-2012</th>
+                <th class="equipo">2012-2013</th>
+                <th class="equipo">2013-2014</th>
+                <th class="equipo">2014-2015</th>
+                <th class="equipo">2015-2016</th>
+                <th class="equipo">2016-2017</th>
+                <th class="equipo">2017-2018</th>
+                <th class="equipo">2018-2019</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/che.jpg" class="table-foto"/> Che (10)</td>
+                <td>Amunt Che</td>
+                <td>Amunt Che</td>
+                <td>Amunt Che</td>
+                <td>Amunt Che</td>
+                <td>Fc Che</td>
+                <td>Amunt Che</td>
+                <td>Amunt Che</td>
+                <td>Amunt Che</td>
+                <td>Amunt Che</td>
+                <td>Amunt Che</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/ortega.jpg" class="table-foto"/> David O. (10)</td>
+                <td>David Valcan</td>
+                <td>David Valcan</td>
+                <td>David Valcan</td>
+                <td>Valcan</td>
+                <td>David Valcan</td>
+                <td>David Valcan</td>
+                <td>David Valcan</td>
+                <td>David Valcan</td>
+                <td>David Valcan</td>
+                <td>David Valcan</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/adolfo.jpg" class="table-foto"/> Adolfo (8)</td>
+                <td>Galizano</td>
+                <td>Galizano 10-11</td>
+                <td>Galizano 3.0</td>
+                <td>Galizano 12-13</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Galizano 15-16</td>
+                <td>Galizano 16-17</td>
+                <td>Galizano 17-18</td>
+                <td>Galizano 18-19</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/fran.jpg" class="table-foto"/> Fran (8)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Rino's Boys</td>
+                <td>Rino's Boys</td>
+                <td>Rino's Boys</td>
+                <td>Rino's Boys</td>
+                <td>Rino's Boys</td>
+                <td>Rino's Boys</td>
+                <td>Rino's Boys</td>
+                <td>Rino's Boys</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/jc.jpg" class="table-foto"/> JC (8)</td>
+                <td>Juanquirlar Team</td>
+                <td>Juanquirlar Evo Team</td>
+                <td>Juanquirlar Evo Team</td>
+                <td>New Juanquirlar Team</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Ahora Ganemos</td>
+                <td>Juan Carlos King</td>
+                <td>Frente Popular</td>
+                <td>Frente Popular</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/mario.jpg" class="table-foto"/> Mario (8)</td>
+                <td>Mario'S Eleven</td>
+                <td>Mario'S Eleven</td>
+                <td>Mario'S Eleven</td>
+                <td>Mario'S Eleven</td>
+                <td>-</td>
+                <td>Mario'S Eleven</td>
+                <td>Mario'S Eleven</td>
+                <td>-</td>
+                <td>Cipriano Escanciano</td>
+                <td>Mario 13-14</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/luis.jpg" class="table-foto"/> Luis (7)</td>
+                <td>Porrua City</td>
+                <td>Porrua City</td>
+                <td>Porrua City</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Porrua City</td>
+                <td>Porrua City</td>
+                <td>Porrua City</td>
+                <td>Porrua City</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/paloma.jpg" class="table-foto"/> Paloma (7)</td>
+                <td>Super Palomba</td>
+                <td>Super Palomba</td>
+                <td>Super Palomba</td>
+                <td>Super Palomba</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Super Palomba</td>
+                <td>-</td>
+                <td>Palmira Chonici</td>
+                <td>Super Palomba</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/alberto_cadelo.jpg" class="table-foto"/> A.Cadelo (6)</td>
+                <td>-</td>
+                <td>Cacicedo</td>
+                <td>Cacicedo</td>
+                <td>Cacicedo</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Cacicedo</td>
+                <td>Cacicedo</td>
+                <td>Cacicedo</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/raul.jpg" class="table-foto"/> Raúl (6)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Dojo Cobra Kai</td>
+                <td>Dojo Cobra Kai</td>
+                <td>-</td>
+                <td>Dojo Cobra Kai</td>
+                <td>Rulitosan</td>
+                <td>Dojo Cobra Kai</td>
+                <td>Dojo Cobra Kai</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/vicente.jpg" class="table-foto"/> Chente (6)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Miniadri</td>
+                <td>-</td>
+                <td>Vicenterrr</td>
+                <td>Chent Team</td>
+                <td>Wayne team</td>
+                <td>Wayne team</td>
+                <td>Wayne team</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/borja.jpg" class="table-foto"/> Borja L. (5)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Oscos C.F</td>
+                <td>Cokero Perrero C.F.</td>
+                <td>-</td>
+                <td>Asturgijón C.F</td>
+                <td>Asturgijón C.F</td>
+                <td>-</td>
+                <td>Asturgijón</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/danilo.jpg" class="table-foto"/> Danilo (5)</td>
+                <td>Wiki Team</td>
+                <td>-</td>
+                <td>Seawave</td>
+                <td>Los Picapiedra</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Karakarton Bell Air</td>
+                <td>-</td>
+                <td>Wiki Team</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/borja_ramos.jpg" class="table-foto"/> Borja R. (4)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Bierzo Power</td>
+                <td>Bierzo Power</td>
+                <td>Bierzo Power</td>
+                <td>Bierzo Power</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/carlos_julio.jpg" class="table-foto"/> Carlos Julio (4)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Cabimas Fc</td>
+                <td>Cabimas Fc</td>
+                <td>Cabimas Fc</td>
+                <td>Cabimas Fc</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/dani_negro.jpg" class="table-foto"/> Dani (4)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Racing De Santander</td>
+                <td>FotografiaDanyRuiz</td>
+                <td>FotografiaDanyRuiz</td>
+                <td>Racing De Santander</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/david_munoz.jpg" class="table-foto"/> David M. (4)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Tikis</td>
+                <td>New tikis</td>
+                <td>New tikis</td>
+                <td>New tikis</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/ivan.jpg" class="table-foto"/> Ivan (4)</td>
+                <td>Ilaca 3.1</td>
+                <td>Ilaca 3.2</td>
+                <td>Ilaca 3.3</td>
+                <td>Ilaca 3.4</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/javi_bsh.jpg" class="table-foto"/> Javi (4)</td>
+                <td>Phoenix Team</td>
+                <td>Los Pajaros Locos</td>
+                <td>-</td>
+                <td>Niupi</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Sito Miñanco</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/nandelas.jpg" class="table-foto"/> Nando (4)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Nandelas F.C.</td>
+                <td>Nandelas F.C.</td>
+                <td>Infican Viajes</td>
+                <td>Infican Viajes</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/raul_magni.jpg" class="table-foto"/> Raúl Magni (4)</td>
+                <td>Puto Sinfín</td>
+                <td>Antifascistas</td>
+                <td>No Limpio Pescado</td>
+                <td>Rajoy Dimisión</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/ru.jpg" class="table-foto"/> Ru (4)</td>
+                <td>Los Antimerengues</td>
+                <td>Los Antimerengues</td>
+                <td>Los Antimerengues</td>
+                <td>-</td>
+                <td>-</td>
+                <td>El Furgón De Dioni</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/serious.jpg" class="table-foto"/> Serious (4)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>4thewin</td>
+                <td>Meneillos</td>
+                <td>Meneillos</td>
+                <td>Meneillos</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/will.jpg" class="table-foto"/> Will (4)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Petrellis</td>
+                <td>Shatara</td>
+                <td>Williessous</td>
+                <td>Williessous</td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/chus.jpg" class="table-foto"/> Chus Contador (3)</td>
+                <td>Buitragueñines</td>
+                <td>Buitragueñines</td>
+                <td>Buitragueñines</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/cruchi.jpg" class="table-foto"/> Cruchi (3)</td>
+                <td>Cruchifritos</td>
+                <td>Cruchifritos</td>
+                <td>Cruchifritos</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/dani_magni.jpg" class="table-foto"/> Dani Magni (3)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Heliópolis Fc</td>
+                <td>New Milford Team</td>
+                <td>-</td>
+                <td>-</td>
+                <td>As Heliópolis</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/diego.jpg" class="table-foto"/> Diego (3)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Diego</td>
+                <td>Orgullo de Runner</td>
+                <td>Orgullo de Runner</td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/dioni.jpg" class="table-foto"/> Dioni (3)</td>
+                <td>-</td>
+                <td>R. Cuervos C.F.</td>
+                <td>R. Cuervos C.F.</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Real Ru Cobarde</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/juanan.jpg" class="table-foto"/> Juanan (3)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Balompedica Porrua</td>
+                <td>Balompedica Porrua</td>
+                <td>Balompedica Porrua</td>
+              </tr>
+              <tr>
+                <td>31</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/chema.jpg" class="table-foto"/> Chema (2)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Sabeco K 4</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Sabeko Areucas</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>32</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/ekaitz.jpg" class="table-foto"/> Ekaitz (2)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Yellow Storm F.C.</td>
+                <td>Yellow Storm F.C.</td>
+              </tr>
+              <tr>
+                <td>33</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/manunu.jpg" class="table-foto"/> Manunu (2)</td>
+                <td>-</td>
+                <td>Manunuteam</td>
+                <td>Manunu Super Team</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>34</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/nando.jpg" class="table-foto"/> Nando Glez. (2)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Handballteam</td>
+                <td>Handbalteam2</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>35</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/ovidiu.jpg" class="table-foto"/> Ovidiu (2)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Ovi Dan</td>
+                <td>Ovi Dan</td>
+              </tr>
+              <tr>
+                <td>36</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/adryalis.jpg" class="table-foto"/> Adryalis (1)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Maxivero</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>37</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/cresmar.jpg" class="table-foto"/> Cresmar (1)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Cresmar Pro Team</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>38</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/daniel_gonzalez.jpg" class="table-foto"/> Dani G. (1)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Caracas FC</td>
+              </tr>
+              <tr>
+                <td>39</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/david_parathinohaycosto.jpg" class="table-foto"/> David (1)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Parathinohaykostho</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>40</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/felipe.jpg" class="table-foto"/> Felipe (1)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Old Tikis</td>
+              </tr>
+              <tr>
+                <td>41</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/ines.jpg" class="table-foto"/> Inés (1)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Capitán Tsubasa</td>
+              </tr>
+              <tr>
+                <td>42</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/javi.jpg" class="table-foto"/> Javi R. (1)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Javier Rey</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>43</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/jose.jpg" class="table-foto"/> Jose S. (1)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Timofónica Team</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>44</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/zea.jpg" class="table-foto"/> Miguel (1)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Zea 1+8 FC</td>
+              </tr>
+              <tr>
+                <td>45</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/pablo_fernandez.jpg" class="table-foto"/> Pablo (1)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Lábaro FC</td>
+              </tr>
+              <tr>
+                <td>46</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/poli.jpg" class="table-foto"/> Poli (1)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Cholo82team</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>47</td>
+                <td class="text-left align-middle" style="background-color: #FFFF00;"><img src="../img/players/rafa_pereira.jpg" class="table-foto"/> Rafa (1)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Luso-Tinto</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-3 w-75">LEYENDA</div>
+      <div class="mx-auto mb-5 w-75" style="border: solid 1px; border-radius: 5px; padding: 15px;">
+        <div class="my-2 mr-2 text-left">
+          <img src="../img/cups/copa_liga_azul.png" alt="Liga Fantástica Marca" style="height: 31px"> LIGA FANTÁSTICA MARCA
+        </div>
+        <div class="my-2 mr-2 text-left">
+          <img src="../img/cups/copa_liga_verde.png" alt="Liga Futmondo" style="height: 31px"> LIGA FUTMONDO
+        </div>
+        <div class="my-2 mr-2 text-left">
+          <img src="../img/cups/copa_champions_negra.png" alt="Opium Champions League" style="height: 31px"> CHAMPIONS LEAGUE
+        </div>
+        <div class="my-2 mr-2 text-left">
+          <img src="../img/cups/copa_uefa_negra.png" alt="Opium Europa League" style="height: 31px"> EUROPA LEAGUE
+        </div>
+        <div class="my-2 mr-2 text-left">
+          <img src="../img/cups/copa_facup_negra.png" alt="FO Cup" style="height: 31px"> FO CUP
+        </div>
+      </div>
     </div>
-</div>
 
 
 
@@ -436,5 +1203,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
     <script src="../js/app.js"></script>
+    <script src="../js/history.js"></script>
   </body>
 </html>

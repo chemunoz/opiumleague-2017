@@ -10,7 +10,7 @@
     <title>Opium League :: Clasificaciones</title>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../css/style.css">
@@ -23,6 +23,14 @@
       ga('create', 'UA-92241042-1', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-5854652030354122",
+        enable_page_level_ads: true
+      });
+    </script> -->
   </head>
 
 
@@ -32,7 +40,7 @@
     <span ng-include="'/views/_header.html'"></span>
 
     <!-- Navbar -->
-    <span ng-include="'/views/_navbar.html'"></span>
+    <span ng-include="'/views/_navbar.html?v.0.0'"></span>
 
 
     <div class="h3 text-center my-3">CLASIFICACIONES</div>
@@ -41,21 +49,21 @@
     <!-- Tabs -->
     <ul class="nav nav-tabs nav-fill my-3" id="myTab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+        <a class="nav-link active" id="current-table-tab" data-toggle="tab" href="#current-table" role="tab" aria-controls="current-table" aria-selected="true">
           <span><i class="fas fa-table"></i></span>
           <span class="d-none d-md-inline">Clasificación General</span>
           <span class="d-sm-inline d-md-none">Cla. Gral.</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+        <a class="nav-link" id="hist-total-table-tab" data-toggle="tab" href="#hist-total-table" role="tab" aria-controls="hist-total-table" aria-selected="false">
           <span class="icon is-small"><i class="far fa-clock"></i></span>
           <span class="d-none d-md-inline">Histórico General</span>
           <span class="d-sm-inline d-md-none">His. Gral.</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+        <a class="nav-link" id="hist-jornada-table-tab" data-toggle="tab" href="#hist-jornada-table" role="tab" aria-controls="hist-jornada-table" aria-selected="false">
           <span class="icon is-small"><i class="far fa-clock"></i></span>
           <span class="d-none d-md-inline">Histórico Jornadas</span>
           <span class="d-sm-inline d-md-none">His. Jor.</span>
@@ -68,7 +76,7 @@
     <!-- TABLES -->
     <div class="tab-content" id="myTabContent">
       <!-- General Table -->
-      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <div class="tab-pane fade show active" id="current-table" role="tabpanel" aria-labelledby="current-table-tab">
         <section class="table-responsive">
           <table class="table">
             <thead class="thead-light">
@@ -98,14 +106,24 @@
               </tr>
             </tfoot>
             <tbody>
-              <tr ng-repeat="player in general_table" ng-cloak ng-class="{'champions': player.position_general < 5,
-                          'uefa': (player.position_general == 5 || player.position_general == 6),
-                          'intertoto': player.position_general == 7,
-                          'descenso': player.position_general > general_table.length - 3}">
+              <tr class ="fila" ng-repeat="player in general_table" ng-cloak ng-class="{'champions': player.position_general < 5,
+                                                                          'uefa': (player.position_general == 5 || player.position_general == 6),
+                                                                          'intertoto': player.position_general == 7,
+                                                                          'descenso': player.position_general > general_table.length - 3}">
                 <td class="text-center align-middle">{{player.position_general}}</td>
-                <td class="text-center align-middle"><img ng-src="{{player.updown}}" class="arrow" /> {{player.updown_num}}</td>
-                <td class="text-left align-middle"><a href="profile.html?id={{player.id}}" class="text-dark"><img ng-src="{{player.shield}}" class="foto-table" /> {{player.team}}</a></td>
-                <td class="text-left align-middle d-none d-md-table-cell"><a href="profile.html?id={{player.id}}" class="text-dark"><img ng-src="{{player.image}}" class="foto-table" /> {{player.name}}</a></td>
+                <td class="text-center align-middle"><img ng-src="{{player.updown}}" class="arrow" /> <span class="align-middle">{{player.updown_num}}</span></td>
+                <td class="text-left align-middle">
+                  <a href="profile.html?id={{player.id}}" ng-class="{'text-dark': player.position_general <= general_table.length - 3,
+                                                                     'text-white': player.position_general > general_table.length - 3}">
+                    <img ng-src="/img/shields/150/{{player.shield}}" class="table-shield" /> {{player.team}}
+                  </a>
+                </td>
+                <td class="text-left align-middle d-none d-md-table-cell">
+                  <a href="profile.html?id={{player.id}}" ng-class="{'text-dark': player.position_general <= general_table.length - 3,
+                                                                     'text-white': player.position_general > general_table.length - 3}">
+                    <img ng-src="/img/players/{{player.image}}" class="table-foto" /> {{player.name}}
+                  </a>
+                </td>
                 <td class="text-center align-middle d-none d-sm-table-cell">{{player.num_jornadas}}</td>
                 <td class="text-center align-middle font-weight-bold">{{player.score_general}}</td>
                 <td class="text-center align-middle d-none d-sm-table-cell">{{player.score_best}}</td>
@@ -118,11 +136,11 @@
       </div>
 
       <!-- Match-day Tables -->
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="tab-pane fade" id="hist-total-table" role="tabpanel" aria-labelledby="hist-total-table-tab">
         <section class="table-responsive text-center">
           <div class="text-center">HISTÓRICO GENERAL</div>
           <span class="historic_table" ng-repeat="jornada in historic_general" ng-show="jornada[0].id" ng-cloak>
-            <div class="my-3">
+            <div class="my-3 title">
               <i class="fas fa-futbol"></i> {{jornada.jor_name}}
             </div>
             <table class="table mt-3">
@@ -139,7 +157,13 @@
                            'intertoto': player_jornada.position_general == 7,
                            'descenso': player_jornada.position_general > jornada.length - 3}">
                   <td class="text-center align-middle">{{player_jornada.position_general}}</td>
-                  <td class="text-left align-middle"><a href="profile.html?id={{player_jornada.id}}"><img ng-src="{{player_jornada.shield}}" class="foto-table" /> {{player_jornada.team}}</a></td>
+                  <td class="text-left align-middle">
+                    <a href="profile.html?id={{player_jornada.id}}" ng-class="{
+                              'text-dark': player_jornada.position_general <= general_table.length - 3,
+                              'text-white': player_jornada.position_general > general_table.length - 3}">
+                      <img ng-src="/img/shields/150/{{player_jornada.shield}}" class="table-shield" /> {{player_jornada.team}}
+                    </a>
+                  </td>
                   <td class="text-center align-middle font-weight-bold">{{player_jornada.score_general}}</td>
                 </tr>
               </tbody>
@@ -150,11 +174,11 @@
 
 
       <!-- Match-day Tables -->
-      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+      <div class="tab-pane fade" id="hist-jornada-table" role="tabpanel" aria-labelledby="hist-jornada-table-tab">
         <section class="table-responsive text-center">
           <div class="text-center">HISTÓRICO DE JORNADAS</div>
           <span class="historic_table" ng-repeat="jornada in historic_jornada" ng-show="jornada[0].id" ng-cloak>
-            <div class="my-3">
+            <div class="my-3 title">
               <i class="fas fa-futbol"></i> {{jornada.jor_name}}
             </div>
             <table class="table mt-3">
@@ -169,7 +193,13 @@
                 <tr ng-class="{'champions': player_jornada.position_jornada == 1,
                                'descenso': player_jornada.position_jornada == jornada.length}">
                   <td class="text-center align-middle">{{player_jornada.position_jornada}}</td>
-                  <td class="text-left align-middle"><a href="profile.html?id={{player_jornada.id}}"><img ng-src="{{player_jornada.shield}}" class="foto-table" /> {{player_jornada.team}}</a></td>
+                  <td class="text-left align-middle">
+                    <a href="profile.html?id={{player_jornada.id}}" ng-class="{
+                              'text-dark': player_jornada.position_jornada <= jornada.length - 1,
+                              'text-white': player_jornada.position_jornada == jornada.length}">
+                      <img ng-src="/img/shields/150/{{player_jornada.shield}}" class="table-shield" /> {{player_jornada.team}}
+                    </a>
+                  </td>
                   <td class="text-center align-middle font-weight-bold">{{player_jornada.score_jornada}}</td>
                 </tr>
               </tbody>
