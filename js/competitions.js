@@ -52,7 +52,7 @@
   let Champions = [
     //SORTEO
     {
-      deadline: new Date("Dec 22, 2018 16:00:00").getTime(),
+      deadline: new Date("Dec 22, 2018 22:30:00").getTime(),
       date: {
         days: 0,
         hours: 0,
