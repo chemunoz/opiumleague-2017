@@ -45,9 +45,10 @@
 
     <div class="text-center mb-2"><i class="fas fa-diagnoses"></i> Sorteo: <span id="countdown-draw-Champions"></div>
     <div class="text-center mb-2"><i class="far fa-clock"></i> Inicio: <span id="countdown-Champions"></div>
-    <!-- CRUCES -->
-    <!-- <div class="text-center"><img id="cruces-champions" class="cruces-img" src="../img/cruces_champions.png" alt=""></div> -->
-    <div class="text-center"><img id="sorteo-champions" class="cruces-img" src="../img/sorteo_champions.png" alt=""></div>
+
+    <!-- CABECERA -->
+    <!-- <div class="text-center"><img id="sorteo-champions" class="cruces-img" src="../img/sorteo_champions.png" alt=""></div> -->
+    <div class="text-center"><img id="sorteo-champions" class="cruces-img" src="../img/grupos_champions.png" alt=""></div>
 
     <!-- TABS -->
     <ul class="nav nav-tabs nav-fill my-3" id="ChampionsTab" role="tablist">
@@ -102,30 +103,31 @@
       </li>
     </ul>
 
-    <!-- GRUPO A -->
+
     <div class="tab-content mb-5" id="ChampionsTabContent">
+      <!-- GRUPO A -->
       <div class="tab-pane fade show active" id="A" role="tabpanel" aria-labelledby="tab-A">
         <div class="h6 text-center">GRUPO A</div>
         <!-- Clasificación -->
         <table class="table">
           <thead>
             <tr>
-              <td><abbr title="Posicion">Pos</abbr></th>
-              <td><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <td><abbr title="Puntos">Ptos</abbr></th>
-              <td><abbr title="Partidos Jugados">PJ</abbr></th>
-              <td><abbr title="Partidos Ganados">PG</abbr></th>
-              <td><abbr title="Partidos Empatados">PE</abbr></th>
-              <td><abbr title="Partidos Perdidos">PP</abbr></th>
-              <td><abbr title="Puntos a favor">PF</abbr></th>
-              <td><abbr title="Puntos en contra">PC</abbr></th>
-              <td><abbr title="Diferencia de puntos">Dif</abbr></th>
+              <th><abbr title="Posicion">Pos</abbr></th>
+              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+              <th><abbr title="Puntos">Ptos</abbr></th>
+              <th><abbr title="Partidos Jugados">PJ</abbr></th>
+              <th><abbr title="Partidos Ganados">PG</abbr></th>
+              <th><abbr title="Partidos Empatados">PE</abbr></th>
+              <th><abbr title="Partidos Perdidos">PP</abbr></th>
+              <th><abbr title="Puntos a favor">PF</abbr></th>
+              <th><abbr title="Puntos en contra">PC</abbr></th>
+              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
             </tr>
           </thead>
           <tbody>
             <tr class="champions">
-              <td>1</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>1</td>
+              <td class="text-left"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> Rino's Boys</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -136,8 +138,8 @@
               <td>0</td>
             </tr>
             <tr class="champions">
-              <td>2</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>2</td>
+              <td class="text-left"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> Lábaro FC</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -148,8 +150,8 @@
               <td>0</td>
             </tr>
             <tr class="uefa">
-              <td>3</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>3</td>
+              <td class="text-left"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> Ovi Dan</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -160,8 +162,8 @@
               <td>0</td>
             </tr>
             <tr class="descenso">
-              <td>4</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>4</td>
+              <td class="text-left"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario 13-14"> Mario 13-14</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -182,88 +184,87 @@
             <th colspan="3">JORNADA 1 (04/01/2019 - 07/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario 13-14"> <div>Mario 13-14</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 2 (11/01/2019 - 14/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario 13-14"> <div>Mario 13-14</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 3 (18/01/2019 - 21/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario 13-14"> <div>Mario 13-14</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 4 (25/01/2019 - 28/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario 13-14"> <div>Mario 13-14</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 5 (08/02/2019 - 11/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario 13-14"> <div>Mario 13-14</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 6 (15/02/2019 - 18/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario 13-14"> <div>Mario 13-14</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
           </tr>
         </table>
       </div>
-
 
 
       <!-- GRUPO B -->
@@ -273,22 +274,22 @@
         <table class="table">
           <thead>
             <tr>
-              <td><abbr title="Posicion">Pos</abbr></th>
-              <td><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <td><abbr title="Puntos">Ptos</abbr></th>
-              <td><abbr title="Partidos Jugados">PJ</abbr></th>
-              <td><abbr title="Partidos Ganados">PG</abbr></th>
-              <td><abbr title="Partidos Empatados">PE</abbr></th>
-              <td><abbr title="Partidos Perdidos">PP</abbr></th>
-              <td><abbr title="Puntos a favor">PF</abbr></th>
-              <td><abbr title="Puntos en contra">PC</abbr></th>
-              <td><abbr title="Diferencia de puntos">Dif</abbr></th>
+              <th><abbr title="Posicion">Pos</abbr></th>
+              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+              <th><abbr title="Puntos">Ptos</abbr></th>
+              <th><abbr title="Partidos Jugados">PJ</abbr></th>
+              <th><abbr title="Partidos Ganados">PG</abbr></th>
+              <th><abbr title="Partidos Empatados">PE</abbr></th>
+              <th><abbr title="Partidos Perdidos">PP</abbr></th>
+              <th><abbr title="Puntos a favor">PF</abbr></th>
+              <th><abbr title="Puntos en contra">PC</abbr></th>
+              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
             </tr>
           </thead>
           <tbody>
             <tr class="champions">
-              <td>1</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>1</td>
+              <td class="text-left"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> New tikis</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -299,8 +300,8 @@
               <td>0</td>
             </tr>
             <tr class="champions">
-              <td>2</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>2</td>
+              <td class="text-left"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> Wayne team</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -311,8 +312,8 @@
               <td>0</td>
             </tr>
             <tr class="uefa">
-              <td>3</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>3</td>
+              <td class="text-left"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> Old Tikis</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -323,8 +324,8 @@
               <td>0</td>
             </tr>
             <tr class="descenso">
-              <td>4</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>4</td>
+              <td class="text-left"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> Zea 1+8 FC</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -345,112 +346,112 @@
             <th colspan="3">JORNADA 1 (04/01/2019 - 07/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 2 (11/01/2019 - 14/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 3 (18/01/2019 - 21/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 4 (25/01/2019 - 28/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 5 (08/02/2019 - 11/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 6 (15/02/2019 - 18/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
           </tr>
         </table>
       </div>
 
 
-
+      <!-- GRUPO C -->
       <div class="tab-pane fade" id="C" role="tabpanel" aria-labelledby="tab-C">
         <div class="h6 text-center">GRUPO C</div>
         <!-- Clasificación -->
         <table class="table">
           <thead>
             <tr>
-              <td><abbr title="Posicion">Pos</abbr></th>
-              <td><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <td><abbr title="Puntos">Ptos</abbr></th>
-              <td><abbr title="Partidos Jugados">PJ</abbr></th>
-              <td><abbr title="Partidos Ganados">PG</abbr></th>
-              <td><abbr title="Partidos Empatados">PE</abbr></th>
-              <td><abbr title="Partidos Perdidos">PP</abbr></th>
-              <td><abbr title="Puntos a favor">PF</abbr></th>
-              <td><abbr title="Puntos en contra">PC</abbr></th>
-              <td><abbr title="Diferencia de puntos">Dif</abbr></th>
+              <th><abbr title="Posicion">Pos</abbr></th>
+              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+              <th><abbr title="Puntos">Ptos</abbr></th>
+              <th><abbr title="Partidos Jugados">PJ</abbr></th>
+              <th><abbr title="Partidos Ganados">PG</abbr></th>
+              <th><abbr title="Partidos Empatados">PE</abbr></th>
+              <th><abbr title="Partidos Perdidos">PP</abbr></th>
+              <th><abbr title="Puntos a favor">PF</abbr></th>
+              <th><abbr title="Puntos en contra">PC</abbr></th>
+              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
             </tr>
           </thead>
           <tbody>
             <tr class="champions">
-              <td>1</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>1</td>
+              <td class="text-left"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> David Valcan</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -461,8 +462,8 @@
               <td>0</td>
             </tr>
             <tr class="champions">
-              <td>2</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>2</td>
+              <td class="text-left"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> Bierzo Power</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -473,8 +474,8 @@
               <td>0</td>
             </tr>
             <tr class="uefa">
-              <td>3</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>3</td>
+              <td class="text-left"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> Williessous</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -485,8 +486,8 @@
               <td>0</td>
             </tr>
             <tr class="descenso">
-              <td>4</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>4</td>
+              <td class="text-left"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> Super Palomba</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -507,112 +508,112 @@
             <th colspan="3">JORNADA 1 (04/01/2019 - 07/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 2 (11/01/2019 - 14/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 3 (18/01/2019 - 21/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 4 (25/01/2019 - 28/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 5 (08/02/2019 - 11/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 6 (15/02/2019 - 18/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
           </tr>
         </table>
       </div>
 
 
-
+      <!-- GRUPO D -->
       <div class="tab-pane fade" id="D" role="tabpanel" aria-labelledby="tab-D">
         <div class="h6 text-center">GRUPO D</div>
         <!-- Clasificación -->
         <table class="table">
           <thead>
             <tr>
-              <td><abbr title="Posicion">Pos</abbr></th>
-              <td><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <td><abbr title="Puntos">Ptos</abbr></th>
-              <td><abbr title="Partidos Jugados">PJ</abbr></th>
-              <td><abbr title="Partidos Ganados">PG</abbr></th>
-              <td><abbr title="Partidos Empatados">PE</abbr></th>
-              <td><abbr title="Partidos Perdidos">PP</abbr></th>
-              <td><abbr title="Puntos a favor">PF</abbr></th>
-              <td><abbr title="Puntos en contra">PC</abbr></th>
-              <td><abbr title="Diferencia de puntos">Dif</abbr></th>
+              <th><abbr title="Posicion">Pos</abbr></th>
+              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+              <th><abbr title="Puntos">Ptos</abbr></th>
+              <th><abbr title="Partidos Jugados">PJ</abbr></th>
+              <th><abbr title="Partidos Ganados">PG</abbr></th>
+              <th><abbr title="Partidos Empatados">PE</abbr></th>
+              <th><abbr title="Partidos Perdidos">PP</abbr></th>
+              <th><abbr title="Puntos a favor">PF</abbr></th>
+              <th><abbr title="Puntos en contra">PC</abbr></th>
+              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
             </tr>
           </thead>
           <tbody>
             <tr class="champions">
-              <td>1</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>1</td>
+              <td class="text-left"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> Amunt Che</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -623,8 +624,8 @@
               <td>0</td>
             </tr>
             <tr class="champions">
-              <td>2</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>2</td>
+              <td class="text-left"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> Capitán Tsubasa</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -635,8 +636,8 @@
               <td>0</td>
             </tr>
             <tr class="uefa">
-              <td>3</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>3</td>
+              <td class="text-left"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> Meneillos</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -647,8 +648,8 @@
               <td>0</td>
             </tr>
             <tr class="descenso">
-              <td>4</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>4</td>
+              <td class="text-left"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> Porrua City</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -669,112 +670,112 @@
             <th colspan="3">JORNADA 1 (04/01/2019 - 07/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 2 (11/01/2019 - 14/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 3 (18/01/2019 - 21/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 4 (25/01/2019 - 28/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 5 (08/02/2019 - 11/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 6 (15/02/2019 - 18/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
           </tr>
         </table>
       </div>
 
 
-
+      <!-- GRUPO E -->
       <div class="tab-pane fade" id="E" role="tabpanel" aria-labelledby="tab-E">
         <div class="h6 text-center">GRUPO E</div>
         <!-- Clasificación -->
         <table class="table">
           <thead>
             <tr>
-              <td><abbr title="Posicion">Pos</abbr></th>
-              <td><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <td><abbr title="Puntos">Ptos</abbr></th>
-              <td><abbr title="Partidos Jugados">PJ</abbr></th>
-              <td><abbr title="Partidos Ganados">PG</abbr></th>
-              <td><abbr title="Partidos Empatados">PE</abbr></th>
-              <td><abbr title="Partidos Perdidos">PP</abbr></th>
-              <td><abbr title="Puntos a favor">PF</abbr></th>
-              <td><abbr title="Puntos en contra">PC</abbr></th>
-              <td><abbr title="Diferencia de puntos">Dif</abbr></th>
+              <th><abbr title="Posicion">Pos</abbr></th>
+              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+              <th><abbr title="Puntos">Ptos</abbr></th>
+              <th><abbr title="Partidos Jugados">PJ</abbr></th>
+              <th><abbr title="Partidos Ganados">PG</abbr></th>
+              <th><abbr title="Partidos Empatados">PE</abbr></th>
+              <th><abbr title="Partidos Perdidos">PP</abbr></th>
+              <th><abbr title="Puntos a favor">PF</abbr></th>
+              <th><abbr title="Puntos en contra">PC</abbr></th>
+              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
             </tr>
           </thead>
           <tbody>
             <tr class="champions">
-              <td>1</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>1</td>
+              <td class="text-left"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> Orgullo de Runner</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -785,8 +786,8 @@
               <td>0</td>
             </tr>
             <tr class="champions">
-              <td>2</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>2</td>
+              <td class="text-left"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> Infican Viajes</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -797,8 +798,8 @@
               <td>0</td>
             </tr>
             <tr class="uefa">
-              <td>3</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>3</td>
+              <td class="text-left"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> Dojo Cobra KAI</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -809,8 +810,8 @@
               <td>0</td>
             </tr>
             <tr class="descenso">
-              <td>4</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>4</td>
+              <td class="text-left"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> Asturgijón</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -831,112 +832,112 @@
             <th colspan="3">JORNADA 1 (04/01/2019 - 07/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 2 (11/01/2019 - 14/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 3 (18/01/2019 - 21/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 4 (25/01/2019 - 28/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 5 (01/02/2019 - 11/04/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 6 (08/02/2019 - 11/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
           </tr>
         </table>
       </div>
 
 
-
+      <!-- GRUPO F -->
       <div class="tab-pane fade" id="F" role="tabpanel" aria-labelledby="tab-F">
         <div class="h6 text-center">GRUPO F</div>
         <!-- Clasificación -->
         <table class="table">
           <thead>
             <tr>
-              <td><abbr title="Posicion">Pos</abbr></th>
-              <td><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <td><abbr title="Puntos">Ptos</abbr></th>
-              <td><abbr title="Partidos Jugados">PJ</abbr></th>
-              <td><abbr title="Partidos Ganados">PG</abbr></th>
-              <td><abbr title="Partidos Empatados">PE</abbr></th>
-              <td><abbr title="Partidos Perdidos">PP</abbr></th>
-              <td><abbr title="Puntos a favor">PF</abbr></th>
-              <td><abbr title="Puntos en contra">PC</abbr></th>
-              <td><abbr title="Diferencia de puntos">Dif</abbr></th>
+              <th><abbr title="Posicion">Pos</abbr></th>
+              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+              <th><abbr title="Puntos">Ptos</abbr></th>
+              <th><abbr title="Partidos Jugados">PJ</abbr></th>
+              <th><abbr title="Partidos Ganados">PG</abbr></th>
+              <th><abbr title="Partidos Empatados">PE</abbr></th>
+              <th><abbr title="Partidos Perdidos">PP</abbr></th>
+              <th><abbr title="Puntos a favor">PF</abbr></th>
+              <th><abbr title="Puntos en contra">PC</abbr></th>
+              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
             </tr>
           </thead>
           <tbody>
             <tr class="champions">
-              <td>1</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>1</td>
+              <td class="text-left"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> Sito Miñanco</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -947,8 +948,8 @@
               <td>0</td>
             </tr>
             <tr class="champions">
-              <td>2</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>2</td>
+              <td class="text-left"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> Yellow Storm F.C.</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -959,8 +960,8 @@
               <td>0</td>
             </tr>
             <tr class="uefa">
-              <td>3</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>3</td>
+              <td class="text-left"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> Balompédica Porrua</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -971,8 +972,8 @@
               <td>0</td>
             </tr>
             <tr class="descenso">
-              <td>4</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>4</td>
+              <td class="text-left"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> Cabimas FC</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -993,112 +994,112 @@
             <th colspan="3">JORNADA 1 (04/01/2019 - 07/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 2 (11/01/2019 - 14/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 3 (18/01/2019 - 21/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 4 (25/01/2019 - 28/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 5 (08/02/2019 - 11/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 6 (15/02/2019 - 18/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
           </tr>
         </table>
       </div>
 
 
-
+      <!-- GRUPO G -->
       <div class="tab-pane fade" id="G" role="tabpanel" aria-labelledby="tab-G">
         <div class="h6 text-center">GRUPO G</div>
         <!-- Clasificación -->
         <table class="table">
           <thead>
             <tr>
-              <td><abbr title="Posicion">Pos</abbr></th>
-              <td><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <td><abbr title="Puntos">Ptos</abbr></th>
-              <td><abbr title="Partidos Jugados">PJ</abbr></th>
-              <td><abbr title="Partidos Ganados">PG</abbr></th>
-              <td><abbr title="Partidos Empatados">PE</abbr></th>
-              <td><abbr title="Partidos Perdidos">PP</abbr></th>
-              <td><abbr title="Puntos a favor">PF</abbr></th>
-              <td><abbr title="Puntos en contra">PC</abbr></th>
-              <td><abbr title="Diferencia de puntos">Dif</abbr></th>
+              <th><abbr title="Posicion">Pos</abbr></th>
+              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+              <th><abbr title="Puntos">Ptos</abbr></th>
+              <th><abbr title="Partidos Jugados">PJ</abbr></th>
+              <th><abbr title="Partidos Ganados">PG</abbr></th>
+              <th><abbr title="Partidos Empatados">PE</abbr></th>
+              <th><abbr title="Partidos Perdidos">PP</abbr></th>
+              <th><abbr title="Puntos a favor">PF</abbr></th>
+              <th><abbr title="Puntos en contra">PC</abbr></th>
+              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
             </tr>
           </thead>
           <tbody>
             <tr class="champions">
-              <td>1</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>1</td>
+              <td class="text-left"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> Frente Popular</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -1109,8 +1110,8 @@
               <td>0</td>
             </tr>
             <tr class="champions">
-              <td>2</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>2</td>
+              <td class="text-left"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> Caracas FC</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -1121,8 +1122,8 @@
               <td>0</td>
             </tr>
             <tr class="uefa">
-              <td>3</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>3</td>
+              <td class="text-left"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> Racing de Santander</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -1133,8 +1134,8 @@
               <td>0</td>
             </tr>
             <tr class="descenso">
-              <td>4</th>
-              <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
+              <td>4</td>
+              <td class="text-left"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> Galizano 18-19</a></td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -1155,357 +1156,84 @@
             <th colspan="3">JORNADA 1 (04/01/2019 - 07/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 2 (11/01/2019 - 14/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 3 (18/01/2019 - 21/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 4 (25/01/2019 - 28/01/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 5 (08/02/2019 - 11/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
           </tr>
 
           <tr>
             <th colspan="3">JORNADA 6 (15/02/2019 - 18/02/2019)</th>
           </tr>
           <tr class="fila-impar">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
           </tr>
           <tr class="fila-par">
-            <td class="left-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+            <td class="text-left equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
             <td class="text-center resultado">0 - 0</td>
-            <td class="right-table equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
-          </tr>
-        </table>
-      </div>
-
-
-      <!-- CRUCES -->
-      <div class="tab-pane fade" id="cruces" role="tabpanel" aria-labelledby="tab-cruces">
-        <div class="text-center">
-          <div class="h4">CAMPEÓN CHAMPIONS LEAGUE 2017-2018</div>
-          <a href="/views/profile.html?id=12"><img src="../img/shields/150/will.png" class="foto" alt="Williessous"> <h3>Williessous</h3></a>
-        </div>
-
-        <div class="text-center"><img id="cruces-champions" class="cruces-img" src="../img/cruces_champions.png" style="width: 60%;" alt=""></div>
-
-
-        <!-- Final -->
-        <table class="table cup-table">
-          <tr>
-            <th colspan="3">FINAL (01/04/2018)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rinos Boys"> Rino's Boys</a></td>
-            <td class="text-center is-dark">57</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=12"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> Williessous</a></td>
-            <td class="text-center is-success">71</td>
-          </tr>
-        </table>
-
-
-        <!-- Semis -->
-        <table class="table cup-table">
-          <tr>
-            <th colspan="3">SEMIFINALES (11/03/2018 y 18/03/2018)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=4"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> Bierzo Power</a></td>
-            <td class="text-center">68</td>
-            <td class="text-center">61</td>
-            <td class="text-center is-dark">129</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=12"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> Williessous</a></td>
-            <td class="text-center">78</td>
-            <td class="text-center">74</td>
-            <td class="text-center is-success">152 (+23)</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rinos Boys"> Rino's Boys</a></td>
-            <td class="text-center">67</td>
-            <td class="text-center">75</td>
-            <td class="text-center is-success">142 (+1)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=6"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> Amunt Che</a></td>
-            <td class="text-center">71</td>
-            <td class="text-center">70</td>
-            <td class="text-center is-dark">141</td>
-          </tr>
-        </table>
-
-
-        <!-- Cuartos -->
-        <table class="table cup-table">
-          <tr>
-            <th colspan="3">CUARTOS DE FINAL (28/02/2018 y 04/03/2018)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=4"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> Bierzo Power</a></td>
-            <td class="text-center">64</td>
-            <td class="text-center">71</td>
-            <td class="text-center is-success">135 (+28)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=19"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New Tikis"> New Tikis</a></td>
-            <td class="text-center">54</td>
-            <td class="text-center">53</td>
-            <td class="text-center is-dark">107</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=12"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> Williessous</a></td>
-            <td class="text-center">77</td>
-            <td class="text-center">79</td>
-            <td class="text-center is-success">156 (+18)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=8"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> Orgullo de Runner</a></td>
-            <td class="text-center">83</td>
-            <td class="text-center">55</td>
-            <td class="text-center is-dark">138</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> David Valcan</a></td>
-            <td class="text-center">63</td>
-            <td class="text-center">73</td>
-            <td class="text-center is-dark">136</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rinos Boys"> Rino's Boys</a></td>
-            <td class="text-center">92</td>
-            <td class="text-center">72</td>
-            <td class="text-center is-success">164 (+28)</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=18"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> Infican Viajes</a></td>
-            <td class="text-center">40</td>
-            <td class="text-center">75</td>
-            <td class="text-center is-dark">115</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=6"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> Amunt Che</a></td>
-            <td class="text-center">75</td>
-            <td class="text-center">84</td>
-            <td class="text-center is-success">159 (+44)</td>
-          </tr>
-        </table>
-
-
-        <!-- Octavos -->
-        <table class="table cup-table">
-          <tr>
-            <th colspan="3">OCTAVOS DE FINAL (18/02/2018 y 25/02/2018)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=4"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> Bierzo Power</a></td>
-            <td class="text-center">65</td>
-            <td class="text-center">68</td>
-            <td class="text-center is-success">133 (+8)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=21"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Palmira Chonici"> Palmira Chonici</a></td>
-            <td class="text-center">65</td>
-            <td class="text-center">60</td>
-            <td class="text-center is-dark">125</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=19"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New Tikis"> New Tikis</a></td>
-            <td class="text-center">71</td>
-            <td class="text-center">97</td>
-            <td class="text-center is-success">168 (+35)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=15"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> Dojo Cobra KAI</a></td>
-            <td class="text-center">52</td>
-            <td class="text-center">81</td>
-            <td class="text-center is-dark">133</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=12"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> Williessous</a></td>
-            <td class="text-center">58</td>
-            <td class="text-center">86</td>
-            <td class="text-center is-success">144 (+16)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> Equipo</a></td>
-            <td class="text-center">45</td>
-            <td class="text-center">83</td>
-            <td class="text-center is-dark">128</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=13"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> Ovi Dan</a></td>
-            <td class="text-center">71</td>
-            <td class="text-center">79</td>
-            <td class="text-center is-dark">150</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=8"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> Orgullo de Runner</a></td>
-            <td class="text-center">69</td>
-            <td class="text-center">89</td>
-            <td class="text-center is-success">158 (+8)</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=14"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> Porrua City</a></td>
-            <td class="text-center">79</td>
-            <td class="text-center">97</td>
-            <td class="text-center is-dark">176</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> David Valcan</a></td>
-            <td class="text-center">92</td>
-            <td class="text-center">89</td>
-            <td class="text-center is-success">181 (+5)</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=3"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rinos Boys"> Rino's Boys</a></td>
-            <td class="text-center">70</td>
-            <td class="text-center">78</td>
-            <td class="text-center is-success">148 (+35)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=7"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas"> Cabimas</a></td>
-            <td class="text-center">39</td>
-            <td class="text-center">74</td>
-            <td class="text-center is-dark">113</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=18"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> Infican Viajes</a></td>
-            <td class="text-center">86</td>
-            <td class="text-center">99</td>
-            <td class="text-center is-success">185 (+13)</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=16"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> Yellow Storm F.C.</a></td>
-            <td class="text-center">70</td>
-            <td class="text-center">102</td>
-            <td class="text-center is-dark">172</td>
-          </tr>
-
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-
-          <tr class="fila-impar">
-            <td class="left-table"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> Frente Popular</a></td>
-            <td class="text-center">81</td>
-            <td class="text-center">96</td>
-            <td class="text-center is-dark">177</td>
-          </tr>
-          <tr class="fila-par">
-            <td class="left-table"><a href="/views/profile.html?id=6"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> Amunt Che</a></td>
-            <td class="text-center">87</td>
-            <td class="text-center">102</td>
-            <td class="text-center is-success">189 (+12)</td>
+            <td class="text-right equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
           </tr>
         </table>
       </div>
