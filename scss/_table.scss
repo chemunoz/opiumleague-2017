@@ -25,17 +25,6 @@ tr.descenso {
   color: #FFF;
 }
 
-
-td.left-table{
-  text-align: left !important;
-}
-td.right-table{
-  text-align: right !important;
-}
-td.center-table{
-  text-align: center !important;
-}
-
 tbody{
   tr.fila:hover{
     background-color: $color-hover !important;

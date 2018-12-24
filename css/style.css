@@ -141,15 +141,6 @@ tr.descenso {
   background-color: #FF5555;
   color: #FFF; }
 
-td.left-table {
-  text-align: left !important; }
-
-td.right-table {
-  text-align: right !important; }
-
-td.center-table {
-  text-align: center !important; }
-
 tbody tr.fila:hover {
   background-color: #0F0 !important;
   color: #000 !important; }
