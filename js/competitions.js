@@ -64,7 +64,7 @@
     },
     //COMIENZO
     {
-      deadline: new Date("Jan 06, 2019 20:00:00").getTime(),
+      deadline: new Date("Jan 04, 2019 19:00:00").getTime(),
       date: {
         days: 0,
         hours: 0,
