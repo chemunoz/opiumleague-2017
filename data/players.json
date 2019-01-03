@@ -6,7 +6,7 @@
       "team": "Frente Popular",
       "shield": "jc.png",
       "image": "jc.jpg",
-      "points": [79, 68, 54, 41, 65, 82, 63, 67, 86, 77, 67, 71, 63, 63, 76, 89, 46, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "points": [79, 68, 54, 41, 65, 82, 63, 67, 86, 77, 67, 71, 63, 63, 76, 89, 48, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "seasons": ["2009-2010", "2010-2011",	"2011-2012", "2012-2013", "2015-2016", "2016-2017", "2017-2018", "2018-2019"],
       "trophies": []
     },
@@ -56,7 +56,7 @@
       "team": "Balompédica Porrua",
       "shield": "juanan.png",
       "image": "juanan.jpg",
-      "points": [53, 70, 72, 28, 71, 36, 57, 75, 67, 70, 60, 49, 57, 52, 54, 83, 52, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "points": [53, 70, 72, 28, 71, 36, 57, 75, 67, 70, 60, 49, 57, 52, 54, 83, 54, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "seasons": ["2016-2017", "2017-2018", "2018-2019"],
       "trophies": []
     },
@@ -96,7 +96,7 @@
       "team": "Porrua City",
       "shield": "luis.png",
       "image": "luis.jpg",
-      "points": [69, 58, 65, 51, 49, 41, 48, 64, 46, 60, 48, 65, 46, 72, 56, 88, 35, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "points": [69, 58, 65, 51, 49, 41, 48, 64, 46, 60, 48, 65, 46, 72, 56, 88, 47, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "seasons": ["2009-2010", "2010-2011",	"2011-2012", "2015-2016", "2016-2017", "2017-2018", "2018-2019"],
       "trophies": []
     },
@@ -106,7 +106,7 @@
       "team": "Dojo Cobra KAI",
       "shield": "raul.png",
       "image": "raul.jpg",
-      "points": [56, 89, 48, 43, 52, 37, 49, 61, 69, 91, 52, 70, 54, 59, 69, 64, 57, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "points": [56, 89, 48, 43, 52, 37, 49, 61, 69, 91, 52, 70, 54, 59, 69, 64, 59, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "seasons": ["2012-2013", "2013-2014", "2015-2016", "2016-2017", "2017-2018", "2018-2019"],
       "trophies": []
     },
@@ -146,7 +146,7 @@
       "team": "Mario 13-14",
       "shield": "mario.png",
       "image": "mario.jpg",
-      "points": [0, 69, 42, 41, 53, 48, 39, 44, 34, 45, 53, 65, 44, 65, 61, 77, 12, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "points": [0, 69, 42, 41, 53, 48, 39, 44, 34, 45, 53, 65, 44, 65, 61, 77, 27, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "seasons": ["2009-2010", "2010-2011",	"2011-2012", "2012-2013", "2014-2015", "2015-2016", "2017-2018", "2018-2019"],
       "trophies": []
     },
@@ -156,7 +156,7 @@
       "team": "Super Palomba",
       "shield": "paloma.png",
       "image": "paloma.jpg",
-      "points": [-30, 66, 57, 55, 35, 78, 39, 56, 88, 80, 45, 44, 40, 53, 54, 60, 35, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "points": [-30, 66, 57, 55, 35, 78, 39, 56, 88, 80, 45, 44, 40, 53, 54, 60, 41, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "seasons": ["2009-2010", "2010-2011",	"2011-2012", "2012-2013", "2015-2016", "2017-2018", "2018-2019"],
       "trophies": []
     },
@@ -196,7 +196,7 @@
       "team": "Wayne team",
       "shield": "vicente.png",
       "image": "vicente.jpg",
-      "points": [51, 49, 71, 44, 87, 35, 73, 66, 31, 88, 61, 63, 47, 65, 66, 95, 51, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "points": [51, 49, 71, 44, 87, 35, 73, 66, 31, 88, 61, 63, 47, 65, 66, 95, 55, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "seasons": ["2012-2013", "2014-2015", "2015-2016", "2016-2017", "2017-2018", "2018-2019"],
       "trophies": []
     },
@@ -206,7 +206,7 @@
       "team": "Meneillos",
       "shield": "serious.png",
       "image": "serious.jpg",
-      "points": [51, 60, 45, 48, 31, 55, 54, 71, 72, 102, 46, 60, 31, 52, 66, 97, 30, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "points": [51, 60, 45, 48, 31, 55, 54, 71, 72, 102, 46, 60, 31, 52, 66, 97, 36, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "seasons": ["2015-2016", "2016-2017", "2017-2018", "2018-2019"],
       "trophies": []
     },
@@ -226,7 +226,7 @@
       "team": "Old Tikis",
       "shield": "felipe.png",
       "image": "felipe.jpg",
-      "points": [82, 57, 66, 40, 39, 57, 79, 46, 52, 44, 41, 51, 52, 75, 73, 90, 50, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "points": [82, 57, 66, 40, 39, 57, 79, 46, 52, 44, 41, 51, 52, 75, 73, 90, 56, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "seasons": ["2018-2019"],
       "trophies": []
     },
@@ -246,7 +246,7 @@
       "team": "Lábaro FC",
       "shield": "pablo_fernandez.png",
       "image": "pablo_fernandez.jpg",
-      "points": [69, 53, 62, 41, 62, 56, 46, 57, 61, 89, 55, 66, 74, 41, 66, 86, 62, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "points": [69, 53, 62, 41, 62, 56, 46, 57, 61, 89, 55, 66, 74, 41, 66, 86, 64, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "seasons": ["2018-2019"],
       "trophies": []
     },
@@ -256,7 +256,7 @@
       "team": "Cabimas FC",
       "shield": "carlos_julio.png",
       "image": "carlos_julio.jpg",
-      "points": [47, 45, 45, 46, 44, 56, 58, 43, 59, 94, 49, 67, 28, 39, 40, 49, 34, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "points": [47, 45, 45, 46, 44, 56, 58, 43, 59, 94, 49, 67, 28, 39, 40, 49, 37, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "seasons": ["2015-2016", "2016-2017", "2017-2018", "2018-2019"],
       "trophies": []
     },
@@ -266,7 +266,7 @@
       "team": "Zea 1+8 FC",
       "shield": "zea.png",
       "image": "zea.jpg",
-      "points": [73, 57, 44, 56, 23, 47, 48, 48, 31, 105, 29, 69, 47, 65, 75, 95, 45, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "points": [73, 57, 44, 56, 23, 47, 48, 48, 31, 105, 29, 69, 47, 65, 75, 95, 61, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "seasons": ["2018-2019"],
       "trophies": []
     },
