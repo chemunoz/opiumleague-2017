@@ -60,7 +60,7 @@
 
       //SORT (by score) and calculate for TABLES (jornada and general) and other KPIs
       let count_jornada = 0;
-      let last_jornada = Object.keys(calculate_jornadas).length || 0;;
+      let last_jornada = Object.keys(calculate_jornadas).length || 0;
       let penultima = [];
       let ultima = [];
       let season_points_average = [];
