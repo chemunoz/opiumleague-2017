@@ -1,3 +1,48 @@
+<script type="text/javascript">
+  let fullscreen_state = false;
+  $('#menu-fullscreen').on('click', ()=>{
+    console.log(fullscreen_state);
+    if (fullscreen_state) {
+      $('#menu-fullscreen').html(`
+        <i id="menu-fullscreen" class="fas fa-window-maximize fa-2x" style="margin-right: 10px; top: 5px; position: relative; color: #7C7C7D;"></i>`);
+      closeFullscreen();
+      fullscreen_state = false;
+    }else{
+      $('#menu-fullscreen').html(`
+        <i id="menu-fullscreen" class="far fa-window-restore fa-2x" style="margin-right: 10px; top: 5px; position: relative; color: #7C7C7D;"></i>`);
+      openFullscreen();
+      fullscreen_state = true;
+    }
+  });
+
+  function openFullscreen() {
+    let elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+      elem.msRequestFullscreen();
+    }
+    $('.navbar-collapse').collapse('hide');
+  }
+
+
+  function closeFullscreen() {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) { /* Firefox */
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE/Edge */
+      document.msExitFullscreen();
+    }
+    $('.navbar-collapse').collapse('hide');
+  }
+</script>
 <style media="screen">
   .nav-link{
     color: #000 !important;
@@ -7,9 +52,15 @@
   <a class="navbar-brand d-lg-none d-block" href="/">
     <img src="/img/banner_opium.png" height="40" alt="">
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <!-- <span style="text-align: right;">
+    <span id="menu-fullscreen" class="d-lg-none d-inline">
+      <i class="fas fa-window-maximize fa-2x" style="margin-right: 10px; top: 5px; position: relative; color: #7C7C7D;"></i>
+    </span> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <!-- </span> -->
+
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav nav-fill w-100">
       <li class="nav-item active">
