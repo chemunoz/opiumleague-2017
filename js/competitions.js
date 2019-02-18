@@ -77,7 +77,7 @@
   ];
 
   let EuropaLeague = {
-    deadline: new Date("Feb 17, 2019 20:00:00").getTime(),
+    deadline: new Date("Feb 15, 2019 21:00:00").getTime(),
     date: {
       days: 0,
       hours: 0,
