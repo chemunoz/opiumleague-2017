@@ -49,1197 +49,1620 @@
 
     <!-- CABECERA -->
     <!-- <div class="text-center"><img id="sorteo-champions" class="cruces-img" src="../img/sorteo_champions.png" alt=""></div> -->
-    <div class="text-center"><img id="sorteo-champions" class="cruces-img" src="../img/grupos_champions.png" alt=""></div>
-    <p class="container mt-2 text-center"><small><i class="fas fa-exclamation-circle"></i> NOTA: Clasifican los 2 primeros equipos de cada grupo y los 2 mejores terceros de entre todos los grupos</small></p>
+    <!-- <div class="text-center"><img id="sorteo-champions" class="cruces-img" src="../img/grupos_champions.png" alt=""></div> -->
+    <div class="text-center"><img id="sorteo-champions" class="cruces-img" src="../img/cruces_champions.png" alt=""></div>
 
     <!-- TABS -->
-    <ul class="nav nav-tabs nav-fill my-3" id="ChampionsTab" role="tablist">
+    <ul class="nav nav-tabs nav-fill my-3" id="ChampionsFasesTab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="tab-A" data-toggle="tab" href="#A" role="tab" aria-controls="A" aria-selected="true">
-          <span><i class="fas fa-table"></i></span>
-          <span class="d-none d-md-inline">GRUPO A</span>
-          <span class="d-sm-inline d-md-none">A</span>
+        <a class="nav-link active" id="tab-fase-A" data-toggle="tab" href="#fase-A" role="tab" aria-controls="fase-A" aria-selected="true">
+          <span><i class="fas fa-expand-arrows-alt"></i></span>
+          <span class="d-none d-md-inline">CRUCES</span>
+          <span class="d-sm-inline d-md-none">CRUCES</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="tab-B" data-toggle="tab" href="#B" role="tab" aria-controls="B" aria-selected="true">
+        <a class="nav-link" id="tab-fase-B" data-toggle="tab" href="#fase-B" role="tab" aria-controls="fase-B" aria-selected="true">
           <span><i class="fas fa-table"></i></span>
-          <span class="d-none d-md-inline">GRUPO B</span>
-          <span class="d-sm-inline d-md-none">B</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="tab-C" data-toggle="tab" href="#C" role="tab" aria-controls="C" aria-selected="true">
-          <span><i class="fas fa-table"></i></span>
-          <span class="d-none d-md-inline">GRUPO C</span>
-          <span class="d-sm-inline d-md-none">C</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="tab-D" data-toggle="tab" href="#D" role="tab" aria-controls="D" aria-selected="true">
-          <span><i class="fas fa-table"></i></span>
-          <span class="d-none d-md-inline">GRUPO D</span>
-          <span class="d-sm-inline d-md-none">D</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="tab-E" data-toggle="tab" href="#E" role="tab" aria-controls="E" aria-selected="true">
-          <span><i class="fas fa-table"></i></span>
-          <span class="d-none d-md-inline">GRUPO E</span>
-          <span class="d-sm-inline d-md-none">E</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="tab-F" data-toggle="tab" href="#F" role="tab" aria-controls="F" aria-selected="true">
-          <span><i class="fas fa-table"></i></span>
-          <span class="d-none d-md-inline">GRUPO F</span>
-          <span class="d-sm-inline d-md-none">F</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="tab-G" data-toggle="tab" href="#G" role="tab" aria-controls="G" aria-selected="true">
-          <span><i class="fas fa-table"></i></span>
-          <span class="d-none d-md-inline">GRUPO G</span>
-          <span class="d-sm-inline d-md-none">G</span>
+          <span class="d-none d-md-inline">GRUPOS</span>
+          <span class="d-sm-inline d-md-none">GRUPOS</span>
         </a>
       </li>
     </ul>
 
 
-    <div class="tab-content mb-5" id="ChampionsTabContent">
-      <!-- GRUPO A -->
-      <div class="container tab-pane fade show active" id="A" role="tabpanel" aria-labelledby="tab-A">
-        <div class="h6 text-center">GRUPO A</div>
-        <!-- Clasificación -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th><abbr title="Posicion">Pos</abbr></th>
-              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <th><abbr title="Puntos">Ptos</abbr></th>
-              <th><abbr title="Partidos Jugados">PJ</abbr></th>
-              <th><abbr title="Partidos Ganados">PG</abbr></th>
-              <th><abbr title="Partidos Empatados">PE</abbr></th>
-              <th><abbr title="Partidos Perdidos">PP</abbr></th>
-              <th><abbr title="Puntos a favor">PF</abbr></th>
-              <th><abbr title="Puntos en contra">PC</abbr></th>
-              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="champions">
-              <td>1</td>
-              <td class="text-left"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> Lábaro FC</a></td>
-              <td>6</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>2</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>0</td> <!-- PP -->
-              <td>104</td> <!-- PF -->
-              <td>-99</td> <!-- PC -->
-              <td>5</td> <!-- Dif -->
-            </tr>
-            <tr class="champions">
-              <td>2</td>
-              <td class="text-left"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> Ovi Dan</a></td>
-              <td>3</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>122</td> <!-- PF -->
-              <td>-97</td> <!-- PC -->
-              <td>25</td> <!-- Dif -->
-            </tr>
-            <tr class="uefa">
-              <td>3</td>
-              <td class="text-left"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> Rino's Boys</a></td>
-              <td>3</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>118</td> <!-- PF -->
-              <td>-117</td> <!-- PC -->
-              <td>1</td> <!-- Dif -->
-            </tr>
-            <tr class="descenso">
-              <td>4</td>
-              <td class="text-left"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> Mario's Eleven</a></td>
-              <td>0</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>0</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>2</td> <!-- PP -->
-              <td>78</td> <!-- PF -->
-              <td>-109</td> <!-- PC -->
-              <td>-31</td> <!-- Dif -->
-            </tr>
-          </tbody>
-        </table>
+    <div class="tab-content mb-5" id="ChampionsFasesTabContent">
+      <!-- FASE CRUCES -->
+      <div class="container tab-pane fade show active" id="fase-A" role="tabpanel" aria-labelledby="fase-A">
+        <div class="h5 text-center mt-3">CRUCES</div>
 
-        <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
+        <!-- TABS -->
+        <ul class="nav nav-tabs nav-fill my-3" id="CrucesTab" role="tablist">
+          <!-- <li class="nav-item">
+            <a class="nav-link" id="tab-cruce-A" data-toggle="tab" href="#cruce-A" role="tab" aria-controls="cruce-A" aria-selected="true">
+              <span><i class="fas fa-table"></i></span>
+              <span class="d-none d-md-inline">RONDA PREVIA</span>
+              <span class="d-sm-inline d-md-none">PREV</span>
+            </a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link active" id="tab-cruce-B" data-toggle="tab" href="#cruce-B" role="tab" aria-controls="cruce-B" aria-selected="true">
+              <span><i class="fas fa-expand-arrows-alt"></i></span>
+              <span class="d-none d-md-inline">OCTAVOS</span>
+              <span class="d-sm-inline d-md-none">8º</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-cruce-C" data-toggle="tab" href="#cruce-C" role="tab" aria-controls="cruce-C" aria-selected="true">
+              <span><i class="fas fa-expand-arrows-alt"></i></span>
+              <span class="d-none d-md-inline">CUARTOS</span>
+              <span class="d-sm-inline d-md-none">4º</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-cruce-D" data-toggle="tab" href="#cruce-D" role="tab" aria-controls="cruce-D" aria-selected="true">
+              <span><i class="fas fa-expand-arrows-alt"></i></span>
+              <span class="d-none d-md-inline">SEMIFINALES</span>
+              <span class="d-sm-inline d-md-none">SE</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-cruce-E" data-toggle="tab" href="#cruce-E" role="tab" aria-controls="cruce-E" aria-selected="true">
+              <span><i class="fas fa-expand-arrows-alt"></i></span>
+              <span class="d-none d-md-inline">FINAL</span>
+              <span class="d-sm-inline d-md-none">FI</span>
+            </a>
+          </li>
+        </ul>
 
-        <!-- Resultados -->
-        <table class="table cup-table mt-3">
-          <tr>
-            <th colspan="3">JORNADA 1 (06/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
-            <td class="text-center resultado">53 - 57</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
-            <td class="text-center resultado">62 - 32</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> <div>Mario's Eleven</div></a></td>
-          </tr>
 
-          <tr>
-            <th colspan="3">JORNADA 2 (13/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
-            <td class="text-center resultado">47 - 46</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> <div>Mario's Eleven</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
-            <td class="text-center resultado">65 - 60</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
-          </tr>
+        <!-- RESULTADOS -->
+        <div class="container tab-content mb-5" id="CrucesTabContent">
+          <!-- RONDA PREVIA -->
+        <!--   <div class="tab-pane fade" id="cruce-A" role="tabpanel" aria-labelledby="cruce-A">
 
-          <tr>
-            <th colspan="3">JORNADA 3 (20/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> <div>Mario's Eleven</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
-          </tr>
+            <table class="table cup-table">
+              <tr>
+                <th colspan="3">RONDA PREVIA (17/02/2019 y 24/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado">0 - 0</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado">0 - 0</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado">0 - 0</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado">0 - 0</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+              </tr>
+            </table>
+          </div> -->
 
-          <tr>
-            <th colspan="3">JORNADA 4 (27/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> <div>Mario's Eleven</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
-          </tr>
+          <!-- OCTAVOS -->
+          <div class="tab-pane fade show active" id="cruce-B" role="tabpanel" aria-labelledby="cruce-B">
+            <!-- Resultados -->
+            <table class="table">
+              <tr>
+                <th colspan="4" class="text-left px-1"><i class="far fa-clock"></i> IDA: 17 Febrero - VUELTA: 24 Febrero</th>
+              </tr>
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
+                <td class="text-center resultado cup-lose-pre"><div class="cup-score">65</div><small class="cup-difference">(-1)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
+                <td class="text-center resultado cup-win-pre"><div class="cup-score">66</div><small class="cup-difference">(+1)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
 
-          <tr>
-            <th colspan="3">JORNADA 5 (10/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> <div>Mario's Eleven</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
-          </tr>
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
+                <td class="text-center resultado cup-win-pre"><div class="cup-score">57</div><small class="cup-difference">(+18)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
+                <td class="text-center resultado cup-lose-pre"><div class="cup-score">39</div><small class="cup-difference">(-18)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
 
-          <tr>
-            <th colspan="3">JORNADA 6 (17/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> <div>Mario's Eleven</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
-          </tr>
-        </table>
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
+                <td class="text-center resultado cup-win-pre"><div class="cup-score">49</div><small class="cup-difference">(+4)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
+                <td class="text-center resultado cup-lose-pre"><div class="cup-score">45</div><small class="cup-difference">(-4)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
+                <td class="text-center resultado cup-win-pre"><div class="cup-score">72</div><small class="cup-difference">(+30)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
+                <td class="text-center resultado cup-lose-pre"><div class="cup-score">42</div><small class="cup-difference">(-30)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
+                <td class="text-center resultado cup-lose-pre"><div class="cup-score">57</div><small class="cup-difference">(-6)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
+                <td class="text-center resultado cup-win-pre"><div class="cup-score">63</div><small class="cup-difference">(+6)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
+                <td class="text-center resultado cup-lose-pre"><div class="cup-score">34</div><small class="cup-difference">(-38)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
+                <td class="text-center resultado cup-win-pre"><div class="cup-score">72</div><small class="cup-difference">(+38)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
+                <td class="text-center resultado cup-win-pre"><div class="cup-score">71</div><small class="cup-difference">(+23)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
+                <td class="text-center resultado cup-lose-pre"><div class="cup-score">48</div><small class="cup-difference">(-23)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
+                <td class="text-center resultado cup-win-pre"><div class="cup-score">61</div><small class="cup-difference">(+11)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
+                <td class="text-center resultado cup-lose-pre"><div class="cup-score">50</div><small class="cup-difference">(-11)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- CUARTOS -->
+          <div class="tab-pane fade" id="cruce-C" role="tabpanel" aria-labelledby="cruce-C">
+            <!-- Resultados -->
+            <table class="table">
+              <tr>
+                <th colspan="4" class="text-left px-1"><i class="far fa-clock"></i> IDA: 03 Marzo - VUELTA: 10 Marzo</th>
+              </tr>
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- SEMIS -->
+          <div class="tab-pane fade" id="cruce-D" role="tabpanel" aria-labelledby="cruce-D">
+            <!-- Resultados -->
+            <table class="table">
+              <tr>
+                <th colspan="4" class="text-left px-1"><i class="far fa-clock"></i> IDA: 17 Marzo - VUELTA: 31 Marzo</th>
+              </tr>
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">IDA</span></th>
+                <th class="text-center"><span class="homeaway-result">VUELTA</span></th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- FINAL -->
+          <div class="tab-pane fade" id="cruce-E" role="tabpanel" aria-labelledby="cruce-E">
+            <!-- Resultados -->
+            <table class="table">
+              <tr>
+                <th colspan="2" class="text-left"><i class="far fa-clock"></i> PARTIDO ÚNICO: 03 Abril</th>
+              </tr>
+              <tr>
+                <th>EQUIPO</th>
+                <th class="text-center"><span class="homeaway-result">TOTAL</span></th>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+              <tr class="fila fila-impar">
+                <td class="text-center equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/logo_opium_icono.png" class="table-shield" alt="Equipo"> <div>Equipo</div></a></td>
+                <td class="text-center resultado"><div class="cup-score">-</div><small class="cup-difference">(+0)</small></td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
       </div>
 
 
-      <!-- GRUPO B -->
-      <div class="container tab-pane fade" id="B" role="tabpanel" aria-labelledby="tab-B">
-        <div class="h6 text-center">GRUPO B</div>
-        <!-- Clasificación -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th><abbr title="Posicion">Pos</abbr></th>
-              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <th><abbr title="Puntos">Ptos</abbr></th>
-              <th><abbr title="Partidos Jugados">PJ</abbr></th>
-              <th><abbr title="Partidos Ganados">PG</abbr></th>
-              <th><abbr title="Partidos Empatados">PE</abbr></th>
-              <th><abbr title="Partidos Perdidos">PP</abbr></th>
-              <th><abbr title="Puntos a favor">PF</abbr></th>
-              <th><abbr title="Puntos en contra">PC</abbr></th>
-              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="champions">
-              <td>1</td>
-              <td class="text-left"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> Old Tikis</a></td>
-              <td>6</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>2</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>0</td> <!-- PP -->
-              <td>142</td> <!-- PF -->
-              <td>-87</td> <!-- PC -->
-              <td>55</td> <!-- Dif -->
-            </tr>
-            <tr class="champions">
-              <td>2</td>
-              <td class="text-left"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> Wayne team</a></td>
-              <td>4</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>1</td> <!-- PE -->
-              <td>0</td> <!-- PP -->
-              <td>108</td> <!-- PF -->
-              <td>-103</td> <!-- PC -->
-              <td>5</td> <!-- Dif -->
-            </tr>
-            <tr class="uefa">
-              <td>3</td>
-              <td class="text-left"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> Zea 1+8 FC</a></td>
-              <td>1</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>0</td> <!-- PG -->
-              <td>1</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>82</td> <!-- PF -->
-              <td>-100</td> <!-- PC -->
-              <td>-18</td> <!-- Dif -->
-            </tr>
-            <tr class="descenso">
-              <td>4</td>
-              <td class="text-left"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> New tikis</a></td>
-              <td>0</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>0</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>2</td> <!-- PP -->
-              <td>108</td> <!-- PF -->
-              <td>-150</td> <!-- PC -->
-              <td>-42</td> <!-- Dif -->
-            </tr>
-          </tbody>
-        </table>
+      <!-- FASE GRUPOS -->
+      <div class="container tab-pane fade" id="fase-B" role="tabpanel" aria-labelledby="fase-B">
+        <div class="h5 text-center mt-3">GRUPOS</div>
 
-        <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
+        <!-- TABS GRUPOS -->
+        <ul class="nav nav-tabs nav-fill my-3" id="ChampionsTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="tab-A" data-toggle="tab" href="#A" role="tab" aria-controls="A" aria-selected="true">
+              <span><i class="fas fa-table"></i></span>
+              <span class="d-none d-md-inline">GRUPO A</span>
+              <span class="d-sm-inline d-md-none">A</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-B" data-toggle="tab" href="#B" role="tab" aria-controls="B" aria-selected="true">
+              <span><i class="fas fa-table"></i></span>
+              <span class="d-none d-md-inline">GRUPO B</span>
+              <span class="d-sm-inline d-md-none">B</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-C" data-toggle="tab" href="#C" role="tab" aria-controls="C" aria-selected="true">
+              <span><i class="fas fa-table"></i></span>
+              <span class="d-none d-md-inline">GRUPO C</span>
+              <span class="d-sm-inline d-md-none">C</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-D" data-toggle="tab" href="#D" role="tab" aria-controls="D" aria-selected="true">
+              <span><i class="fas fa-table"></i></span>
+              <span class="d-none d-md-inline">GRUPO D</span>
+              <span class="d-sm-inline d-md-none">D</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-E" data-toggle="tab" href="#E" role="tab" aria-controls="E" aria-selected="true">
+              <span><i class="fas fa-table"></i></span>
+              <span class="d-none d-md-inline">GRUPO E</span>
+              <span class="d-sm-inline d-md-none">E</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-F" data-toggle="tab" href="#F" role="tab" aria-controls="F" aria-selected="true">
+              <span><i class="fas fa-table"></i></span>
+              <span class="d-none d-md-inline">GRUPO F</span>
+              <span class="d-sm-inline d-md-none">F</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="tab-G" data-toggle="tab" href="#G" role="tab" aria-controls="G" aria-selected="true">
+              <span><i class="fas fa-table"></i></span>
+              <span class="d-none d-md-inline">GRUPO G</span>
+              <span class="d-sm-inline d-md-none">G</span>
+            </a>
+          </li>
+        </ul>
+        <p class="container mt-2 text-center"><small><i class="fas fa-exclamation-circle"></i> NOTA: Clasifican los 2 primeros equipos de cada grupo y los 2 mejores terceros de entre todos los grupos</small></p>
 
-        <!-- Resultados -->
-        <table class="table cup-table mt-3">
-          <tr>
-            <th colspan="3">JORNADA 1 (06/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
-            <td class="text-center resultado">60 - 65</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
-            <td class="text-center resultado">57 - 39</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
-          </tr>
+        <!-- FASE GRUPOS -->
+        <div class="tab-content mb-5" id="ChampionsTabContent">
+          <!-- GRUPO A -->
+          <div class="container tab-pane fade show active" id="A" role="tabpanel" aria-labelledby="tab-A">
+            <div class="h6 text-center">GRUPO A</div>
+            <!-- Clasificación -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><abbr title="Posicion">Pos</abbr></th>
+                  <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+                  <th><abbr title="Puntos">Ptos</abbr></th>
+                  <th><abbr title="Partidos Jugados">PJ</abbr></th>
+                  <th><abbr title="Partidos Ganados">PG</abbr></th>
+                  <th><abbr title="Partidos Empatados">PE</abbr></th>
+                  <th><abbr title="Partidos Perdidos">PP</abbr></th>
+                  <th><abbr title="Puntos a favor">PF</abbr></th>
+                  <th><abbr title="Puntos en contra">PC</abbr></th>
+                  <th><abbr title="Diferencia de puntos">Dif</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="champions">
+                  <td>1</td>
+                  <td class="text-left"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> Lábaro FC</a></td>
+                  <td>18</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>6</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>0</td> <!-- PP -->
+                  <td>391</td> <!-- PF -->
+                  <td>-274</td> <!-- PC -->
+                  <td>117</td> <!-- Dif -->
+                </tr>
+                <tr class="champions">
+                  <td>2</td>
+                  <td class="text-left"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> Ovi Dan</a></td>
+                  <td>9</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>3</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>3</td> <!-- PP -->
+                  <td>359</td> <!-- PF -->
+                  <td>-330</td> <!-- PC -->
+                  <td>29</td> <!-- Dif -->
+                </tr>
+                <tr class="uefa">
+                  <td>3</td>
+                  <td class="text-left"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> Rino's Boys</a></td>
+                  <td>9</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>3</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>3</td> <!-- PP -->
+                  <td>331</td> <!-- PF -->
+                  <td>-366</td> <!-- PC -->
+                  <td>-35</td> <!-- Dif -->
+                </tr>
+                <tr class="descenso">
+                  <td>4</td>
+                  <td class="text-left"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> Mario's Eleven</a></td>
+                  <td>0</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>0</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>6</td> <!-- PP -->
+                  <td>259</td> <!-- PF -->
+                  <td>-370</td> <!-- PC -->
+                  <td>-111</td> <!-- Dif -->
+                </tr>
+              </tbody>
+            </table>
 
-          <tr>
-            <th colspan="3">JORNADA 2 (13/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
-            <td class="text-center resultado">43 - 43</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
-            <td class="text-center resultado">48 - 85</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
-          </tr>
+            <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
 
-          <tr>
-            <th colspan="3">JORNADA 3 (20/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
-          </tr>
+            <!-- Resultados -->
+            <table class="table cup-table mt-3">
+              <tr>
+                <th colspan="3">JORNADA 1 (06/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
+                <td class="text-center resultado">53 - 57</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
+                <td class="text-center resultado">62 - 32</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> <div>Mario's Eleven</div></a></td>
+              </tr>
 
-          <tr>
-            <th colspan="3">JORNADA 4 (27/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
-          </tr>
+              <tr>
+                <th colspan="3">JORNADA 2 (13/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
+                <td class="text-center resultado">47 - 46</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> <div>Mario's Eleven</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
+                <td class="text-center resultado">65 - 60</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
+              </tr>
 
-          <tr>
-            <th colspan="3">JORNADA 5 (10/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
-          </tr>
+              <tr>
+                <th colspan="3">JORNADA 3 (20/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
+                <td class="text-center resultado">76 - 65</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> <div>Mario's Eleven</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
+                <td class="text-center resultado">74 - 58</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
+              </tr>
 
-          <tr>
-            <th colspan="3">JORNADA 6 (17/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
-          </tr>
-        </table>
+              <tr>
+                <th colspan="3">JORNADA 4 (27/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
+                <td class="text-center resultado">70 - 49</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> <div>Mario's Eleven</div></a></td>
+                <td class="text-center resultado">55 - 58</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 5 (10/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> <div>Mario's Eleven</div></a></td>
+                <td class="text-center resultado">9 - 69</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
+                <td class="text-center resultado">62 - 30</sup></td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 6 (17/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=14"><img src="../img/shields/150/mario.png" class="table-shield" alt="Mario's Eleven"> <div>Mario's Eleven</div></a></td>
+                <td class="text-center resultado">52 - 58</sup></td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=1"><img src="../img/shields/150/fran.png" class="table-shield" alt="Rino's Boys"> <div>Rino's Boys</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=8"><img src="../img/shields/150/ovidiu.png" class="table-shield" alt="Ovi Dan"> <div>Ovi Dan</div></a></td>
+                <td class="text-center resultado">59 - 74</sup></td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=24"><img src="../img/shields/150/pablo_fernandez.png" class="table-shield" alt="Lábaro FC"> <div>Lábaro FC</div></a></td>
+              </tr>
+            </table>
+          </div>
+
+
+          <!-- GRUPO B -->
+          <div class="container tab-pane fade" id="B" role="tabpanel" aria-labelledby="tab-B">
+            <div class="h6 text-center">GRUPO B</div>
+            <!-- Clasificación -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><abbr title="Posicion">Pos</abbr></th>
+                  <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+                  <th><abbr title="Puntos">Ptos</abbr></th>
+                  <th><abbr title="Partidos Jugados">PJ</abbr></th>
+                  <th><abbr title="Partidos Ganados">PG</abbr></th>
+                  <th><abbr title="Partidos Empatados">PE</abbr></th>
+                  <th><abbr title="Partidos Perdidos">PP</abbr></th>
+                  <th><abbr title="Puntos a favor">PF</abbr></th>
+                  <th><abbr title="Puntos en contra">PC</abbr></th>
+                  <th><abbr title="Diferencia de puntos">Dif</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="champions">
+                  <td>1</td>
+                  <td class="text-left"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> Old Tikis</a></td>
+                  <td>18</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>6</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>0</td> <!-- PP -->
+                  <td>406</td> <!-- PF -->
+                  <td>-319</td> <!-- PC -->
+                  <td>87</td> <!-- Dif -->
+                </tr>
+                <tr class="champions">
+                  <td>2</td>
+                  <td class="text-left"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> Wayne team</a></td>
+                  <td>7</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>2</td> <!-- PG -->
+                  <td>1</td> <!-- PE -->
+                  <td>3</td> <!-- PP -->
+                  <td>374</td> <!-- PF -->
+                  <td>-352</td> <!-- PC -->
+                  <td>22</td> <!-- Dif -->
+                </tr>
+                <tr class="uefa">
+                  <td>3</td>
+                  <td class="text-left"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> New tikis</a></td>
+                  <td>6</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>2</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>4</td> <!-- PP -->
+                  <td>332</td> <!-- PF -->
+                  <td>-392</td> <!-- PC -->
+                  <td>-60</td> <!-- Dif -->
+                </tr>
+                <tr class="descenso">
+                  <td>4</td>
+                  <td class="text-left"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> Zea 1+8 FC</a></td>
+                  <td>4</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>1</td> <!-- PG -->
+                  <td>1</td> <!-- PE -->
+                  <td>4</td> <!-- PP -->
+                  <td>289</td> <!-- PF -->
+                  <td>-338</td> <!-- PC -->
+                  <td>-49</td> <!-- Dif -->
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
+
+            <!-- Resultados -->
+            <table class="table cup-table mt-3">
+              <tr>
+                <th colspan="3">JORNADA 1 (06/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
+                <td class="text-center resultado">60 - 65</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
+                <td class="text-center resultado">57 - 39</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 2 (13/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
+                <td class="text-center resultado">43 - 43</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
+                <td class="text-center resultado">48 - 85</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 3 (20/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
+                <td class="text-center resultado">69 - 50</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
+                <td class="text-center resultado">71 - 84</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 4 (27/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
+                <td class="text-center resultado">97 - 60</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
+                <td class="text-center resultado">68 - 69</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 5 (10/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
+                <td class="text-center resultado">58 - 53</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
+                <td class="text-center resultado">64 - 48</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 6 (17/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=26"><img src="../img/shields/150/zea.png" class="table-shield" alt="Zea 1+8 FC"> <div>Zea 1+8 FC</div></a></td>
+                <td class="text-center resultado">31 - 47</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=21"><img src="../img/shields/150/david_munoz.png" class="table-shield" alt="New tikis"> <div>New tikis</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=22"><img src="../img/shields/150/felipe.png" class="table-shield" alt="Old Tikis"> <div>Old Tikis</div></a></td>
+                <td class="text-center resultado">47 - 45</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=19"><img src="../img/shields/150/vicente.png" class="table-shield" alt="Wayne team"> <div>Wayne team</div></a></td>
+              </tr>
+            </table>
+          </div>
+
+
+          <!-- GRUPO C -->
+          <div class="container tab-pane fade" id="C" role="tabpanel" aria-labelledby="tab-C">
+            <div class="h6 text-center">GRUPO C</div>
+            <!-- Clasificación -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><abbr title="Posicion">Pos</abbr></th>
+                  <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+                  <th><abbr title="Puntos">Ptos</abbr></th>
+                  <th><abbr title="Partidos Jugados">PJ</abbr></th>
+                  <th><abbr title="Partidos Ganados">PG</abbr></th>
+                  <th><abbr title="Partidos Empatados">PE</abbr></th>
+                  <th><abbr title="Partidos Perdidos">PP</abbr></th>
+                  <th><abbr title="Puntos a favor">PF</abbr></th>
+                  <th><abbr title="Puntos en contra">PC</abbr></th>
+                  <th><abbr title="Diferencia de puntos">Dif</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="champions">
+                  <td>1</td>
+                  <td class="text-left"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> Bierzo Power</a></td>
+                  <td>18</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>6</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>0</td> <!-- PP -->
+                  <td>398</td> <!-- PF -->
+                  <td>-307</td> <!-- PC -->
+                  <td>91</td> <!-- Dif -->
+                </tr>
+                <tr class="champions">
+                  <td>2</td>
+                  <td class="text-left"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> David Valcan</a></td>
+                  <td>12</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>4</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>2</td> <!-- PP -->
+                  <td>377</td> <!-- PF -->
+                  <td>-319</td> <!-- PC -->
+                  <td>58</td> <!-- Dif -->
+                </tr>
+                <tr class="uefa">
+                  <td>3</td>
+                  <td class="text-left"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> Williessous</a></td>
+                  <td>3</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>1</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>5</td> <!-- PP -->
+                  <td>298</td> <!-- PF -->
+                  <td>-372</td> <!-- PC -->
+                  <td>-74</td> <!-- Dif -->
+                </tr>
+                <tr class="descenso">
+                  <td>4</td>
+                  <td class="text-left"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> Super Palomba</a></td>
+                  <td>3</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>1</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>5</td> <!-- PP -->
+                  <td>251</td> <!-- PF -->
+                  <td>-326</td> <!-- PC -->
+                  <td>-75</td> <!-- Dif -->
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
+
+            <!-- Resultados -->
+            <table class="table cup-table mt-3">
+              <tr>
+                <th colspan="3">JORNADA 1 (06/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
+                <td class="text-center resultado">75 - 82</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
+                <td class="text-center resultado">56 - 51</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 2 (13/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
+                <td class="text-center resultado">54 - 41</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
+                <td class="text-center resultado">51 - 38</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 3 (20/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
+                <td class="text-center resultado">71 - 32</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
+                <td class="text-center resultado">69 - 49</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 4 (27/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
+                <td class="text-center resultado">83 - 62</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
+                <td class="text-center resultado">61 - 57</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 5 (10/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
+                <td class="text-center resultado">34 - 38</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
+                <td class="text-center resultado">52 - 68</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 6 (17/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
+                <td class="text-center resultado">32 - 50</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
+                <td class="text-center resultado">46 - 72</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
+              </tr>
+            </table>
+          </div>
+
+
+          <!-- GRUPO D -->
+          <div class="container tab-pane fade" id="D" role="tabpanel" aria-labelledby="tab-D">
+            <div class="h6 text-center">GRUPO D</div>
+            <!-- Clasificación -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><abbr title="Posicion">Pos</abbr></th>
+                  <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+                  <th><abbr title="Puntos">Ptos</abbr></th>
+                  <th><abbr title="Partidos Jugados">PJ</abbr></th>
+                  <th><abbr title="Partidos Ganados">PG</abbr></th>
+                  <th><abbr title="Partidos Empatados">PE</abbr></th>
+                  <th><abbr title="Partidos Perdidos">PP</abbr></th>
+                  <th><abbr title="Puntos a favor">PF</abbr></th>
+                  <th><abbr title="Puntos en contra">PC</abbr></th>
+                  <th><abbr title="Diferencia de puntos">Dif</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="champions">
+                  <td>1</td>
+                  <td class="text-left"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> Amunt Che</a></td>
+                  <td>12</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>4</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>2</td> <!-- PP -->
+                  <td>360</td> <!-- PF -->
+                  <td>-326</td> <!-- PC -->
+                  <td>34</td> <!-- Dif -->
+                </tr>
+                <tr class="champions">
+                  <td>2</td>
+                  <td class="text-left"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> Meneillos</a></td>
+                  <td>12</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>4</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>2</td> <!-- PP -->
+                  <td>369</td> <!-- PF -->
+                  <td>-336</td> <!-- PC -->
+                  <td>33</td> <!-- Dif -->
+                </tr>
+                <tr class="uefa">
+                  <td>3</td>
+                  <td class="text-left"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> Capitán Tsubasa</a></td>
+                  <td>9</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>3</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>3</td> <!-- PP -->
+                  <td>351</td> <!-- PF -->
+                  <td>-352</td> <!-- PC -->
+                  <td>-1</td> <!-- Dif -->
+                </tr>
+                <tr class="descenso">
+                  <td>4</td>
+                  <td class="text-left"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> Porrua City</a></td>
+                  <td>3</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>1</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>5</td> <!-- PP -->
+                  <td>345</td> <!-- PF -->
+                  <td>-411</td> <!-- PC -->
+                  <td>-66</td> <!-- Dif -->
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
+
+            <!-- Resultados -->
+            <table class="table cup-table mt-3">
+              <tr>
+                <th colspan="3">JORNADA 1 (06/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
+                <td class="text-center resultado">67 - 57</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
+                <td class="text-center resultado">88 - 54</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 2 (13/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
+                <td class="text-center resultado">63 - 45</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
+                <td class="text-center resultado">41 - 52</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 3 (20/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
+                <td class="text-center resultado">71 - 68</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
+                <td class="text-center resultado">65 - 37</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 4 (27/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
+                <td class="text-center resultado">62 - 46</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
+                <td class="text-center resultado">53 - 73</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 5 (10/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
+                <td class="text-center resultado">76 - 56</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
+                <td class="text-center resultado">38 - 75</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 6 (17/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
+                <td class="text-center resultado">49 - 60</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
+                <td class="text-center resultado">81 - 48</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
+              </tr>
+            </table>
+          </div>
+
+
+          <!-- GRUPO E -->
+          <div class="container tab-pane fade" id="E" role="tabpanel" aria-labelledby="tab-E">
+            <div class="h6 text-center">GRUPO E</div>
+            <!-- Clasificación -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><abbr title="Posicion">Pos</abbr></th>
+                  <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+                  <th><abbr title="Puntos">Ptos</abbr></th>
+                  <th><abbr title="Partidos Jugados">PJ</abbr></th>
+                  <th><abbr title="Partidos Ganados">PG</abbr></th>
+                  <th><abbr title="Partidos Empatados">PE</abbr></th>
+                  <th><abbr title="Partidos Perdidos">PP</abbr></th>
+                  <th><abbr title="Puntos a favor">PF</abbr></th>
+                  <th><abbr title="Puntos en contra">PC</abbr></th>
+                  <th><abbr title="Diferencia de puntos">Dif</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="champions">
+                  <td>1</td>
+                  <td class="text-left"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> Dojo Cobra KAI</a></td>
+                  <td>15</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>5</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>1</td> <!-- PP -->
+                  <td>346</td> <!-- PF -->
+                  <td>-334</td> <!-- PC -->
+                  <td>12</td> <!-- Dif -->
+                </tr>
+                <tr class="champions">
+                  <td>2</td>
+                  <td class="text-left"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> Orgullo de Runner</a></td>
+                  <td>9</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>3</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>3</td> <!-- PP -->
+                  <td>384</td> <!-- PF -->
+                  <td>-363</td> <!-- PC -->
+                  <td>21</td> <!-- Dif -->
+                </tr>
+                <tr class="uefa">
+                  <td>3</td>
+                  <td class="text-left"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> Infican Viajes</a></td>
+                  <td>9</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>3</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>3</td> <!-- PP -->
+                  <td>389</td> <!-- PF -->
+                  <td>-374</td> <!-- PC -->
+                  <td>15</td> <!-- Dif -->
+                </tr>
+                <tr class="descenso">
+                  <td>4</td>
+                  <td class="text-left"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> Asturgijón</a></td>
+                  <td>3</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>1</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>5</td> <!-- PP -->
+                  <td>338</td> <!-- PF -->
+                  <td>-386</td> <!-- PC -->
+                  <td>-48</td> <!-- Dif -->
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
+
+            <!-- Resultados -->
+            <table class="table cup-table mt-3">
+              <tr>
+                <th colspan="3">JORNADA 1 (06/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
+                <td class="text-center resultado">64 - 80</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
+                <td class="text-center resultado">62 - 52</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 2 (13/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
+                <td class="text-center resultado">51 - 64</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
+                <td class="text-center resultado">42 - 51</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 3 (20/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
+                <td class="text-center resultado">81 - 69</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
+                <td class="text-center resultado">59 - 63</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 4 (27/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
+                <td class="text-center resultado">75 - 64</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
+                <td class="text-center resultado">51 - 65</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 5 (10/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
+                <td class="text-center resultado">55 - 73</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
+                <td class="text-center resultado">41 - 79</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 6 (17/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
+                <td class="text-center resultado">47 - 54</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
+                <td class="text-center resultado">64 - 51</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
+              </tr>
+            </table>
+          </div>
+
+
+          <!-- GRUPO F -->
+          <div class="container tab-pane fade" id="F" role="tabpanel" aria-labelledby="tab-F">
+            <div class="h6 text-center">GRUPO F</div>
+            <!-- Clasificación -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><abbr title="Posicion">Pos</abbr></th>
+                  <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+                  <th><abbr title="Puntos">Ptos</abbr></th>
+                  <th><abbr title="Partidos Jugados">PJ</abbr></th>
+                  <th><abbr title="Partidos Ganados">PG</abbr></th>
+                  <th><abbr title="Partidos Empatados">PE</abbr></th>
+                  <th><abbr title="Partidos Perdidos">PP</abbr></th>
+                  <th><abbr title="Puntos a favor">PF</abbr></th>
+                  <th><abbr title="Puntos en contra">PC</abbr></th>
+                  <th><abbr title="Diferencia de puntos">Dif</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="champions">
+                  <td>1</td>
+                  <td class="text-left"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> Yellow Storm F.C.</a></td>
+                  <td>15</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>5</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>1</td> <!-- PP -->
+                  <td>399</td> <!-- PF -->
+                  <td>-302</td> <!-- PC -->
+                  <td>97</td> <!-- Dif -->
+                </tr>
+                <tr class="champions">
+                  <td>2</td>
+                  <td class="text-left"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> Sito Miñanco</a></td>
+                  <td>9</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>3</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>3</td> <!-- PP -->
+                  <td>390</td> <!-- PF -->
+                  <td>-346</td> <!-- PC -->
+                  <td>44</td> <!-- Dif -->
+                </tr>
+                <tr class="uefa">
+                  <td>3</td>
+                  <td class="text-left"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> Balompédica Porrua</a></td>
+                  <td>9</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>3</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>3</td> <!-- PP -->
+                  <td>332</td> <!-- PF -->
+                  <td>-336</td> <!-- PC -->
+                  <td>-4</td> <!-- Dif -->
+                </tr>
+                <tr class="descenso">
+                  <td>4</td>
+                  <td class="text-left"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> Cabimas FC</a></td>
+                  <td>3</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>1</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>5</td> <!-- PP -->
+                  <td>240</td> <!-- PF -->
+                  <td>-377</td> <!-- PC -->
+                  <td>-137</td> <!-- Dif -->
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
+
+            <!-- Resultados -->
+            <table class="table cup-table mt-3">
+              <tr>
+                <th colspan="3">JORNADA 1 (06/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
+                <td class="text-center resultado">73 - 81</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
+                <td class="text-center resultado">45 - 55</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 2 (13/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
+                <td class="text-center resultado">67 - 43</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
+                <td class="text-center resultado">71 - 45</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 3 (20/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
+                <td class="text-center resultado">61 - 34</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
+                <td class="text-center resultado">61 - 65</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 4 (27/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
+                <td class="text-center resultado">64 - 60</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
+                <td class="text-center resultado">26 - 76</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 5 (10/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
+                <td class="text-center resultado">19 - 49</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
+                <td class="text-center resultado">59 - 46</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 6 (17/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
+                <td class="text-center resultado">63 - 79</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
+                <td class="text-center resultado">42 - 77</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
+              </tr>
+            </table>
+          </div>
+
+
+          <!-- GRUPO G -->
+          <div class="container tab-pane fade" id="G" role="tabpanel" aria-labelledby="tab-G">
+            <div class="h6 text-center">GRUPO G</div>
+            <!-- Clasificación -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><abbr title="Posicion">Pos</abbr></th>
+                  <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
+                  <th><abbr title="Puntos">Ptos</abbr></th>
+                  <th><abbr title="Partidos Jugados">PJ</abbr></th>
+                  <th><abbr title="Partidos Ganados">PG</abbr></th>
+                  <th><abbr title="Partidos Empatados">PE</abbr></th>
+                  <th><abbr title="Partidos Perdidos">PP</abbr></th>
+                  <th><abbr title="Puntos a favor">PF</abbr></th>
+                  <th><abbr title="Puntos en contra">PC</abbr></th>
+                  <th><abbr title="Diferencia de puntos">Dif</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="champions">
+                  <td>1</td>
+                  <td class="text-left"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> Galizano 18-19</a></td>
+                  <td>12</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>4</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>2</td> <!-- PP -->
+                  <td>325</td> <!-- PF -->
+                  <td>-336</td> <!-- PC -->
+                  <td>-11</td> <!-- Dif -->
+                </tr>
+                <tr class="champions">
+                  <td>2</td>
+                  <td class="text-left"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> Frente Popular</a></td>
+                  <td>9</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>3</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>3</td> <!-- PP -->
+                  <td>377</td> <!-- PF -->
+                  <td>-278</td> <!-- PC -->
+                  <td>99</td> <!-- Dif -->
+                </tr>
+                <tr class="uefa">
+                  <td>3</td>
+                  <td class="text-left"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> Caracas FC</a></td>
+                  <td>9</td> <!-- Ptos -->
+                  <td>6</td> <!-- PJ -->
+                  <td>3</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>3</td> <!-- PP -->
+                  <td>334</td> <!-- PF -->
+                  <td>-326</td> <!-- PC -->
+                  <td>8</td> <!-- Dif -->
+                </tr>
+                <tr class="descenso">
+                  <td>4</td>
+                  <td class="text-left"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> Racing de Santander</a></td>
+                  <td>6</td> <!-- Ptos -->
+                  <td>5</td> <!-- PJ -->
+                  <td>2</td> <!-- PG -->
+                  <td>0</td> <!-- PE -->
+                  <td>4</td> <!-- PP -->
+                  <td>246</td> <!-- PF -->
+                  <td>-342</td> <!-- PC -->
+                  <td>-96</td> <!-- Dif -->
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
+
+            <!-- Resultados -->
+            <table class="table cup-table mt-3">
+              <tr>
+                <th colspan="3">JORNADA 1 (06/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
+                <td class="text-center resultado">69 - 71</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
+                <td class="text-center resultado">53 - 61</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 2 (13/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
+                <td class="text-center resultado">45 - 49</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
+                <td class="text-center resultado">72 - -19</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 3 (20/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
+                <td class="text-center resultado">72 - 56</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
+                <td class="text-center resultado">34 - 49</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 4 (27/01/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
+                <td class="text-center resultado">75 - 63</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
+                <td class="text-center resultado">55 - 76</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 5 (10/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
+                <td class="text-center resultado">47 - 44</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
+                <td class="text-center resultado">38 - 55</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
+              </tr>
+
+              <tr>
+                <th colspan="3">JORNADA 6 (17/02/2019)</th>
+              </tr>
+              <tr class="fila-impar">
+                <td class="text-left equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
+                <td class="text-center resultado">57 - 46</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
+              </tr>
+              <tr class="fila-par">
+                <td class="text-left equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
+                <td class="text-center resultado">49 - 65</td>
+                <td class="text-right equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
+              </tr>
+            </table>
+          </div>
+
       </div>
+    </div>
 
-
-      <!-- GRUPO C -->
-      <div class="container tab-pane fade" id="C" role="tabpanel" aria-labelledby="tab-C">
-        <div class="h6 text-center">GRUPO C</div>
-        <!-- Clasificación -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th><abbr title="Posicion">Pos</abbr></th>
-              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <th><abbr title="Puntos">Ptos</abbr></th>
-              <th><abbr title="Partidos Jugados">PJ</abbr></th>
-              <th><abbr title="Partidos Ganados">PG</abbr></th>
-              <th><abbr title="Partidos Empatados">PE</abbr></th>
-              <th><abbr title="Partidos Perdidos">PP</abbr></th>
-              <th><abbr title="Puntos a favor">PF</abbr></th>
-              <th><abbr title="Puntos en contra">PC</abbr></th>
-              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="champions">
-              <td>1</td>
-              <td class="text-left"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> Bierzo Power</a></td>
-              <td>6</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>2</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>0</td> <!-- PP -->
-              <td>136</td> <!-- PF -->
-              <td>-116</td> <!-- PC -->
-              <td>20</td> <!-- Dif -->
-            </tr>
-            <tr class="champions">
-              <td>2</td>
-              3	2	1	0	1	126	-120	6
-              <td class="text-left"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> David Valcan</a></td>
-              <td>3</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>126</td> <!-- PF -->
-              <td>-120</td> <!-- PC -->
-              <td>6</td> <!-- Dif -->
-            </tr>
-            <tr class="uefa">
-              <td>3</td>
-              <td class="text-left"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> Williessous</a></td>
-              <td>3</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>94</td> <!-- PF -->
-              <td>-102</td> <!-- PC -->
-              <td>-8</td> <!-- Dif -->
-            </tr>
-            <tr class="descenso">
-              <td>4</td>
-              <td class="text-left"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> Super Palomba</a></td>
-              <td>0</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>0</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>2</td> <!-- PP -->
-              <td>92</td> <!-- PF -->
-              <td>-110</td> <!-- PC -->
-              <td>-18</td> <!-- Dif -->
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
-
-        <!-- Resultados -->
-        <table class="table cup-table mt-3">
-          <tr>
-            <th colspan="3">JORNADA 1 (06/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
-            <td class="text-center resultado">75 - 82</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
-            <td class="text-center resultado">56 - 51</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 2 (13/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
-            <td class="text-center resultado">54 - 41</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
-            <td class="text-center resultado">51 - 38</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 3 (20/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 4 (27/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 5 (10/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 6 (17/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=15"><img src="../img/shields/150/paloma.png" class="table-shield" alt="Super Palomba"> <div>Super Palomba</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=12"><img src="../img/shields/150/ortega.png" class="table-shield" alt="David Valcan"> <div>David Valcan</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=7"><img src="../img/shields/150/will.png" class="table-shield" alt="Williessous"> <div>Williessous</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=2"><img src="../img/shields/150/borja_ramos.png" class="table-shield" alt="Bierzo Power"> <div>Bierzo Power</div></a></td>
-          </tr>
-        </table>
-      </div>
-
-
-      <!-- GRUPO D -->
-      <div class="container tab-pane fade" id="D" role="tabpanel" aria-labelledby="tab-D">
-        <div class="h6 text-center">GRUPO D</div>
-        <!-- Clasificación -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th><abbr title="Posicion">Pos</abbr></th>
-              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <th><abbr title="Puntos">Ptos</abbr></th>
-              <th><abbr title="Partidos Jugados">PJ</abbr></th>
-              <th><abbr title="Partidos Ganados">PG</abbr></th>
-              <th><abbr title="Partidos Empatados">PE</abbr></th>
-              <th><abbr title="Partidos Perdidos">PP</abbr></th>
-              <th><abbr title="Puntos a favor">PF</abbr></th>
-              <th><abbr title="Puntos en contra">PC</abbr></th>
-              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="champions">
-              <td>1</td>
-              <td class="text-left"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> Meneillos</a></td>
-              <td>6</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>2</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>0</td> <!-- PP -->
-              <td>140</td> <!-- PF -->
-              <td>-95</td> <!-- PC -->
-              <td>45</td> <!-- Dif -->
-            </tr>
-            <tr class="champions">
-              <td>2</td>
-              <td class="text-left"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> Capitán Tsubasa</a></td>
-              <td>3</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>120</td> <!-- PF -->
-              <td>-112</td> <!-- PC -->
-              <td>8</td> <!-- Dif -->
-            </tr>
-            <tr class="uefa">
-              <td>3</td>
-              <td class="text-left"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> Amunt Che</a></td>
-              <td>3</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>108</td> <!-- PF -->
-              <td>-109</td> <!-- PC -->
-              <td>-1</td> <!-- Dif -->
-            </tr>
-            <tr class="descenso">
-              <td>4</td>
-              <td class="text-left"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> Porrua City</a></td>
-              <td>0</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>0</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>2</td> <!-- PP -->
-              <td>99</td> <!-- PF -->
-              <td>-151</td> <!-- PC -->
-              <td>-52</td> <!-- Dif -->
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
-
-        <!-- Resultados -->
-        <table class="table cup-table mt-3">
-          <tr>
-            <th colspan="3">JORNADA 1 (06/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
-            <td class="text-center resultado">67 - 57</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
-            <td class="text-center resultado">88 - 54</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 2 (13/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
-            <td class="text-center resultado">63 - 45</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
-            <td class="text-center resultado">41 - 52</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 3 (20/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 4 (27/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 5 (10/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 6 (17/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=9"><img src="../img/shields/150/luis.png" class="table-shield" alt="Porrua City"> <div>Porrua City</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=3"><img src="../img/shields/150/che.png" class="table-shield" alt="Amunt Che"> <div>Amunt Che</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=20"><img src="../img/shields/150/serious.png" class="table-shield" alt="Meneillos"> <div>Meneillos</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=17"><img src="../img/shields/150/ines.png" class="table-shield" alt="Capitán Tsubasa"> <div>Capitán Tsubasa</div></a></td>
-          </tr>
-        </table>
-      </div>
-
-
-      <!-- GRUPO E -->
-      <div class="container tab-pane fade" id="E" role="tabpanel" aria-labelledby="tab-E">
-        <div class="h6 text-center">GRUPO E</div>
-        <!-- Clasificación -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th><abbr title="Posicion">Pos</abbr></th>
-              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <th><abbr title="Puntos">Ptos</abbr></th>
-              <th><abbr title="Partidos Jugados">PJ</abbr></th>
-              <th><abbr title="Partidos Ganados">PG</abbr></th>
-              <th><abbr title="Partidos Empatados">PE</abbr></th>
-              <th><abbr title="Partidos Perdidos">PP</abbr></th>
-              <th><abbr title="Puntos a favor">PF</abbr></th>
-              <th><abbr title="Puntos en contra">PC</abbr></th>
-              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="champions">
-              <td>1</td>
-              <td class="text-left"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> Dojo Cobra KAI</a></td>
-              <td>6</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>2</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>0</td> <!-- PP -->
-              <td>113</td> <!-- PF -->
-              <td>-94</td> <!-- PC -->
-              <td>19</td> <!-- Dif -->
-            </tr>
-            <tr class="champions">
-              <td>2</td>
-              <td class="text-left"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> Infican Viajes</a></td>
-              <td>3</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>131</td> <!-- PF -->
-              <td>-128</td> <!-- PC -->
-              <td>3</td> <!-- Dif -->
-            </tr>
-            <tr class="uefa">
-              <td>3</td>
-              <td class="text-left"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> Asturgijón</a></td>
-              <td>3</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>116</td> <!-- PF -->
-              <td>-113</td> <!-- PC -->
-              <td>3</td> <!-- Dif -->
-            </tr>
-            <tr class="descenso">
-              <td>4</td>
-              <td class="text-left"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> Orgullo de Runner</a></td>
-              <td>0</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>0</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>2</td> <!-- PP -->
-              <td>106</td> <!-- PF -->
-              <td>-131</td> <!-- PC -->
-              <td>-25</td> <!-- Dif -->
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
-
-        <!-- Resultados -->
-        <table class="table cup-table mt-3">
-          <tr>
-            <th colspan="3">JORNADA 1 (06/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
-            <td class="text-center resultado">64 - 80</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
-            <td class="text-center resultado">62 - 52</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 2 (13/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
-            <td class="text-center resultado">51 - 64</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
-            <td class="text-center resultado">42 - 51</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 3 (20/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 4 (27/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 5 (10/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 6 (17/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=23"><img src="../img/shields/150/borja.png" class="table-shield" alt="Asturgijón"> <div>Asturgijón</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=4"><img src="../img/shields/150/diego.png" class="table-shield" alt="Orgullo de Runner"> <div>Orgullo de Runner</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=10"><img src="../img/shields/150/raul.png" class="table-shield" alt="Dojo Cobra KAI"> <div>Dojo Cobra KAI</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=13"><img src="../img/shields/150/nandelas.png" class="table-shield" alt="Infican Viajes"> <div>Infican Viajes</div></a></td>
-          </tr>
-        </table>
-      </div>
-
-
-      <!-- GRUPO F -->
-      <div class="container tab-pane fade" id="F" role="tabpanel" aria-labelledby="tab-F">
-        <div class="h6 text-center">GRUPO F</div>
-        <!-- Clasificación -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th><abbr title="Posicion">Pos</abbr></th>
-              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <th><abbr title="Puntos">Ptos</abbr></th>
-              <th><abbr title="Partidos Jugados">PJ</abbr></th>
-              <th><abbr title="Partidos Ganados">PG</abbr></th>
-              <th><abbr title="Partidos Empatados">PE</abbr></th>
-              <th><abbr title="Partidos Perdidos">PP</abbr></th>
-              <th><abbr title="Puntos a favor">PF</abbr></th>
-              <th><abbr title="Puntos en contra">PC</abbr></th>
-              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="champions">
-              <td>1</td>
-              <td class="text-left"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> Yellow Storm F.C.</a></td>
-              <td>6</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>2</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>0</td> <!-- PP -->
-              <td>148</td> <!-- PF -->
-              <td>-116</td> <!-- PC -->
-              <td>32</td> <!-- Dif -->
-            </tr>
-            <tr class="champions">
-              <td>2</td>
-              <td class="text-left"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> Sito Miñanco</a></td>
-              <td>3</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>144</td> <!-- PF -->
-              <td>-126</td> <!-- PC -->
-              <td>18</td> <!-- Dif -->
-            </tr>
-            <tr class="uefa">
-              <td>3</td>
-              <td class="text-left"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> Cabimas FC</a></td>
-              <td>3</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>98</td> <!-- PF -->
-              <td>-112</td> <!-- PC -->
-              <td>-14</td> <!-- Dif -->
-            </tr>
-            <tr class="descenso">
-              <td>4</td>
-              <td class="text-left"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> Balompédica Porrua</a></td>
-              <td>0</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>0</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>2</td> <!-- PP -->
-              <td>90</td> <!-- PF -->
-              <td>-126</td> <!-- PC -->
-              <td>-36</td> <!-- Dif -->
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
-
-        <!-- Resultados -->
-        <table class="table cup-table mt-3">
-          <tr>
-            <th colspan="3">JORNADA 1 (06/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
-            <td class="text-center resultado">73 - 81</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
-            <td class="text-center resultado">45 - 55</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 2 (13/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
-            <td class="text-center resultado">67 - 43</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
-            <td class="text-center resultado">71 - 45</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 3 (20/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 4 (27/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 5 (10/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 6 (17/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=25"><img src="../img/shields/150/carlos_julio.png" class="table-shield" alt="Cabimas FC"> <div>Cabimas FC</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=16"><img src="../img/shields/150/javi_bsh.png" class="table-shield" alt="Sito Miñanco"> <div>Sito Miñanco</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=5"><img src="../img/shields/150/juanan.png" class="table-shield" alt="Balompédica Porrua"> <div>Balompédica Porrua</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=11"><img src="../img/shields/150/ekaitz.png" class="table-shield" alt="Yellow Storm F.C."> <div>Yellow Storm F.C.</div></a></td>
-          </tr>
-        </table>
-      </div>
-
-
-      <!-- GRUPO G -->
-      <div class="container tab-pane fade" id="G" role="tabpanel" aria-labelledby="tab-G">
-        <div class="h6 text-center">GRUPO G</div>
-        <!-- Clasificación -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th><abbr title="Posicion">Pos</abbr></th>
-              <th><span style="color: #FFF;">____________</span>Equipo<span style="color: #FFF;">____________</span></th>
-              <th><abbr title="Puntos">Ptos</abbr></th>
-              <th><abbr title="Partidos Jugados">PJ</abbr></th>
-              <th><abbr title="Partidos Ganados">PG</abbr></th>
-              <th><abbr title="Partidos Empatados">PE</abbr></th>
-              <th><abbr title="Partidos Perdidos">PP</abbr></th>
-              <th><abbr title="Puntos a favor">PF</abbr></th>
-              <th><abbr title="Puntos en contra">PC</abbr></th>
-              <th><abbr title="Diferencia de puntos">Dif</abbr></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="champions">
-              <td>1</td>
-              <td class="text-left"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> Galizano 18-19</a></td>
-              <td>6</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>2</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>0</td> <!-- PP -->
-              <td>110</td> <!-- PF -->
-              <td>-98</td> <!-- PC -->
-              <td>12</td> <!-- Dif -->
-            </tr>
-            <tr class="champions">
-              <td>2</td>
-              <td class="text-left"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> Frente Popular</a></td>
-              <td>3</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>141</td> <!-- PF -->
-              <td>-52</td> <!-- PC -->
-              <td>89</td> <!-- Dif -->
-            </tr>
-            <tr class="uefa">
-              <td>3</td>
-              <td class="text-left"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> Caracas FC</a></td>
-              <td>3</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>1</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>1</td> <!-- PP -->
-              <td>116</td> <!-- PF -->
-              <td>-118</td> <!-- PC -->
-              <td>-2</td> <!-- Dif -->
-            </tr>
-            <tr class="descenso">
-              <td>4</td>
-              <td class="text-left"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> Racing de Santander</a></td>
-              <td>0</td> <!-- Ptos -->
-              <td>2</td> <!-- PJ -->
-              <td>0</td> <!-- PG -->
-              <td>0</td> <!-- PE -->
-              <td>2</td> <!-- PP -->
-              <td>34</td> <!-- PF -->
-              <td>-133</td> <!-- PC -->
-              <td>-99</td> <!-- Dif -->
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="d-lg-none text-left"><small><i class="fas fa-arrows-alt-h fa-lg"></i> Puede desplazarse a derecha-izquierda para ver todos los datos de la clasificación</small></div>
-
-        <!-- Resultados -->
-        <table class="table cup-table mt-3">
-          <tr>
-            <th colspan="3">JORNADA 1 (06/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
-            <td class="text-center resultado">69 - 71</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
-            <td class="text-center resultado">53 - 61</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 2 (13/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
-            <td class="text-center resultado">45 - 49</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
-            <td class="text-center resultado">72 - -19</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 3 (20/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 4 (27/01/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 5 (10/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
-          </tr>
-
-          <tr>
-            <th colspan="3">JORNADA 6 (17/02/2019)</th>
-          </tr>
-          <tr class="fila-impar">
-            <td class="text-left equipo"><a href="/views/profile.html?id=6"><img src="../img/shields/150/adolfo.png" class="table-shield" alt="Galizano 18-19"> <div>Galizano 18-19</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=0"><img src="../img/shields/150/jc.png" class="table-shield" alt="Frente Popular"> <div>Frente Popular</div></a></td>
-          </tr>
-          <tr class="fila-par">
-            <td class="text-left equipo"><a href="/views/profile.html?id=18"><img src="../img/shields/150/dani_negro.png" class="table-shield" alt="Racing de Santander"> <div>Racing de Santander</div></a></td>
-            <td class="text-center resultado">0 - 0</td>
-            <td class="text-right equipo"><a href="/views/profile.html?id=27"><img src="../img/shields/150/daniel_gonzalez.png" class="table-shield" alt="Caracas FC"> <div>Caracas FC</div></a></td>
-          </tr>
-        </table>
-      </div>
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
